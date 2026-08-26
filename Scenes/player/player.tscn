@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://b0ipyxcr6w3e8"]
+
+[ext_resource type="Script" uid="uid://buvtipramp20d" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="PackedScene" uid="uid://ctu7i8trkddmu" path="res://scenes/player/player_camera.tscn" id="2_dovo2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dovo2"]
+albedo_color = Color(0.2073909, 0.6671061, 0.56671625, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hy6xw"]
+material = SubResource("StandardMaterial3D_dovo2")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+
+[sub_resource type="Animation" id="Animation_gmlin"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.6795035, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_dovo2"]
+resource_name = "crouch"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.041666668, 0, 0, 0, 0, -0.025000002, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.25, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.6795035, -0.25, 0, 0.25, 0, 0.09406865, -0.041666668, 0.097572476, 0, 0, 0.1583482, -0.025000002, -0.01071326, 0, 0),
+"times": PackedFloat32Array(0, 0.25, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.15886033, -0.041666668, 0.026476722, 0, 0, -0.020199418, -0.025000002, -0.023110151, 0, 0),
+"times": PackedFloat32Array(0, 0.25, 0.4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gmlin"]
+_data = {
+&"RESET": SubResource("Animation_gmlin"),
+&"crouch": SubResource("Animation_dovo2")
+}
+
+[node name="Player" type="CharacterBody3D" unique_id=423765952]
+script = ExtResource("1_8afob")
+
+[node name="TempBody" type="MeshInstance3D" parent="." unique_id=1675666204]
+mesh = SubResource("CapsuleMesh_hy6xw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1904728620]
+shape = SubResource("CapsuleShape3D_u8vuu")
+
+[node name="Head" type="Node3D" parent="." unique_id=99954840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6795035, 0)
+
+[node name="PlayerCamera" parent="Head" unique_id=1818396284 node_paths=PackedStringArray("player", "head") instance=ExtResource("2_dovo2")]
+player = NodePath("../..")
+head = NodePath("..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=458502156]
+libraries/ = SubResource("AnimationLibrary_gmlin")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b0ipyxcr6w3e8"]
+
+[ext_resource type="Script" uid="uid://buvtipramp20d" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="PackedScene" uid="uid://ctu7i8trkddmu" path="res://scenes/player/player_camera.tscn" id="2_dovo2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+
+[node name="Player" type="CharacterBody3D" unique_id=423765952]
+script = ExtResource("1_8afob")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1904728620]
+shape = SubResource("CapsuleShape3D_u8vuu")
+
+[node name="Head" type="Node3D" parent="." unique_id=99954840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6795035, 0)
+
+[node name="PlayerCamera" parent="Head" unique_id=1818396284 node_paths=PackedStringArray("player", "head") instance=ExtResource("2_dovo2")]
+player = NodePath("../..")
+head = NodePath("..")
