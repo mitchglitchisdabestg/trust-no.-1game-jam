@@ -10,9 +10,10 @@ func _ready() -> void:
 	start_position = background.position
 	
 func _on_new_game_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/world.tscn")
+	get_tree().change_scene_to_file("res://Scenes/world/world.tscn")
 
-
+func _on_quit_pressed() -> void:
+	get_tree().quit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -34,3 +35,9 @@ func _on_settings_button_mouse_entered() -> void:
 
 func _on_settings_button_mouse_exited() -> void:
 	$MarginContainer/VBoxContainer/SettingsButton.text = "Settings"
+
+func _on_quit_mouse_entered() -> void:
+	$MarginContainer/VBoxContainer/Quit.text = ">> Quit"
+
+func _on_quit_mouse_exited() -> void:
+	$MarginContainer/VBoxContainer/Quit.text = "Quit"
