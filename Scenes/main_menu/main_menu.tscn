@@ -114,7 +114,7 @@ text = "Settings"
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1269603510]
 layout_mode = 2
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1296841661]
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1296841661]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/line_spacing = 500
@@ -131,9 +131,11 @@ text = "Quit"
 [connection signal="pressed" from="MarginContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_mouse_exited"]
-[connection signal="focus_entered" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_focus_entered"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_settings_button_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_exited"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_settings_button_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="focus_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_focus_entered"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_settings_button_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_exited"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_mouse_exited"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_settings_button_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_pressed"]

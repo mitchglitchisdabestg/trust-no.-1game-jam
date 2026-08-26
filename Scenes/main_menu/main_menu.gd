@@ -36,8 +36,8 @@ func _on_settings_button_mouse_entered() -> void:
 func _on_settings_button_mouse_exited() -> void:
 	$MarginContainer/VBoxContainer/SettingsButton.text = "Settings"
 
-func _on_quit_mouse_entered() -> void:
-	$MarginContainer/VBoxContainer/Quit.text = ">> Quit"
+func _on_quit_button_mouse_entered() -> void:
+	$MarginContainer/VBoxContainer/QuitButton.text = ">> Quit"
 
-func _on_quit_mouse_exited() -> void:
-	$MarginContainer/VBoxContainer/Quit.text = "Quit"
+func _on_quit_button_mouse_exited() -> void:
+	$MarginContainer/VBoxContainer/QuitButton.text = "Quit"
