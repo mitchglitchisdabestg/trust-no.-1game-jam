@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://b1x3od4253adb" path="res://Scripts/static_overlay.gd" id="4_jix8l"]
 [ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="5_glbon"]
 
-
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_glbon"]
 blend_mode = 1
 
@@ -111,6 +110,9 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_8qtwp")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0o4t1")
 text = "Settings"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1269603510]
+layout_mode = 2
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1296841661]
 layout_mode = 2

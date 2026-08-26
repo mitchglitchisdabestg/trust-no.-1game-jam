@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Trust no. 1 (brackeys jam 26-2)"
-run/main_scene="uid://cl52hsomas772"
+run/main_scene="uid://butkopq7hpn4x"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

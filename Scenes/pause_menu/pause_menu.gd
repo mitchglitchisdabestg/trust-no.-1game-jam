@@ -6,7 +6,6 @@ var last_mouse_state := Input.MouseMode.MOUSE_MODE_CAPTURED
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	main_panel.hide()
 	animation_player.play("RESET")
 
 func pause_tree() -> void:
