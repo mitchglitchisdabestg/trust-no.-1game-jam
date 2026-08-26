@@ -32,7 +32,7 @@ offset_bottom = 27.0
 
 [node name="Button" type="Button" parent="." unique_id=380983017]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 31.0
-offset_right = 39.0
-offset_bottom = 39.0
+offset_left = 133.0
+offset_top = 132.0
+offset_right = 141.0
+offset_bottom = 140.0
