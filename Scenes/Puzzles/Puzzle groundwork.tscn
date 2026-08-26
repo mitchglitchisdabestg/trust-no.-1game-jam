@@ -10,11 +10,11 @@ grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=210102783]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.123
-anchor_bottom = 0.21300001
-offset_right = 0.30400085
-offset_bottom = -0.024002075
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1588801652]
 layout_mode = 1
@@ -34,30 +34,33 @@ scale = Vector2(0.4, 0.4)
 
 [node name="CloseButton" type="Button" parent="." unique_id=380983017]
 layout_mode = 0
-offset_left = 116.99999
-offset_top = 125.0
-offset_right = 136.57256
-offset_bottom = 137.0
-scale = Vector2(1.2262067, 1)
+offset_left = 1058.0
+offset_top = 604.0
+offset_right = 1118.0
+offset_bottom = 634.0
+scale = Vector2(1.3703374, 1.2761503)
 
 [node name="CloseLabel" type="Label" parent="." unique_id=658098949]
 layout_mode = 0
-offset_left = 120.0
-offset_top = 127.0
-offset_right = 170.0
-offset_bottom = 150.0
-scale = Vector2(0.35, 0.35)
+offset_left = 1060.0
+offset_top = 606.0
+offset_right = 1110.0
+offset_bottom = 629.0
+scale = Vector2(1.5, 1.5)
 text = "Close"
 uppercase = true
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=554499783]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.006
-anchor_top = 0.012
-anchor_right = 0.116000004
-anchor_bottom = 0.187
-offset_left = 0.08799982
-offset_top = 0.22399998
-offset_right = 0.36799622
-offset_bottom = -0.1760025
+anchor_left = 0.17500001
+anchor_top = 0.032
+anchor_right = 0.81700003
+anchor_bottom = 0.85800004
+offset_left = 0.39997864
+offset_top = 0.26399994
+offset_right = -612.184
+offset_bottom = -421.984
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5.8193545, 4.7367353)
