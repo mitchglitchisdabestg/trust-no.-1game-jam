@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bheumvpgw1mxt"]
 
-[ext_resource type="Script" uid="uid://buxgdch0arnut" path="res://main_menu.gd" id="1_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://dm5dmaxhl1gqb" path="res://wmremove-transformed.jpeg" id="2_jix8l"]
-[ext_resource type="Texture2D" uid="uid://kl4kdx05e6e0" path="res://Unknown-3.jpg" id="3_jix8l"]
-[ext_resource type="Script" uid="uid://b1x3od4253adb" path="res://static_overlay.gd" id="4_jix8l"]
-[ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Press_Start_2P/PressStart2P-Regular.ttf" id="5_glbon"]
+[ext_resource type="Script" uid="uid://buxgdch0arnut" path="res://Scenes/main_menu/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://dm5dmaxhl1gqb" path="res://Assets/wmremove-transformed.jpeg" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://kl4kdx05e6e0" path="res://Assets/Unknown-3.jpg" id="3_jix8l"]
+[ext_resource type="Script" uid="uid://b1x3od4253adb" path="res://Scripts/static_overlay.gd" id="4_jix8l"]
+[ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="5_glbon"]
+
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_glbon"]
 blend_mode = 1

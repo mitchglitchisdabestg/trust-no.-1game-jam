@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kl4kdx05e6e0"
-path="res://.godot/imported/Unknown-3.jpg-93b761d949c71f30189f35d48149fa00.ctex"
+uid="uid://dm5dmaxhl1gqb"
+path="res://.godot/imported/wmremove-transformed.jpeg-d01128f61ef97ecac93b64160c0a1c2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Unknown-3.jpg"
-dest_files=["res://.godot/imported/Unknown-3.jpg-93b761d949c71f30189f35d48149fa00.ctex"]
+source_file="res://Assets/wmremove-transformed.jpeg"
+dest_files=["res://.godot/imported/wmremove-transformed.jpeg-d01128f61ef97ecac93b64160c0a1c2e.ctex"]
 
 [params]
 

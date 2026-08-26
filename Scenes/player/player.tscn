@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0ipyxcr6w3e8"]
 
-[ext_resource type="Script" uid="uid://buvtipramp20d" path="res://scenes/player/player.gd" id="1_8afob"]
-[ext_resource type="PackedScene" uid="uid://ctu7i8trkddmu" path="res://scenes/player/player_camera.tscn" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://buvtipramp20d" path="res://Scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="PackedScene" uid="uid://ctu7i8trkddmu" path="res://Scenes/player_camera/player_camera.tscn" id="2_eo61r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dovo2"]
 albedo_color = Color(0.2073909, 0.6671061, 0.56671625, 1)
@@ -102,7 +102,8 @@ shape = SubResource("CapsuleShape3D_u8vuu")
 [node name="Head" type="Node3D" parent="." unique_id=99954840]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6795035, 0)
 
-[node name="PlayerCamera" parent="Head" unique_id=1818396284 node_paths=PackedStringArray("player", "head") instance=ExtResource("2_dovo2")]
+[node name="PlayerCamera" parent="Head" unique_id=1818396284 node_paths=PackedStringArray("player", "head") instance=ExtResource("2_eo61r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6795035, 0)
 player = NodePath("../..")
 head = NodePath("..")
 

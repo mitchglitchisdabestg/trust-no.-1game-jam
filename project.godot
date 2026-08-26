@@ -13,7 +13,7 @@ config_version=5
 config/name="Trust no. 1 (brackeys jam 26-2)"
 run/main_scene="uid://cl52hsomas772"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [editor_plugins]
 
@@ -22,10 +22,10 @@ enabled=PackedStringArray("res://addons/godot_with_u/plugin.cfg")
 [file_customization]
 
 folder_colors={
-"res://Assets/": "red",
+"res://Addons/": "yellow",
+"res://Assets/": "purple",
 "res://Scenes/": "blue",
-"res://Scripts/": "green",
-"res://addons/": "yellow"
+"res://Scripts/": "green"
 }
 
 [input]
@@ -67,7 +67,17 @@ Down={
 }
 MouseLock={
 "deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194326,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+Pause={
+"deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+Interact={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 

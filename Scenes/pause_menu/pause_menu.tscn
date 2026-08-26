@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5tsawn866bsp"]
 
-[ext_resource type="Shader" uid="uid://jjy1ggm0e5va" path="res://scenes/pause_menu/pause_menu_shader.gdshader" id="1_5bgjm"]
-[ext_resource type="Script" uid="uid://wih5xtg51vne" path="res://scenes/pause_menu/pause_menu.gd" id="1_qcmsd"]
+[ext_resource type="Shader" uid="uid://jjy1ggm0e5va" path="res://Scenes/pause_menu/pause_menu_shader.gdshader" id="1_5bgjm"]
+[ext_resource type="Script" uid="uid://wih5xtg51vne" path="res://Scenes/pause_menu/pause_menu.gd" id="1_qcmsd"]
 
 [sub_resource type="Animation" id="Animation_10tpt"]
 length = 0.001
@@ -212,7 +212,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainPanel" type="PanelContainer" parent="." unique_id=158568976]
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8

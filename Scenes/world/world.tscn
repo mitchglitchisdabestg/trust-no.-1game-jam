@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://ctk6mjhs3nnbd" path="res://Scenes/world/floor.tscn" id="1_sl2e5"]
 [ext_resource type="PackedScene" uid="uid://b0ipyxcr6w3e8" path="res://Scenes/player/player.tscn" id="2_1fp7r"]
 [ext_resource type="PackedScene" uid="uid://c8yijckfutcyv" path="res://Scenes/world/box.tscn" id="2_6m72w"]
+[ext_resource type="Script" uid="uid://dcj47mwsibkwy" path="res://Scripts/basic_interact_script.gd" id="3_qgrml"]
+[ext_resource type="PackedScene" uid="uid://5tsawn866bsp" path="res://Scenes/pause_menu/pause_menu.tscn" id="4_fbtbp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sl2e5"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,6 +18,15 @@ background_mode = 2
 sky = SubResource("Sky_1fp7r")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrml"]
+albedo_color = Color(1, 1, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qgrml"]
+material = SubResource("StandardMaterial3D_qgrml")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nhnx1"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="World" type="Node3D" unique_id=1014660479]
 
@@ -46,7 +57,27 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.761519, 0.99646854, -17.83
 [node name="Box5" parent="Level" unique_id=1991341658 instance=ExtResource("2_6m72w")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.97196007, 0.99646854, 13.564949)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Level" unique_id=1144158057 node_paths=PackedStringArray("label")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9572473, 0.94755983, 0)
+script = ExtResource("3_qgrml")
+label = NodePath("InteractionLabel")
+
+[node name="InteractionLabel" type="Label3D" parent="Level/StaticBody3D" unique_id=1947686202]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+offset = Vector2(0, 150)
+billboard = 1
+text = "Press E to Interact
+"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/StaticBody3D" unique_id=1239083383]
+mesh = SubResource("BoxMesh_qgrml")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D" unique_id=747092600]
+shape = SubResource("ConcavePolygonShape3D_nhnx1")
+
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
 [node name="Player" parent="." unique_id=423765952 instance=ExtResource("2_1fp7r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1502094, -4.5021877)
+
+[node name="Pause Menu" parent="." unique_id=1368006392 instance=ExtResource("4_fbtbp")]
