@@ -11,13 +11,11 @@ const SENSITIVITY : float = 0.2
 @export_subgroup("Configuration")
 @export var reticle_size : float = 0.15
 
-
 var current_interaction_target: Node3D = null
 var mouse_locked : bool = true
 
 func interact_with_object() -> void:
 	if !mouse_locked or !interaction_ray.is_colliding(): return
-	
 	var hit_object = interaction_ray.get_collider()
 	
 	if hit_object and hit_object.has_method("interact"):
@@ -68,7 +66,6 @@ func _input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("MouseLock"):
 		toggle_mouse_lock()
-	
 	if event.is_action_pressed("Interact"):
 		interact_with_object()
 
