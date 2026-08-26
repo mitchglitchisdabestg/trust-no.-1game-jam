@@ -41,7 +41,10 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.119946, -0.108650684, -10
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -10.875902, 0.99646854, -17.836119)
 
 [node name="Box4" parent="Level" unique_id=835053526 instance=ExtResource("2_6m72w")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5.0918365, 0.99646854, -17.836119)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.761519, 0.99646854, -17.836119)
+
+[node name="Box5" parent="Level" unique_id=1991341658 instance=ExtResource("2_6m72w")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.97196007, 0.99646854, 13.564949)
 
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
