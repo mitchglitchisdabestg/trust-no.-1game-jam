@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dw3fwfrkrekw7"]
+
+[node name="PuzzleGroundwork" type="Control" unique_id=216729549]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=210102783]
+layout_mode = 0
+offset_right = 141.0
+offset_bottom = 137.0
+
+[node name="Label" type="Label" parent="." unique_id=1588801652]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=333949645]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label2" type="Label" parent="." unique_id=1249983855]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 41.0
+offset_bottom = 27.0
+
+[node name="Button" type="Button" parent="." unique_id=380983017]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 31.0
+offset_right = 39.0
+offset_bottom = 39.0
