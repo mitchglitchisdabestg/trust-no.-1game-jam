@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ctu7i8trkddmu"]
 
-[ext_resource type="Script" uid="uid://di7gi6xhjs685" path="res://Scenes/player_camera/player_camera.gd" id="1_nvw1d"]
+[ext_resource type="Script" uid="uid://ck3ybybsb20mg" path="res://Scenes/player_camera/player_camera.gd" id="1_nvw1d"]
 
 [node name="PlayerCamera" type="Camera3D" unique_id=1818396284 node_paths=PackedStringArray("interaction_ray", "reticle")]
 script = ExtResource("1_nvw1d")
@@ -24,4 +24,4 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 color = Color(0, 0, 0, 1)
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=1441152189]
-target_position = Vector3(0, 0, -6)
+target_position = Vector3(0, 0, -3)
