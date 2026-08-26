@@ -1,0 +1,36 @@
+extends Control
+@onready var background = $Background
+var sway_speed : float = 0.05
+var screen_center : Vector2
+var start_position : Vector2
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	screen_center = get_viewport_rect().size / 2.0
+	start_position = background.position
+	
+func _on_new_game_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/world.tscn")
+
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+	var mouse_pos = get_viewport().get_mouse_position()
+	var offset = (mouse_pos - screen_center) * sway_speed
+	background.position = start_position - offset
+	print(mouse_pos)
+
+
+func _on_new_game_button_mouse_entered() -> void:
+	$MarginContainer/VBoxContainer/NewGameButton.text = ">> New Game"
+
+func _on_new_game_button_mouse_exited() -> void:
+	$MarginContainer/VBoxContainer/NewGameButton.text = "New Game"
+
+func _on_settings_button_mouse_entered() -> void:
+	$MarginContainer/VBoxContainer/SettingsButton.text = ">> Settings"
+
+func _on_settings_button_mouse_exited() -> void:
+	$MarginContainer/VBoxContainer/SettingsButton.text = "Settings"
