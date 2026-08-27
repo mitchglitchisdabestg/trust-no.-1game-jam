@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://c77m8s1n603w7"]
+
+[ext_resource type="PackedScene" uid="uid://dw3fwfrkrekw7" path="res://Scenes/Puzzles/puzzle_groundwork.tscn" id="1_bnh4e"]
+[ext_resource type="Script" uid="uid://b15b841rto01i" path="res://Scenes/Puzzles/socket.gd" id="2_xsflo"]
+
+[node name="PuzzleGroundwork" unique_id=216729549 instance=ExtResource("1_bnh4e")]
+
+[node name="Wiring_Puzzle" type="Control" parent="." index="6" unique_id=2073243332]
+layout_mode = 1
+anchor_left = 0.17400001
+anchor_top = 0.07700001
+anchor_right = 0.86500007
+anchor_bottom = 0.873
+offset_left = -0.4480133
+offset_top = 0.10399628
+offset_right = 0.51989746
+offset_bottom = 0.29595947
+
+[node name="Panel" type="Panel" parent="Wiring_Puzzle" index="0" unique_id=141567993]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99700004
+anchor_bottom = 0.98800004
+offset_right = 0.3909912
+offset_bottom = 0.19198608
+
+[node name="Instructions" type="Label" parent="Wiring_Puzzle" index="1" unique_id=1480172470]
+layout_mode = 0
+offset_right = 796.0
+offset_bottom = 35.0
+
+[node name="Left socket" type="Control" parent="Wiring_Puzzle" index="2" unique_id=22035847]
+layout_mode = 1
+anchor_right = 0.21000001
+anchor_bottom = 0.98800004
+offset_right = -0.37001038
+offset_bottom = 0.19198608
+
+[node name="Redsocket" type="Button" parent="Wiring_Puzzle/Left socket" index="0" unique_id=545573567]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("2_xsflo")
+
+[node name="Bluesocket" type="Button" parent="Wiring_Puzzle/Left socket" index="1" unique_id=547371299]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("2_xsflo")
+
+[node name="Greensocket" type="Button" parent="Wiring_Puzzle/Left socket" index="2" unique_id=21776993]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("2_xsflo")
+
+[node name="Yellowsocket" type="Button" parent="Wiring_Puzzle/Left socket" index="3" unique_id=1621693202]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("2_xsflo")
+
+[node name="Right socket" type="Control" parent="Wiring_Puzzle" index="3" unique_id=2033730329]
+layout_mode = 1
+anchor_left = 0.77300006
+anchor_right = 1.0
+anchor_bottom = 0.98600006
+offset_left = -0.08105469
+offset_right = -1.0
+offset_bottom = 0.2239685
+
+[node name="Redsocket" type="Button" parent="Wiring_Puzzle/Right socket" index="0" unique_id=106744760]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("2_xsflo")
+
+[node name="Bluesocket" type="Button" parent="Wiring_Puzzle/Right socket" index="1" unique_id=1874922437]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("2_xsflo")
+
+[node name="Greensocket" type="Button" parent="Wiring_Puzzle/Right socket" index="2" unique_id=339210465]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("2_xsflo")
+
+[node name="Yellowsocket" type="Button" parent="Wiring_Puzzle/Right socket" index="3" unique_id=1140143151]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("2_xsflo")
+
+[node name="Wires" type="Control" parent="Wiring_Puzzle" index="4" unique_id=624794945]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Redwire" type="Line2D" parent="Wiring_Puzzle/Wires" index="0" unique_id=1068921541]
+
+[node name="Bluewire" type="Line2D" parent="Wiring_Puzzle/Wires" index="1" unique_id=1501491463]
+
+[node name="Greenwire" type="Line2D" parent="Wiring_Puzzle/Wires" index="2" unique_id=1043940795]
+
+[node name="Yellowwire" type="Line2D" parent="Wiring_Puzzle/Wires" index="3" unique_id=1892646962]
+
+[node name="Completed label" type="Label" parent="Wiring_Puzzle" index="5" unique_id=1230056435]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
