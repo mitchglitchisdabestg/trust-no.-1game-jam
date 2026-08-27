@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c8yijckfutcyv" path="res://Scenes/world/box.tscn" id="2_6m72w"]
 [ext_resource type="Script" uid="uid://dcj47mwsibkwy" path="res://Scripts/basic_interact_script.gd" id="3_qgrml"]
 [ext_resource type="PackedScene" uid="uid://5tsawn866bsp" path="res://Scenes/pause_menu/pause_menu.tscn" id="4_fbtbp"]
+[ext_resource type="PackedScene" uid="uid://dohrkyj7bsimk" path="res://Scenes/Puzzles/base_puzzle_terminal.tscn" id="4_o0828"]
 [ext_resource type="Texture2D" uid="uid://dniv0e0ahvls2" path="res://Assets/Textures/Screenshot 2026-08-27 175152.png" id="6_nhnx1"]
 [ext_resource type="Texture2D" uid="uid://lh51yjnn3iqk" path="res://Assets/Textures/Screenshot 2026-08-27 183541.png" id="7_x8qfb"]
 
@@ -93,10 +94,13 @@ mesh = SubResource("BoxMesh_qgrml")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D" unique_id=747092600]
 shape = SubResource("ConcavePolygonShape3D_nhnx1")
 
+[node name="Terminal" parent="Level" unique_id=934970872 instance=ExtResource("4_o0828")]
+transform = Transform3D(0.56033546, 0, -0.8282657, 0, 1, 0, 0.8282657, 0, 0.56033546, 23.372978, 0.496067, -1.3245327)
+
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
 [node name="Player" parent="." unique_id=423765952 instance=ExtResource("2_1fp7r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.756651, 1.1502094, 3.948113)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.756651, 1.1502094, 3.948113)
 
 [node name="Pause Menu" parent="." unique_id=1368006392 instance=ExtResource("4_fbtbp")]
 
