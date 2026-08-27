@@ -18,9 +18,10 @@ sky_material = SubResource("ProceduralSkyMaterial_sl2e5")
 
 [sub_resource type="Environment" id="Environment_6m72w"]
 background_mode = 2
+background_energy_multiplier = 0.3
 sky = SubResource("Sky_1fp7r")
-tonemap_mode = 2
 glow_enabled = true
+glow_bloom = 0.17
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrml"]
 albedo_color = Color(1, 1, 0.2, 1)
@@ -51,6 +52,8 @@ uv2_scale = Vector3(0.4, 0.4, 0.4)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1332801193]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0, 0, 0, 1)
+light_energy = 15.15
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1581340225]
@@ -227,3 +230,15 @@ transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 
 use_collision = true
 size = Vector3(12.527718, 22.804806, 0.27563477)
 material = SubResource("StandardMaterial3D_o0828")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Prototyping" unique_id=1586749847]
+transform = Transform3D(1, 0, 0, 0, 0.045764033, 0.9989523, 0, -0.9989523, 0.045764033, 16.633987, 2.574247, 5.974209)
+light_energy = 3.04
+shadow_enabled = true
+spot_range = 3.789
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Prototyping" unique_id=1152879093]
+transform = Transform3D(1, 0, 0, 0, 0.045764033, 0.9989523, 0, -0.9989523, 0.045764033, 29.99573, 2.574247, 2.4392715)
+light_energy = 3.04
+light_negative = true
+spot_range = 3.789
