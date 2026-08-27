@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cl52hsomas772"]
 
+[ext_resource type="PackedScene" uid="uid://war8l4yhhhch" path="res://Scenes/world/lighting.tscn" id="1_5jrsn"]
 [ext_resource type="PackedScene" uid="uid://ctk6mjhs3nnbd" path="res://Scenes/world/floor.tscn" id="1_sl2e5"]
 [ext_resource type="PackedScene" uid="uid://b0ipyxcr6w3e8" path="res://Scenes/player/player.tscn" id="2_1fp7r"]
 [ext_resource type="PackedScene" uid="uid://c8yijckfutcyv" path="res://Scenes/world/box.tscn" id="2_6m72w"]
@@ -8,20 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dohrkyj7bsimk" path="res://Scenes/Puzzles/base_puzzle_terminal.tscn" id="4_o0828"]
 [ext_resource type="Texture2D" uid="uid://dniv0e0ahvls2" path="res://Assets/Textures/Screenshot 2026-08-27 175152.png" id="6_nhnx1"]
 [ext_resource type="Texture2D" uid="uid://lh51yjnn3iqk" path="res://Assets/Textures/Screenshot 2026-08-27 183541.png" id="7_x8qfb"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sl2e5"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_1fp7r"]
-sky_material = SubResource("ProceduralSkyMaterial_sl2e5")
-
-[sub_resource type="Environment" id="Environment_6m72w"]
-background_mode = 2
-background_energy_multiplier = 0.3
-sky = SubResource("Sky_1fp7r")
-glow_enabled = true
-glow_bloom = 0.17
+[ext_resource type="PackedScene" uid="uid://dlnmpj1xqimgv" path="res://Scenes/base_door/base_door.tscn" id="9_12diy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrml"]
 albedo_color = Color(1, 1, 0.2, 1)
@@ -50,14 +38,7 @@ uv2_scale = Vector3(0.4, 0.4, 0.4)
 
 [node name="World" type="Node3D" unique_id=1014660479]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1332801193]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-light_color = Color(0, 0, 0, 1)
-light_energy = 15.15
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1581340225]
-environment = SubResource("Environment_6m72w")
+[node name="Lighting" parent="." unique_id=298486255 instance=ExtResource("1_5jrsn")]
 
 [node name="Level" type="Node3D" parent="." unique_id=1191396916]
 
@@ -242,3 +223,6 @@ transform = Transform3D(1, 0, 0, 0, 0.045764033, 0.9989523, 0, -0.9989523, 0.045
 light_energy = 3.04
 light_negative = true
 spot_range = 3.789
+
+[node name="BaseDoor" parent="." unique_id=522574859 instance=ExtResource("9_12diy")]
+transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 1.6, 0, -1.6, 0, -6.9938224e-08, 24.929708, 1.3676319, 4.0483756)
