@@ -64,3 +64,11 @@ mesh = SubResource("BoxMesh_bnehh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1396009432]
 shape = SubResource("ConcavePolygonShape3D_7is5v")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=226286945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17984056, 1.0180546)
+light_indirect_energy = 0.858
+shadow_enabled = true
+spot_range = 0.855
+spot_attenuation = 1.75
+spot_angle = 36.58
