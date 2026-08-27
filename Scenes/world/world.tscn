@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dcj47mwsibkwy" path="res://Scripts/basic_interact_script.gd" id="3_qgrml"]
 [ext_resource type="PackedScene" uid="uid://5tsawn866bsp" path="res://Scenes/pause_menu/pause_menu.tscn" id="4_fbtbp"]
 [ext_resource type="Texture2D" uid="uid://dniv0e0ahvls2" path="res://Assets/Textures/Screenshot 2026-08-27 175152.png" id="6_nhnx1"]
+[ext_resource type="Texture2D" uid="uid://lh51yjnn3iqk" path="res://Assets/Textures/Screenshot 2026-08-27 183541.png" id="7_x8qfb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sl2e5"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -33,7 +34,17 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 diffuse_mode = 3
 albedo_color = Color(0.8901961, 0.9764706, 0.98039216, 1)
 albedo_texture = ExtResource("6_nhnx1")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
 uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o0828"]
+albedo_color = Color(0.78352344, 0.7835234, 0.7835234, 1)
+albedo_texture = ExtResource("7_x8qfb")
+uv1_scale = Vector3(0.3, 0.3, 0.3)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_scale = Vector3(0.4, 0.4, 0.4)
 
 [node name="World" type="Node3D" unique_id=1014660479]
 
@@ -47,7 +58,7 @@ environment = SubResource("Environment_6m72w")
 [node name="Level" type="Node3D" parent="." unique_id=1191396916]
 
 [node name="Floor" parent="Level" unique_id=477003862 instance=ExtResource("1_sl2e5")]
-transform = Transform3D(18.01148, 0, 0, 0, 5, 0, 0, 0, 16.642904, 0.041467667, 9.536743e-07, -0.016456604)
+transform = Transform3D(18.01148, 0, 0, 0, 5, 0, 0, 0, 16.642904, 0.09275055, -0.06924391, -0.0822463)
 
 [node name="Box" parent="Level" unique_id=646383262 instance=ExtResource("2_6m72w")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.119946, -1.3180285, -3.4849281)
@@ -189,4 +200,4 @@ size = Vector3(12.527718, 22.804806, 0.27563477)
 transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, 31.310234, -0.111258864, 3.6724463)
 use_collision = true
 size = Vector3(12.527718, 22.804806, 0.27563477)
-material = SubResource("StandardMaterial3D_x8qfb")
+material = SubResource("StandardMaterial3D_o0828")
