@@ -547,3 +547,25 @@ transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2
 use_collision = true
 size = Vector3(3.533102, 24.426277, 0.27563477)
 material = ExtResource("10_pbr1s")
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="Map" unique_id=249185708]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -21.550789, 3.9655745, 30.694775)
+light_energy = 3.973
+light_size = 0.045
+shadow_enabled = true
+spot_range = 5.639
+spot_angle = 86.41
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Map" unique_id=1486211940]
+transform = Transform3D(1, 0, 0, 0, 0.045764033, 0.9989523, 0, -0.9989523, 0.045764033, -27.02916, 3.440144, 30.69875)
+light_energy = 3.04
+light_negative = true
+spot_range = 4.061
+spot_angle = 117.14
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="Map" unique_id=2144932942]
+transform = Transform3D(1, 0, 0, 0, 0.045764033, 0.9989523, 0, -0.9989523, 0.045764033, -31.991646, 3.5018163, 30.69875)
+light_energy = 3.04
+light_negative = true
+spot_range = 5.359
+spot_angle = 117.14
