@@ -1,0 +1,49 @@
+[33m7b6ce2f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m just moved something (nothing important)
+[33maa26e0d[m Merge branch 'main' of https://github.com/mitchglitchisdabestg/trust-no.-1game-jam
+[33md903a04[m[33m ([m[1;36mHEAD[m[33m)[m Wiring Mini-game made
+[33m2159299[m added 2 lights to the map idk
+[33mca5ca40[m Did some work on the game map
+[33mf1b03af[m Attemped to do some scripting for the wire puzzle ,however got fed up with it and decided to take a break from it and come back later
+[33mdba56ce[m[33m ([m[1;35mrefs/stash[m[33m)[m On main: !!GitHub_Desktop<main>
+[33me6ed964[m index on main: 879b89a Built door, made lighting scene
+[33mb4ec9d5[m Remote Door Opening Logic
+[33m879b89a[m Built door, made lighting scene
+[33me137022[m started working on the wiring puzzle .tscn
+[33m027b0e6[m added a light for the terminalbase scene cause why not (makes the screen iluminated somewhat)
+[33m174a4a5[m changed some lightin settings
+[33mcd2bcb9[m Updated Terminal to Inherit from StaticBody
+[33m25f6714[m Added script for terminal and updated visuals
+[33m612ba74[m added a scene for the puzzles terminal with a csg placeholder
+[33m1fa0cf3[m Merge branch 'main' of https://github.com/mitchglitchisdabestg/trust-no.-1game-jam
+[33m093da7d[m added collision to the csg boxes that im using to make the map
+[33md44c62f[m Fixed the texture materials by changing the triplanar scale, to make the textures look nicer
+[33m71daa80[m Removed the print statement from Mainmenu.gd
+[33m671ce63[m Re-uploaded fix to pause menu bug
+[33mb3f6d36[m added a texture to the prototyped map (W.I.P.
+[33m26464e3[m started using CSG boxes to prototype the map layout
+[33md579103[m Did some more work on the puzzle screen groundwork (made the tscn fit the whole screen
+[33m68ccb2e[m Did some more work on the puzzle screen groundwork
+[33m6d7a5f9[m edited the puzzle groundwork
+[33mec08615[m Added a README
+[33mdee7e2f[m Started work on the puzzle groundwork so we can reuse it
+[33md5a5b0c[m Merge branch 'main' of https://github.com/mitchglitchisdabestg/trust-no.-1game-jam
+[33m398b836[m Saved the code for the main menu in an atempt to fix the bug where the settings and quit button are both entered but failed :(  also had to merge
+[33m550983b[m Saved the code for the main menu in an atempt to fix the bug where the settings and quit button are both entered but failed :(
+[33m867c357[m A couple more tweaks
+[33mb63df66[m Merge remote changes
+[33m59385c7[m fixed the main menu screen quit button layout in relation to the other buttons
+[33m6911f02[m Bug fixes to interact system
+[33m3270945[m just saving
+[33m9f50107[m Pause Menu, Interaction System
+[33m903f35a[m tested jacks github setup
+[33md047eda[m Added a quit button to Ruslan's main menu
+[33m996fdc7[m Merge branch 'main' of https://github.com/mitchglitchisdabestg/trust-no.-1game-jam
+[33m79b1541[m finished menu screen
+[33m38c4352[m helping will test git lfs and github
+[33me3baf53[m Added the pause menu because i forgot lol
+[33m49a1ad3[m Added Matthew's charcter controller
+[33ma1e0d0e[m idk
+[33m5624868[m added test .tscn for the godot with u plugin
+[33m3e5b869[m Fix GodotWithU class resolution
+[33md5c8ac3[m Initial project setup
+[33m9baee23[m Initial commit
