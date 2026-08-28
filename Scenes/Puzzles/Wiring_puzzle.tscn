@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c77m8s1n603w7"]
 
 [ext_resource type="PackedScene" uid="uid://dw3fwfrkrekw7" path="res://Scenes/Puzzles/puzzle_groundwork.tscn" id="1_bnh4e"]
+[ext_resource type="Script" uid="uid://d3cekedri12wm" path="res://Scenes/Puzzles/wiring_puzzle.gd" id="2_mt240"]
 [ext_resource type="Script" uid="uid://b15b841rto01i" path="res://Scenes/Puzzles/socket.gd" id="2_xsflo"]
 
 [node name="PuzzleGroundwork" unique_id=216729549 instance=ExtResource("1_bnh4e")]
@@ -15,6 +16,7 @@ offset_left = -0.4480133
 offset_top = 0.10399628
 offset_right = 0.51989746
 offset_bottom = 0.29595947
+script = ExtResource("2_mt240")
 
 [node name="Panel" type="Panel" parent="Wiring_Puzzle" index="0" unique_id=141567993]
 layout_mode = 1
@@ -29,38 +31,38 @@ layout_mode = 0
 offset_right = 796.0
 offset_bottom = 35.0
 
-[node name="Left socket" type="Control" parent="Wiring_Puzzle" index="2" unique_id=22035847]
+[node name="Leftsocket" type="Control" parent="Wiring_Puzzle" index="2" unique_id=22035847]
 layout_mode = 1
 anchor_right = 0.21000001
 anchor_bottom = 0.98800004
 offset_right = -0.37001038
 offset_bottom = 0.19198608
 
-[node name="Redsocket" type="Button" parent="Wiring_Puzzle/Left socket" index="0" unique_id=545573567]
+[node name="Redsocket" type="Button" parent="Wiring_Puzzle/Leftsocket" index="0" unique_id=545573567]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("2_xsflo")
 
-[node name="Bluesocket" type="Button" parent="Wiring_Puzzle/Left socket" index="1" unique_id=547371299]
+[node name="Bluesocket" type="Button" parent="Wiring_Puzzle/Leftsocket" index="1" unique_id=547371299]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("2_xsflo")
 
-[node name="Greensocket" type="Button" parent="Wiring_Puzzle/Left socket" index="2" unique_id=21776993]
+[node name="Greensocket" type="Button" parent="Wiring_Puzzle/Leftsocket" index="2" unique_id=21776993]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("2_xsflo")
 
-[node name="Yellowsocket" type="Button" parent="Wiring_Puzzle/Left socket" index="3" unique_id=1621693202]
+[node name="Yellowsocket" type="Button" parent="Wiring_Puzzle/Leftsocket" index="3" unique_id=1621693202]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("2_xsflo")
 
-[node name="Right socket" type="Control" parent="Wiring_Puzzle" index="3" unique_id=2033730329]
+[node name="Rightsocket" type="Control" parent="Wiring_Puzzle" index="3" unique_id=2033730329]
 layout_mode = 1
 anchor_left = 0.77300006
 anchor_right = 1.0
@@ -69,25 +71,25 @@ offset_left = -0.08105469
 offset_right = -1.0
 offset_bottom = 0.2239685
 
-[node name="Redsocket" type="Button" parent="Wiring_Puzzle/Right socket" index="0" unique_id=106744760]
+[node name="Redsocket" type="Button" parent="Wiring_Puzzle/Rightsocket" index="0" unique_id=106744760]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("2_xsflo")
 
-[node name="Bluesocket" type="Button" parent="Wiring_Puzzle/Right socket" index="1" unique_id=1874922437]
+[node name="Bluesocket" type="Button" parent="Wiring_Puzzle/Rightsocket" index="1" unique_id=1874922437]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("2_xsflo")
 
-[node name="Greensocket" type="Button" parent="Wiring_Puzzle/Right socket" index="2" unique_id=339210465]
+[node name="Greensocket" type="Button" parent="Wiring_Puzzle/Rightsocket" index="2" unique_id=339210465]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("2_xsflo")
 
-[node name="Yellowsocket" type="Button" parent="Wiring_Puzzle/Right socket" index="3" unique_id=1140143151]
+[node name="Yellowsocket" type="Button" parent="Wiring_Puzzle/Rightsocket" index="3" unique_id=1140143151]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0

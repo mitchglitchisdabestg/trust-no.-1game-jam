@@ -1,13 +1,15 @@
+extends Button
 
-extends Control
+@export var socket_colour: String
+@export var socket_side: String
 
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+signal socket_pressed(socket)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func _ready():
+	pressed.connect(_on_pressed)
+
+
+func _on_pressed():
+	socket_pressed.emit(self)
