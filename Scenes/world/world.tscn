@@ -25,7 +25,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [node name="Level" type="Node3D" parent="." unique_id=1191396916]
 
 [node name="BaseDoor" parent="Level" unique_id=522574859 instance=ExtResource("9_12diy")]
-transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 1.6, 0, -1.6, 0, -6.9938224e-08, 24.929708, 1.3676319, 4.0483756)
+transform = Transform3D(-0.061169423, 0, 1.5988303, 0, 1.6, 0, -1.5988303, 0, -0.061169423, 24.929708, 1.3676319, 4.0483756)
 door_ID = 1111
 
 [node name="Floor" parent="Level" unique_id=477003862 instance=ExtResource("1_sl2e5")]
