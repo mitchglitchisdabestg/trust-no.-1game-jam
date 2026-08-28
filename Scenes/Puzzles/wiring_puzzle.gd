@@ -1,6 +1,6 @@
 extends Control
 
-@export var door_ID_to_open: int
+var door_ID_to_open: int = 1111
 
 var selected_socket: Socket = null
 var correct_wire: int = 0
@@ -18,7 +18,7 @@ const connections: int = 4
 
 func _ready() -> void:
 	reset_game()
-	
+	print(door_ID_to_open)
 	for socket: Socket in left_sockets:
 		socket.socket_pressed.connect(on_socket_pressed)
 	
