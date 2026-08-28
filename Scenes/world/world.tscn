@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c8yijckfutcyv" path="res://Scenes/world/box.tscn" id="2_6m72w"]
 [ext_resource type="Script" uid="uid://dcj47mwsibkwy" path="res://Scripts/basic_interact_script.gd" id="3_qgrml"]
 [ext_resource type="PackedScene" uid="uid://5tsawn866bsp" path="res://Scenes/pause_menu/pause_menu.tscn" id="4_fbtbp"]
-[ext_resource type="PackedScene" uid="uid://dohrkyj7bsimk" path="res://Scenes/Puzzles/base_puzzle_terminal.tscn" id="4_o0828"]
+[ext_resource type="PackedScene" uid="uid://lyebknc4s66c" path="res://Scenes/Puzzles/puzzle_terminal_1.tscn" id="5_12diy"]
 [ext_resource type="Texture2D" uid="uid://dniv0e0ahvls2" path="res://Assets/Textures/Screenshot 2026-08-27 175152.png" id="6_nhnx1"]
 [ext_resource type="Texture2D" uid="uid://lh51yjnn3iqk" path="res://Assets/Textures/Screenshot 2026-08-27 183541.png" id="7_x8qfb"]
 [ext_resource type="PackedScene" uid="uid://dlnmpj1xqimgv" path="res://Scenes/base_door/base_door.tscn" id="9_12diy"]
@@ -38,9 +38,11 @@ uv2_scale = Vector3(0.4, 0.4, 0.4)
 
 [node name="World" type="Node3D" unique_id=1014660479]
 
-[node name="Lighting" parent="." unique_id=298486255 instance=ExtResource("1_5jrsn")]
-
 [node name="Level" type="Node3D" parent="." unique_id=1191396916]
+
+[node name="BaseDoor" parent="Level" unique_id=522574859 instance=ExtResource("9_12diy")]
+transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 1.6, 0, -1.6, 0, -6.9938224e-08, 24.929708, 1.3676319, 4.0483756)
+door_ID = 1111
 
 [node name="Floor" parent="Level" unique_id=477003862 instance=ExtResource("1_sl2e5")]
 transform = Transform3D(18.01148, 0, 0, 0, 5, 0, 0, 0, 16.642904, 0.09275055, -0.06924391, -0.0822463)
@@ -78,8 +80,11 @@ mesh = SubResource("BoxMesh_qgrml")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D" unique_id=747092600]
 shape = SubResource("ConcavePolygonShape3D_nhnx1")
 
-[node name="Terminal" parent="Level" unique_id=934970872 instance=ExtResource("4_o0828")]
-transform = Transform3D(0.56033546, 0, -0.8282657, 0, 1, 0, 0.8282657, 0, 0.56033546, 23.372978, 0.496067, -1.3245327)
+[node name="puzzle_terminal_1" parent="Level" unique_id=1661541044 instance=ExtResource("5_12diy")]
+transform = Transform3D(0.7472648, 0, -0.66452634, 0, 1, 0, 0.66452634, 0, 0.7472648, 22.929424, 0.5097165, -0.92473066)
+door_ID_to_open = 1111
+
+[node name="Lighting" parent="Level" unique_id=298486255 instance=ExtResource("1_5jrsn")]
 
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
@@ -213,16 +218,17 @@ size = Vector3(12.527718, 22.804806, 0.27563477)
 material = SubResource("StandardMaterial3D_o0828")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Prototyping" unique_id=1586749847]
-transform = Transform3D(1, 0, 0, 0, 0.045764033, 0.9989523, 0, -0.9989523, 0.045764033, 16.633987, 2.574247, 5.974209)
+transform = Transform3D(1, 0, 0, 0, 0.045764033, 0.9989523, 0, -0.9989523, 0.045764033, 20.14019, 2.574247, 3.8777614)
+light_color = Color(0.6745098, 0.4745098, 0.5137255, 1)
 light_energy = 3.04
 shadow_enabled = true
-spot_range = 3.789
+spot_range = 6.641
+spot_attenuation = -0.19
+spot_angle = 88.57
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Prototyping" unique_id=1152879093]
 transform = Transform3D(1, 0, 0, 0, 0.045764033, 0.9989523, 0, -0.9989523, 0.045764033, 29.99573, 2.574247, 2.4392715)
 light_energy = 3.04
 light_negative = true
-spot_range = 3.789
-
-[node name="BaseDoor" parent="." unique_id=522574859 instance=ExtResource("9_12diy")]
-transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 1.6, 0, -1.6, 0, -6.9938224e-08, 24.929708, 1.3676319, 4.0483756)
+spot_range = 7.578
+spot_angle = 117.14

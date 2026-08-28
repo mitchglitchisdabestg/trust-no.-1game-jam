@@ -15,6 +15,10 @@ run/main_scene="uid://bheumvpgw1mxt"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+SignalBus="*uid://m72cy8qhe4fj"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_with_u/plugin.cfg")
