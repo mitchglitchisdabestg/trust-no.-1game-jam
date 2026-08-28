@@ -13,6 +13,7 @@
 [ext_resource type="Material" uid="uid://cp5b1xmm0j7sn" path="res://Assets/Textures/Basement floor.tres" id="10_pbr1s"]
 [ext_resource type="Material" uid="uid://dhs38u3a3mduo" path="res://Assets/Textures/basementroff.tres" id="12_77064"]
 [ext_resource type="Material" uid="uid://bij4urn1fraol" path="res://Assets/Textures/Basementwall.tres" id="12_tspqu"]
+[ext_resource type="Material" uid="uid://bdmj7wqg68og2" path="res://Assets/Textures/Receptionfloor.tres" id="14_8nkgs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrml"]
 albedo_color = Color(1, 1, 0.2, 1)
@@ -23,6 +24,11 @@ material = SubResource("StandardMaterial3D_qgrml")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nhnx1"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_futi2"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(1, 1, 1, 0)
+
 [node name="World" type="Node3D" unique_id=1014660479]
 
 [node name="Level" type="Node3D" parent="." unique_id=1191396916]
@@ -32,7 +38,7 @@ transform = Transform3D(-0.061169423, 0, 1.5988303, 0, 1.6, 0, -1.5988303, 0, -0
 door_ID = 1111
 
 [node name="Floor" parent="Level" unique_id=477003862 instance=ExtResource("1_sl2e5")]
-transform = Transform3D(22.60258, 0, 0, 0, 5, 0, 0, 0, 29.87577, -18.081198, -0.007677555, 24.010815)
+transform = Transform3D(29.355177, 0, 0, 0, 5, 0, 0, 0, 29.87577, -68.80465, -0.007677555, 24.010815)
 
 [node name="Box" parent="Level" unique_id=646383262 instance=ExtResource("2_6m72w")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.119946, -1.3180285, -3.4849281)
@@ -568,7 +574,6 @@ size = Vector3(13.4730625, 5.795349, 0.47729492)
 
 [node name="CSGBox3D53" type="CSGBox3D" parent="Map" unique_id=376182488]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -44.941757, -0.0894439, 30.693092)
-use_collision = true
 size = Vector3(6.220105, 10.778352, 0.27563477)
 material = ExtResource("10_pbr1s")
 
@@ -608,7 +613,6 @@ material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D55" type="CSGBox3D" parent="Map" unique_id=450719354]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -43.46454, 0.26788566, 30.633854)
-use_collision = true
 size = Vector3(3.2200894, 1.3636799, 0.32919312)
 material = ExtResource("10_pbr1s")
 
@@ -622,67 +626,56 @@ spot_angle = 86.41
 
 [node name="CSGBox3D56" type="CSGBox3D" parent="Map" unique_id=1455213676]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -44.37822, 0.48610443, 30.636757)
-use_collision = true
 size = Vector3(3.2200894, 1.9870157, 0.51185226)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D57" type="CSGBox3D" parent="Map" unique_id=479316959]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -45.472908, 0.8724776, 30.636757)
-use_collision = true
 size = Vector3(3.2200894, 1.9870157, 0.51185226)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D58" type="CSGBox3D" parent="Map" unique_id=1530157975]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -46.47731, 1.450377, 30.63554)
-use_collision = true
 size = Vector3(3.2200894, 1.7259297, 0.6283293)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D59" type="CSGBox3D" parent="Map" unique_id=594902534]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -47.460167, 2.020163, 30.636757)
-use_collision = true
 size = Vector3(3.2200894, 1.9870157, 0.51185226)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D60" type="CSGBox3D" parent="Map" unique_id=2018687444]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -48.554855, 2.406536, 30.636757)
-use_collision = true
 size = Vector3(3.2200894, 1.9870157, 0.51185226)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D61" type="CSGBox3D" parent="Map" unique_id=1322350555]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -49.559258, 2.9308689, 30.63554)
-use_collision = true
 size = Vector3(3.2200894, 1.7259297, 0.5211959)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D62" type="CSGBox3D" parent="Map" unique_id=1837469387]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -50.489502, 3.414545, 30.636757)
-use_collision = true
 size = Vector3(3.2200894, 1.9870157, 0.410223)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D63" type="CSGBox3D" parent="Map" unique_id=98033162]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -51.58419, 3.8202052, 30.636757)
-use_collision = true
 size = Vector3(3.2200894, 1.9870157, 0.44879723)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D64" type="CSGBox3D" parent="Map" unique_id=652162569]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -52.31494, 4.3175616, 30.63554)
-use_collision = true
 size = Vector3(3.2200894, 1.7259297, 0.49104452)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D65" type="CSGBox3D" parent="Map" unique_id=1736722357]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -53.24787, 4.8372145, 30.636757)
-use_collision = true
 size = Vector3(3.2200894, 1.9870157, 0.51185226)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D66" type="CSGBox3D" parent="Map" unique_id=424402186]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -54.224297, 5.3857913, 30.636757)
-use_collision = true
 size = Vector3(3.2200894, 1.9870157, 0.51185226)
 material = ExtResource("10_pbr1s")
 
@@ -693,14 +686,14 @@ size = Vector3(3.2200894, 1.7259297, 0.6283293)
 material = ExtResource("10_pbr1s")
 
 [node name="CSGBox3D68" type="CSGBox3D" parent="Map" unique_id=2112813707]
-transform = Transform3D(-1.0000001, 0, -0.000104665756, 0, 0.71393794, 0, 0.000104665756, 0, -1.0000001, -40.555847, 2.0177524, 29.002068)
+transform = Transform3D(-1.0000001, 0, -0.000104665756, 0, 0.71393794, 0, 0.000104665756, 0, -1.0000001, -40.555847, 3.0552588, 29.002068)
 use_collision = true
-size = Vector3(13.549074, 5.7127686, 0.47729492)
+size = Vector3(13.549074, 8.619202, 0.47729492)
 
 [node name="CSGBox3D69" type="CSGBox3D" parent="Map" unique_id=548722897]
-transform = Transform3D(-1.0000001, 0, -0.000104665756, 0, 0.71393794, 0, 0.000104665756, 0, -1.0000001, -40.336334, 2.0846956, 32.44339)
+transform = Transform3D(-1.0000001, 0, -0.000104665756, 0, 0.71393794, 0, 0.000104665756, 0, -1.0000001, -40.336334, 3.0293322, 32.44339)
 use_collision = true
-size = Vector3(13.4730625, 5.795349, 0.47729492)
+size = Vector3(13.4730625, 8.44162, 0.47729492)
 
 [node name="Roof4" type="CSGBox3D" parent="Map" unique_id=34991792]
 transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -37.808258, 4.067539, 30.636105)
@@ -726,5 +719,139 @@ light_energy = 3.04
 light_negative = true
 spot_range = 5.359
 spot_angle = 117.14
+
+[node name="BaseDoor2" parent="Map" unique_id=91568385 instance=ExtResource("9_12diy")]
+transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 2.0214696, 0, -1.6, 0, -6.9938224e-08, -151.76358, 8.115067, 43.81)
+door_ID = 1111
+
+[node name="puzzle_terminal_2" parent="Map" unique_id=703107241 instance=ExtResource("5_12diy")]
+transform = Transform3D(-0.6877086, 0, 0.7259868, 0, 1, 0, -0.7259868, 0, -0.6877086, -150.0411, 6.832308, 48.358543)
+door_ID_to_open = 1111
+puzzle_scene = ExtResource("7_pbr1s")
+
+[node name="Roof7" type="CSGBox3D" parent="Map" unique_id=1098597911]
+transform = Transform3D(-4.371139e-08, -0.5586771, -4.3711378e-08, 0, -2.4420551e-08, 0.99999976, -1, 2.4420551e-08, 1.910685e-15, -62.277924, 10.346619, 30.552555)
+use_collision = true
+flip_faces = true
+size = Vector3(12.527718, 22.804806, 0.27563477)
+material = ExtResource("12_77064")
+
+[node name="CSGBox3D25" type="CSGBox3D" parent="Map" unique_id=1799513423]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -65.47934, 8.377258, 24.252842)
+use_collision = true
+size = Vector3(6.715088, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="Map" unique_id=350416500]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -65.06256, 8.353546, 36.734592)
+use_collision = true
+size = Vector3(6.6295166, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D44" type="CSGBox3D" parent="Map" unique_id=356078604]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -68.6051, 8.328873, 34.3642)
+use_collision = true
+size = Vector3(5.0991364, 7.301819, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D49" type="CSGBox3D" parent="Map" unique_id=1604181194]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, -55.52334, 8.275314, 26.738186)
+use_collision = true
+size = Vector3(4.641377, 6.103943, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D70" type="CSGBox3D" parent="Map" unique_id=880939453]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, -55.53057, 8.336417, 34.509663)
+use_collision = true
+size = Vector3(4.808092, 5.905792, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D71" type="CSGBox3D" parent="Map" unique_id=1625985254]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, -55.51748, 10.228035, 30.71725)
+use_collision = true
+size = Vector3(3.437107, 0.6518574, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D72" type="CSGBox3D" parent="Map" unique_id=1130164884]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -58.966934, 8.370722, 24.252842)
+use_collision = true
+size = Vector3(7.2525635, 5.578369, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D73" type="CSGBox3D" parent="Map" unique_id=1045418552]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -58.86168, 8.353546, 36.734592)
+use_collision = true
+size = Vector3(6.715088, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D74" type="CSGBox3D" parent="Map" unique_id=1858691158]
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -62.07512, 6.2113333, 30.552555)
+use_collision = true
+size = Vector3(12.527718, 22.804806, 0.27563477)
+material = ExtResource("14_8nkgs")
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="Map" unique_id=1283906768]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -61.45842, 9.989309, 30.694775)
+light_energy = 3.973
+light_size = 0.045
+shadow_enabled = true
+spot_range = 39.271
+spot_angle = 86.41
+
+[node name="CSGBox3D78" type="CSGBox3D" parent="Map" unique_id=1209380256]
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -54.348938, 6.2113333, 40.803894)
+use_collision = true
+size = Vector3(2.2437367, 4.914092, 0.27563477)
+material = ExtResource("10_pbr1s")
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="Map" unique_id=1607413645]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -54.406776, 9.371189, 30.694775)
+light_energy = 3.973
+light_size = 0.045
+shadow_enabled = true
+spot_range = 39.271
+spot_angle = 86.41
+
+[node name="CSGBox3D84" type="CSGBox3D" parent="Map" unique_id=1825073776]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -68.55472, 8.33577, 27.081356)
+use_collision = true
+size = Vector3(5.327715, 7.3265076, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D85" type="CSGBox3D" parent="Map" unique_id=737645516]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -68.57143, 10.032175, 30.725174)
+use_collision = true
+size = Vector3(2.2214594, 1.2195473, 0.43215942)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D89" type="CSGBox3D" parent="Map" unique_id=1147204730]
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -69.71173, 6.2113333, 30.863445)
+use_collision = true
+size = Vector3(2.2437367, 4.914092, 0.27563477)
+material = ExtResource("10_pbr1s")
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="Map" unique_id=2002940630]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -67.438156, 9.371189, 30.694775)
+light_energy = 3.973
+light_size = 0.045
+shadow_enabled = true
+spot_range = 39.271
+spot_angle = 86.41
+
+[node name="CSGBox3D75" type="CSGBox3D" parent="Map" unique_id=696653637]
+transform = Transform3D(-1.0000001, 0, -0.000104665756, 0, 0.71393794, 0, 0.000104665756, 0, -1.0000001, -51.399734, 5.154576, 29.001793)
+use_collision = true
+size = Vector3(8.293214, 14.500153, 0.47729492)
+
+[node name="CSGBox3D76" type="CSGBox3D" parent="Map" unique_id=1164482934]
+transform = Transform3D(-1.0000001, 0, -0.000104665756, 0, 0.71393794, 0, 0.000104665756, 0, -1.0000001, -51.316544, 5.154576, 32.414074)
+use_collision = true
+size = Vector3(8.459595, 14.500153, 0.47729492)
+
+[node name="Roof8" type="CSGBox3D" parent="Map" unique_id=224231479]
+transform = Transform3D(-0.014221767, -0.5057755, 0.42451543, 0.0066680177, 0.23713784, 0.9054206, -0.9998765, 0.008775341, 6.483861e-10, -48.029877, 2.947011, 30.619938)
+use_collision = true
+size = Vector3(3.8401723, 27.117468, 0.27563477)
+material = SubResource("StandardMaterial3D_futi2")
 
 [node name="PuzzleUI" type="CanvasLayer" parent="." unique_id=848183622]

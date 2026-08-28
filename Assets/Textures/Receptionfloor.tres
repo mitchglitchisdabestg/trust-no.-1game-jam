@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bdmj7wqg68og2"]
+
+[ext_resource type="Texture2D" uid="uid://d313o5xkfbkj5" path="res://Assets/Textures/Screenshot 2026-08-29 114406.png" id="1_vy8kr"]
+
+[resource]
+albedo_texture = ExtResource("1_vy8kr")
+metallic = 1.0
+metallic_specular = 0.41
+emission_enabled = true
+emission = Color(0.9607843, 0.98039216, 0.98039216, 1)
+emission_energy_multiplier = 0.1
+refraction_enabled = true
+refraction_scale = -0.19
+uv1_scale = Vector3(0.3, 0.3, 0.3)
+uv1_triplanar = true
+uv1_world_triplanar = true
