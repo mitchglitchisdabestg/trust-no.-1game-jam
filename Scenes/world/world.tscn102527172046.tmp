@@ -67,18 +67,18 @@ shape = SubResource("ConcavePolygonShape3D_nhnx1")
 
 [node name="puzzle_terminal_1" parent="Level" unique_id=1661541044 instance=ExtResource("5_12diy")]
 transform = Transform3D(0.7472648, 0, -0.66452634, 0, 1, 0, 0.66452634, 0, 0.7472648, 22.929424, 0.5097165, -0.92473066)
-door_ID_to_open = 1111
+door_ID_to_open = null
 puzzle_scene = null
 
 [node name="Lighting" parent="Level" unique_id=298486255 instance=ExtResource("1_5jrsn")]
 
 [node name="BaseDoor2" parent="Level" unique_id=1235796359 instance=ExtResource("9_12diy")]
 transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 2.0214696, 0, -1.6, 0, -6.9938224e-08, -90.305176, 1.792475, 43.81)
-door_ID = 1111
+door_ID = 1112
 
 [node name="puzzle_terminal_2" parent="Level" unique_id=263274929 instance=ExtResource("5_12diy")]
 transform = Transform3D(-0.6877086, 0, 0.7259868, 0, 1, 0, -0.7259868, 0, -0.6877086, -88.58269, 0.5097165, 48.358543)
-door_ID_to_open = 1111
+door_ID_to_open = 1112
 puzzle_scene = ExtResource("7_pbr1s")
 
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]

@@ -1,4 +1,5 @@
-class_name Terminal extends Node3D
+class_name Terminal 
+extends Node3D
 
 @export var label: Label3D
 #@export var game
@@ -17,3 +18,4 @@ func hide_prompt () -> void:
 
 func play_game () -> void:
 	print("Opened Game")
+	

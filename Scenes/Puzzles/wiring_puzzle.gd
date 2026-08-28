@@ -1,5 +1,7 @@
 extends Control
 
+@export var door_ID_to_open: int
+
 var selected_socket: Socket = null
 var correct_wire: int = 0
 const connections: int = 4
@@ -51,3 +53,7 @@ func on_socket_pressed(socket_pressed: Socket) -> void:
 
 func on_win() -> void:
 	print("success")
+
+	get_parent().visible = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	SignalBus.emit_open_door(door_ID_to_open)
