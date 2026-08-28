@@ -11,6 +11,8 @@
 [ext_resource type="Material" uid="uid://doxclr7t2sbfm" path="res://Assets/Textures/Officecarpetfloor.tres" id="9_5jrsn"]
 [ext_resource type="PackedScene" uid="uid://dlnmpj1xqimgv" path="res://Scenes/base_door/base_door.tscn" id="9_12diy"]
 [ext_resource type="Material" uid="uid://cp5b1xmm0j7sn" path="res://Assets/Textures/Basement floor.tres" id="10_pbr1s"]
+[ext_resource type="Material" uid="uid://dhs38u3a3mduo" path="res://Assets/Textures/basementroff.tres" id="12_77064"]
+[ext_resource type="Material" uid="uid://bij4urn1fraol" path="res://Assets/Textures/Basementwall.tres" id="12_tspqu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrml"]
 albedo_color = Color(1, 1, 0.2, 1)
@@ -285,10 +287,11 @@ use_collision = true
 size = Vector3(6.715088, 5.5600586, 0.47729492)
 
 [node name="Roof" type="CSGBox3D" parent="Map" unique_id=152187351]
-transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -0.8195114, 4.024027, 30.552555)
-visible = false
+transform = Transform3D(-4.371139e-08, -0.5586771, -4.3711378e-08, 0, -2.4420551e-08, 0.99999976, -1, 2.4420551e-08, 1.910685e-15, -0.8195114, 4.024027, 30.552555)
 use_collision = true
+flip_faces = true
 size = Vector3(12.527718, 22.804806, 0.27563477)
+material = ExtResource("12_77064")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Map" unique_id=366358593]
 transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, 18.58522, -0.111258864, 61.630894)
@@ -348,9 +351,9 @@ size = Vector3(6.715088, 5.5600586, 0.47729492)
 
 [node name="Roof2" type="CSGBox3D" parent="Map" unique_id=1237411553]
 transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -13.826416, 4.067539, 30.552555)
-visible = false
 use_collision = true
 size = Vector3(12.527718, 22.804806, 0.27563477)
+material = ExtResource("12_77064")
 
 [node name="CSGBox3D22" type="CSGBox3D" parent="Map" unique_id=1356742399]
 transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, 31.310234, -0.111258864, 61.630894)
@@ -378,45 +381,52 @@ spot_angle = 117.14
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -4.020935, 2.054666, 24.252842)
 use_collision = true
 size = Vector3(6.715088, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D24" type="CSGBox3D" parent="Map" unique_id=569051700]
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -3.6041565, 2.0309536, 36.734592)
 use_collision = true
 size = Vector3(6.6295166, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D26" type="CSGBox3D" parent="Map" unique_id=813573042]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -7.1466904, 2.0062811, 34.3642)
 use_collision = true
 size = Vector3(5.0991364, 7.301819, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D28" type="CSGBox3D" parent="Map" unique_id=634637088]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, 5.935074, 2.0923595, 27.139744)
 use_collision = true
 size = Vector3(5.4444923, 5.7127686, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D29" type="CSGBox3D" parent="Map" unique_id=1758795594]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, 5.927841, 2.122754, 34.42265)
 use_collision = true
 size = Vector3(4.9821243, 5.600647, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D30" type="CSGBox3D" parent="Map" unique_id=1075254826]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, 5.940933, 3.905443, 30.71725)
 use_collision = true
 size = Vector3(3.437107, 0.6518574, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D31" type="CSGBox3D" parent="Map" unique_id=524099000]
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, 2.491478, 2.04813, 24.252842)
 use_collision = true
 size = Vector3(7.2525635, 5.578369, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D32" type="CSGBox3D" parent="Map" unique_id=34461343]
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, 2.5967407, 2.0309536, 36.734592)
 use_collision = true
 size = Vector3(6.715088, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="Roof3" type="CSGBox3D" parent="Map" unique_id=339446189]
-transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -0.6166992, 3, 30.552555)
-visible = false
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -22.97789, 8.247641, 30.552555)
 use_collision = true
 size = Vector3(12.527718, 22.804806, 0.27563477)
 
@@ -427,7 +437,7 @@ size = Vector3(12.527718, 22.804806, 0.27563477)
 material = ExtResource("10_pbr1s")
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="Map" unique_id=236099918]
-transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, 0, 3.0485978, 30.694775)
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, 0, 3.6667185, 30.694775)
 light_energy = 3.973
 light_size = 0.045
 shadow_enabled = true
@@ -436,18 +446,24 @@ spot_angle = 86.41
 
 [node name="CSGBox3D34" type="CSGBox3D" parent="Map" unique_id=1727508425]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, 8.676064, 2.0923595, 30.891014)
+operation = 1
 use_collision = true
 size = Vector3(3.1036768, 5.7127686, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D35" type="CSGBox3D" parent="Map" unique_id=706385759]
 transform = Transform3D(1.0000001, 0, -1.7484557e-07, 0, 0.7139379, 0, 1.7484557e-07, 0, 1.0000001, 7.2611923, 2.0923595, 32.188663)
+operation = 1
 use_collision = true
 size = Vector3(2.4468164, 5.7127686, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D36" type="CSGBox3D" parent="Map" unique_id=1846352653]
 transform = Transform3D(1.0000001, 0, -1.7484557e-07, 0, 0.7139379, 0, 1.7484557e-07, 0, 1.0000001, 7.2473297, 2.0923595, 29.615704)
+operation = 1
 use_collision = true
 size = Vector3(2.4195948, 5.7127686, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D37" type="CSGBox3D" parent="Map" unique_id=1107367712]
 transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, 7.109478, -0.11125882, 30.863445)
@@ -467,46 +483,55 @@ spot_angle = 86.41
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -17.052315, 2.054666, 24.252842)
 use_collision = true
 size = Vector3(6.715088, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D39" type="CSGBox3D" parent="Map" unique_id=1012422162]
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -16.635536, 2.0309536, 36.734592)
 use_collision = true
 size = Vector3(6.6295166, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D40" type="CSGBox3D" parent="Map" unique_id=129980648]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, -20.164345, 2.0923595, 26.98632)
 use_collision = true
 size = Vector3(5.1373444, 5.7127686, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D41" type="CSGBox3D" parent="Map" unique_id=363491544]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, -20.178062, 2.0923595, 34.3642)
 use_collision = true
 size = Vector3(5.0991364, 5.7127686, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D42" type="CSGBox3D" parent="Map" unique_id=1109497154]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7139379, 0, -1, 0, -4.371139e-08, -20.187386, 3.8298497, 30.71725)
 use_collision = true
 size = Vector3(3.437107, 0.8344765, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D43" type="CSGBox3D" parent="Map" unique_id=641910716]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -7.096306, 2.0131776, 27.081356)
 use_collision = true
 size = Vector3(5.327715, 7.3265076, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D45" type="CSGBox3D" parent="Map" unique_id=1183077364]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -7.0904465, 3.6741695, 30.71725)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -7.113014, 3.7095823, 30.725174)
 use_collision = true
-size = Vector3(3.437107, 1.3463211, 0.47729492)
+size = Vector3(2.2214594, 1.2195473, 0.43215942)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D46" type="CSGBox3D" parent="Map" unique_id=2027131765]
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -10.539894, 2.04813, 24.252842)
 use_collision = true
 size = Vector3(7.2525635, 5.578369, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D47" type="CSGBox3D" parent="Map" unique_id=2092594288]
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -10.434639, 2.0309536, 36.734592)
 use_collision = true
 size = Vector3(6.715088, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D48" type="CSGBox3D" parent="Map" unique_id=580317570]
 transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -13.648079, -0.111258864, 30.552555)
@@ -515,7 +540,7 @@ size = Vector3(12.527718, 22.804806, 0.27563477)
 material = ExtResource("10_pbr1s")
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="Map" unique_id=576419949]
-transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -13.03138, 3.0485978, 30.694775)
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -13.03138, 3.868927, 30.694775)
 light_energy = 3.973
 light_size = 0.045
 shadow_enabled = true
