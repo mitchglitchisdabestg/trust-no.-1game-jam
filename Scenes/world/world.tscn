@@ -1053,7 +1053,7 @@ size = Vector3(0.26057434, 5.8303223, 1.9871569)
 material = SubResource("StandardMaterial3D_gg7pb")
 
 [node name="SpotLight3D17" type="SpotLight3D" parent="Map" unique_id=1187422567]
-transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -59.885696, 10.153884, 43.859272)
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -59.885696, 9.939376, 43.859272)
 light_energy = 3.973
 light_size = 0.045
 shadow_enabled = true
@@ -1268,7 +1268,7 @@ size = Vector3(0.6160431, 5.5600586, 21.10558)
 material = ExtResource("17_w8o47")
 
 [node name="SpotLight3D19" type="SpotLight3D" parent="Map" unique_id=541052363]
-transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -65.256454, 10.153884, 43.859272)
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -65.256454, 9.984161, 43.859272)
 light_energy = 3.973
 light_size = 0.045
 shadow_enabled = true
