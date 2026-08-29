@@ -81,7 +81,6 @@ func on_rune_pressed(rune_pressed: Rune) -> void:
 		
 		selected_rune = null
 		runes_set_count -= 1
-		print(runes_set_count)
 	else:
 		#If we got this far, it's not a match :(
 		failed_reveal_timer.start()
