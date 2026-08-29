@@ -804,11 +804,12 @@ size = Vector3(0.26057434, 5.8303223, 1.9871569)
 material = SubResource("StandardMaterial3D_gg7pb")
 
 [node name="SpotLight3D17" type="SpotLight3D" parent="Map" unique_id=1187422567]
-transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -59.885696, 9.939376, 43.859272)
-light_energy = 3.973
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -59.885696, 9.750861, 43.859272)
+light_energy = 14.876
 light_size = 0.045
 shadow_enabled = true
-spot_range = 39.271
+spot_range = 9.698
+spot_attenuation = 0.47
 spot_angle = 86.41
 
 [node name="CSGBox3D86" type="CSGBox3D" parent="Map" unique_id=560270532]
@@ -1020,7 +1021,7 @@ material = ExtResource("17_w8o47")
 
 [node name="SpotLight3D19" type="SpotLight3D" parent="Map" unique_id=541052363]
 transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -65.256454, 9.984161, 43.859272)
-light_energy = 3.973
+light_energy = 6.097
 light_size = 0.045
 shadow_enabled = true
 spot_range = 39.271
@@ -2255,6 +2256,41 @@ transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -76.15195, 12.555135,
 use_collision = true
 size = Vector3(0.73680496, 5.9231567, 0.22940445)
 material = SubResource("StandardMaterial3D_7p775")
+
+[node name="SpotLight3D51" type="SpotLight3D" parent="Map" unique_id=2033014213]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -57.06922, 10.048375, 40.21776)
+light_energy = 4.398
+light_size = 0.045
+shadow_enabled = true
+spot_range = 9.698
+spot_attenuation = -0.2
+spot_angle = 86.41
+
+[node name="SpotLight3D52" type="SpotLight3D" parent="Map" unique_id=1456748338]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -56.227463, 10.048375, 33.84724)
+light_energy = 1.283
+light_size = 0.045
+shadow_enabled = true
+spot_range = 9.698
+spot_attenuation = -0.2
+spot_angle = 86.41
+
+[node name="SpotLight3D53" type="SpotLight3D" parent="Map" unique_id=813254189]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -65.76251, 10.048375, 40.21776)
+light_energy = 4.398
+light_size = 0.045
+shadow_enabled = true
+spot_range = 9.698
+spot_attenuation = -0.2
+spot_angle = 86.41
+
+[node name="SpotLight3D54" type="SpotLight3D" parent="Map" unique_id=379589366]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -56.76934, 9.895046, 49.338253)
+light_energy = 3.973
+light_size = 0.045
+shadow_enabled = true
+spot_range = 39.271
+spot_angle = 86.41
 
 [node name="Key Objects" type="Node3D" parent="." unique_id=1191396916]
 
