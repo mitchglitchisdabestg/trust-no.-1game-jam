@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dw3fwfrkrekw7" path="res://Scenes/Puzzles/puzzle_groundwork.tscn" id="1_redks"]
 [ext_resource type="Script" uid="uid://cy667i3yqvx1g" path="res://Scenes/Puzzles/match_puzzle/match_puzzle.gd" id="2_3y1kt"]
+[ext_resource type="PackedScene" uid="uid://t28y84kq4j3h" path="res://Scenes/Puzzles/match_puzzle/rune.tscn" id="3_ij32e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh5cw"]
 bg_color = Color(0.2051175, 0.20511743, 0.20511743, 1)
@@ -17,10 +18,15 @@ corner_radius_bottom_left = 25
 
 [node name="MatchPuzzle" unique_id=216729549 instance=ExtResource("1_redks")]
 script = ExtResource("2_3y1kt")
+rune_icon_uids = Array[String](["uid://do77br2ko8vkr", "uid://c6a0rqcm0m23d", "uid://dq4o6eincei1n", "uid://7cpq4j80twf4", "uid://l6gywfvjkubq", "uid://b1o8cpv6qwxki", "uid://cyek4wr55047a", "uid://dc8m730jbf7cd", "uid://cjh3wf4mdxygn", "uid://b738rirssvh0k", "uid://dwc2376g2vtgt", "uid://b6rql1dqrlayx", "uid://crn8epp4rhxyw", "uid://k4mn7bqg2bho", "uid://dbnqkb7rxeep5", "uid://c7ii8s41p0ny7", "uid://dko1fegja4tns", "uid://droc1qwhs4gnq"])
 
 [node name="ShowSuccessTimer" type="Timer" parent="." index="0" unique_id=1196276124]
 
-[node name="MainFrame" type="Control" parent="." index="7" unique_id=1119173782]
+[node name="FailedRevealTimer" type="Timer" parent="." index="1" unique_id=506594635]
+wait_time = 0.5
+one_shot = true
+
+[node name="MainFrame" type="Control" parent="." index="8" unique_id=1119173782]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -39,11 +45,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -183.0
+offset_top = 8.0
+offset_right = 183.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dh5cw")
 
-[node name="MarginContainer" type="MarginContainer" parent="MainFrame" index="1" unique_id=266873336]
+[node name="TilesContainer" type="MarginContainer" parent="MainFrame" index="1" unique_id=266873336]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,14 +65,84 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="Tiles" type="HBoxContainer" parent="MainFrame/MarginContainer" index="0" unique_id=467445418]
+[node name="Tiles" type="HBoxContainer" parent="MainFrame/TilesContainer" index="0" unique_id=467445418]
 layout_mode = 2
 alignment = 1
 
-[node name="TileRow1" type="VBoxContainer" parent="MainFrame/MarginContainer/Tiles" index="0" unique_id=1963036606]
+[node name="TileRow1" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" index="0" unique_id=1963036606]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="MainFrame/MarginContainer/Tiles/TileRow1" index="0" unique_id=805732271]
+[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow1" index="0" unique_id=1979509240 instance=ExtResource("3_ij32e")]
 layout_mode = 2
-size_flags_vertical = 3
+
+[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow1" index="1" unique_id=234226038 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow1" index="2" unique_id=1555866736 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="TileRow2" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" index="1" unique_id=136287784]
+layout_mode = 2
+alignment = 1
+
+[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow2" index="0" unique_id=785314445 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow2" index="1" unique_id=784127166 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow2" index="2" unique_id=597826649 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="TileRow3" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" index="2" unique_id=1332283396]
+layout_mode = 2
+alignment = 1
+
+[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow3" index="0" unique_id=306061736 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow3" index="1" unique_id=448945200 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow3" index="2" unique_id=1091612956 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="TileRow4" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" index="3" unique_id=1460694035]
+layout_mode = 2
+alignment = 1
+
+[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow4" index="0" unique_id=1734961086 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow4" index="1" unique_id=1229206762 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow4" index="2" unique_id=1542438090 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="TileRow5" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" index="4" unique_id=985307392]
+layout_mode = 2
+alignment = 1
+
+[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow5" index="0" unique_id=134888694 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow5" index="1" unique_id=1026326227 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow5" index="2" unique_id=2085714100 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="TileRow6" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" index="5" unique_id=373701115]
+layout_mode = 2
+alignment = 1
+
+[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow6" index="0" unique_id=2008539048 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow6" index="1" unique_id=794931119 instance=ExtResource("3_ij32e")]
+layout_mode = 2
+
+[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow6" index="2" unique_id=1899760014 instance=ExtResource("3_ij32e")]
+layout_mode = 2

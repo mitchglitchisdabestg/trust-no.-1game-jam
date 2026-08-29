@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://vxsum40aeg8g"
-path="res://.godot/imported/File cabnet.blend-7f27ad387dc40d8c5abf30b36e3a1534.scn"
+valid=false
 
 [deps]
 
 source_file="res://Brackeys Gam Jam!/File cabnet.blend"
-dest_files=["res://.godot/imported/File cabnet.blend-7f27ad387dc40d8c5abf30b36e3a1534.scn"]
 
 [params]
 
