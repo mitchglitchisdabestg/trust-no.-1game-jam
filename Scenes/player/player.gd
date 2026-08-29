@@ -104,4 +104,6 @@ func _physics_process(delta: float) -> void:
 	player_camera.fov = lerp(player_camera.fov, target_fov, delta * 8.0)
 	
 	is_audible = decide_is_audible()
-	move_and_slide()
+	
+	if Status.current_status == Status.Statuses.World:
+		move_and_slide()

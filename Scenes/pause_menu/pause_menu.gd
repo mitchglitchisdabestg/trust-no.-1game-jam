@@ -9,6 +9,9 @@ func _ready() -> void:
 	main_panel.hide()
 	animation_player.play("RESET")
 
+func check_can_pause() -> bool:
+	return Status.current_status != Status.Statuses.Puzzle
+
 func pause_tree() -> void:
 	last_mouse_state = Input.mouse_mode
 	
@@ -25,7 +28,7 @@ func resume_tree() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	# If we ain't pausing, we don't care
-	if !event.is_action_pressed("Pause"): return
+	if !event.is_action_pressed("Pause") or !check_can_pause(): return
 	
 	if get_tree().paused:
 		resume_tree()
