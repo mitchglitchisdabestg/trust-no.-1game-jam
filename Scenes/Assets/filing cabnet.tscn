@@ -2,4 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://dvirl5g78q65u" path="res://Brackeys Gam Jam!/File cabnet.glb" id="1_wspw3"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wspw3"]
+size = Vector3(4.0631714, 8.757446, 4.0589905)
+
 [node name="cabnet" unique_id=838815503 instance=ExtResource("1_wspw3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="14" unique_id=1052995922]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1171819854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03665161, 3.8787231, 0.01133728)
+shape = SubResource("BoxShape3D_wspw3")

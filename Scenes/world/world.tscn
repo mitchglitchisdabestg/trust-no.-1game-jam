@@ -7,13 +7,14 @@
 [ext_resource type="Script" uid="uid://dcj47mwsibkwy" path="res://Scripts/basic_interact_script.gd" id="3_qgrml"]
 [ext_resource type="PackedScene" uid="uid://5tsawn866bsp" path="res://Scenes/pause_menu/pause_menu.tscn" id="4_fbtbp"]
 [ext_resource type="PackedScene" uid="uid://lyebknc4s66c" path="res://Scenes/Puzzles/puzzle_terminal_1.tscn" id="5_12diy"]
-[ext_resource type="PackedScene" uid="uid://c77m8s1n603w7" path="res://Scenes/Puzzles/Wiring_puzzle.tscn" id="7_pbr1s"]
+[ext_resource type="PackedScene" uid="uid://c77m8s1n603w7" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.tscn" id="7_pbr1s"]
 [ext_resource type="Material" uid="uid://doxclr7t2sbfm" path="res://Assets/Textures/Officecarpetfloor.tres" id="9_5jrsn"]
 [ext_resource type="PackedScene" uid="uid://dlnmpj1xqimgv" path="res://Scenes/base_door/base_door.tscn" id="9_12diy"]
 [ext_resource type="Material" uid="uid://cp5b1xmm0j7sn" path="res://Assets/Textures/Basement floor.tres" id="10_pbr1s"]
 [ext_resource type="Material" uid="uid://dhs38u3a3mduo" path="res://Assets/Textures/basementroff.tres" id="12_77064"]
 [ext_resource type="Material" uid="uid://bij4urn1fraol" path="res://Assets/Textures/Basementwall.tres" id="12_tspqu"]
 [ext_resource type="Material" uid="uid://bdmj7wqg68og2" path="res://Assets/Textures/Receptionfloor.tres" id="14_8nkgs"]
+[ext_resource type="PackedScene" uid="uid://bd5cckv58v5h5" path="res://Scenes/Assets/filing cabnet.tscn" id="15_futi2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrml"]
 albedo_color = Color(1, 1, 0.2, 1)
@@ -860,4 +861,51 @@ use_collision = true
 size = Vector3(3.8401723, 27.117468, 0.27563477)
 material = SubResource("StandardMaterial3D_futi2")
 
+[node name="cabnet" parent="Map" unique_id=838815503 instance=ExtResource("15_futi2")]
+transform = Transform3D(-0.19208112, 0, -1.9476476e-08, 0, 0.21062794, 0, 1.6792265e-08, 0, -0.2227849, 2.3143387, 0.06320751, 30.431664)
+
+[node name="cabnet2" parent="Map" unique_id=148737403 instance=ExtResource("15_futi2")]
+transform = Transform3D(-0.19208112, 0, -1.9476476e-08, 0, 0.21062794, 0, 1.6792265e-08, 0, -0.2227849, 2.3143387, 0.06320751, 29.57603)
+
+[node name="cabnet3" parent="Map" unique_id=2056190793 instance=ExtResource("15_futi2")]
+transform = Transform3D(-0.19208112, 0, -1.9476476e-08, 0, 0.21062794, 0, 1.6792265e-08, 0, -0.2227849, 2.3143387, 0.06320751, 28.731426)
+
+[node name="cabnet4" parent="Map" unique_id=494808158 instance=ExtResource("15_futi2")]
+transform = Transform3D(-0.19208112, 0, -1.9476476e-08, 0, 0.21062794, 0, 1.6792265e-08, 0, -0.2227849, 2.3143387, 0.06320751, 27.822872)
+
+[node name="cabnet5" parent="Map" unique_id=1103550400 instance=ExtResource("15_futi2")]
+transform = Transform3D(-0.19208112, 0, -1.9476476e-08, 0, 0.21062794, 0, 1.6792265e-08, 0, -0.2227849, 2.3143387, 0.06320751, 26.96724)
+
+[node name="cabnet6" parent="Map" unique_id=1982493601 instance=ExtResource("15_futi2")]
+transform = Transform3D(-0.19208112, 0, -1.9476476e-08, 0, 0.21062794, 0, 1.6792265e-08, 0, -0.2227849, 2.3143387, 0.06320751, 26.122635)
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="Map" unique_id=2003456361]
+transform = Transform3D(0.6835541, -0.035044704, 0.7290581, -0.7298999, -0.032819502, 0.6827658, 0, -0.9988467, -0.04801303, 5.411743, 2.8308127, 28.231068)
+light_energy = 3.973
+light_size = 0.045
+shadow_enabled = true
+spot_range = 39.271
+spot_angle = 86.41
+
+[node name="cabnet7" parent="Map" unique_id=1277068944 instance=ExtResource("15_futi2")]
+transform = Transform3D(0.19208112, 0, 0, 0, 0.21062793, 0, 0, 0, 0.22278488, 1.7640228, 0.06320751, 26.120548)
+
+[node name="cabnet8" parent="Map" unique_id=1420593782 instance=ExtResource("15_futi2")]
+transform = Transform3D(0.19208112, 0, 0, 0, 0.21062793, 0, 0, 0, 0.22278488, 1.7311707, 0.06320751, 26.975548)
+
+[node name="cabnet9" parent="Map" unique_id=231485838 instance=ExtResource("15_futi2")]
+transform = Transform3D(0.19208112, 0, 0, 0, 0.21062793, 0, 0, 0, 0.22278488, 1.6987534, 0.06320751, 27.81953)
+
+[node name="cabnet10" parent="Map" unique_id=1738676051 instance=ExtResource("15_futi2")]
+transform = Transform3D(0.19208112, 0, 0, 0, 0.21062793, 0, 0, 0, 0.22278488, 1.6638718, 0.06320751, 28.727413)
+
+[node name="cabnet11" parent="Map" unique_id=90486669 instance=ExtResource("15_futi2")]
+transform = Transform3D(0.19208112, 0, 0, 0, 0.21062793, 0, 0, 0, 0.22278488, 1.6310349, 0.06320751, 29.582417)
+
+[node name="cabnet12" parent="Map" unique_id=400334530 instance=ExtResource("15_futi2")]
+transform = Transform3D(0.19208112, 0, 0, 0, 0.21062793, 0, 0, 0, 0.22278488, 1.5986099, 0.06320751, 30.4264)
+
 [node name="PuzzleUI" type="CanvasLayer" parent="." unique_id=848183622]
+
+[node name="cabnet" parent="." unique_id=1665941040 instance=ExtResource("15_futi2")]
+transform = Transform3D(0.19208115, 0, 0, 0, 0.21062797, 0, 0, 0, 0.22278494, -67.58114, 0.18195927, 51.819695)
