@@ -50,7 +50,9 @@ func _input(_event: InputEvent) -> void:
 			get_tree().create_timer(7.0).timeout.connect(hide_text)
 			
 		$CollisionShape3D.set_deferred("disabled", true)
+		
 
 func hide_text() -> void:
 	if subtitle_box != null:
 		subtitle_box.hide()
+		queue_free()
