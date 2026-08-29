@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bd5cckv58v5h5"]
+
+[ext_resource type="PackedScene" uid="uid://dvirl5g78q65u" path="res://Brackeys Gam Jam!/File cabnet.glb" id="1_wspw3"]
+
+[node name="cabnet" unique_id=838815503 instance=ExtResource("1_wspw3")]

@@ -92,7 +92,7 @@ puzzle_scene = ExtResource("7_pbr1s")
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
 [node name="Player" parent="." unique_id=423765952 instance=ExtResource("2_1fp7r")]
-transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -103.386894, 2.060338, 44.024887)
+transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -84.43235, 2.060338, 44.024887)
 
 [node name="Pause Menu" parent="." unique_id=1368006392 instance=ExtResource("4_fbtbp")]
 metadata/_edit_use_anchors_ = true
