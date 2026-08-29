@@ -14,7 +14,10 @@
 [ext_resource type="Material" uid="uid://dhs38u3a3mduo" path="res://Assets/Textures/basementroff.tres" id="12_77064"]
 [ext_resource type="Material" uid="uid://bij4urn1fraol" path="res://Assets/Textures/Basementwall.tres" id="12_tspqu"]
 [ext_resource type="Material" uid="uid://bdmj7wqg68og2" path="res://Assets/Textures/Receptionfloor.tres" id="14_8nkgs"]
+[ext_resource type="PackedScene" uid="uid://dw3fwfrkrekw7" path="res://Scenes/Puzzles/puzzle_groundwork.tscn" id="14_gg7pb"]
+[ext_resource type="Script" uid="uid://d3cekedri12wm" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.gd" id="15_7p775"]
 [ext_resource type="PackedScene" uid="uid://bd5cckv58v5h5" path="res://Scenes/Assets/filing cabnet.tscn" id="15_futi2"]
+[ext_resource type="Script" uid="uid://b15b841rto01i" path="res://Scenes/Puzzles/wiring_puzzle/socket.gd" id="16_c3v03"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrml"]
 albedo_color = Color(1, 1, 0.2, 1)
@@ -25,10 +28,75 @@ material = SubResource("StandardMaterial3D_qgrml")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nhnx1"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c07je"]
+bg_color = Color(0.23031491, 0.23031494, 0.23031485, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.4117647, 0.4117647, 0.4117647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mt240"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xafj"]
+bg_color = Color(0.19999999, 0.39999998, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_baqgp"]
+bg_color = Color(0.34650004, 0.77, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn406"]
+bg_color = Color(0.9932222, 0.8698, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="PackedScene" id="PackedScene_w8o47"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array()],
+"names": PackedStringArray("WiringPuzzle", "script", "ShowSuccessTimer", "Timer", "one_shot", "Main_Panel", "Control", "layout_mode", "anchor_left", "anchor_top", "anchor_right", "anchor_bottom", "offset_left", "offset_top", "offset_right", "offset_bottom", "Panel", "Panel", "layout_mode", "anchors_preset", "anchor_right", "anchor_bottom", "offset_right", "offset_bottom", "theme_override_styles/panel", "Instructions", "Label", "layout_mode", "offset_right", "offset_bottom", "Wires", "Control", "anchors_preset", "offset_right", "offset_bottom", "Red", "Line2D", "default_color", "Blue", "Line2D", "default_color", "Green", "Line2D", "default_color", "Yellow", "Line2D", "default_color", "CompletedLabel", "Label", "layout_mode", "anchors_preset", "anchor_right", "offset_bottom", "grow_horizontal", "horizontal_alignment", "LeftSocket", "VBoxContainer", "layout_mode", "anchors_preset", "anchor_left", "anchor_top", "anchor_right", "anchor_bottom", "offset_right", "offset_bottom", "grow_vertical", "theme_override_constants/separation", "alignment", "metadata/_edit_use_anchors_", "Redsocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_colors/icon_normal_color", "theme_override_colors/icon_focus_color", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Bluesocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Greensocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Yellowsocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "RightSocket", "VBoxContainer", "layout_mode", "anchors_preset", "anchor_left", "anchor_right", "anchor_bottom", "offset_left", "offset_top", "offset_right", "offset_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "alignment", "Bluesocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Yellowsocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Redsocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_colors/icon_normal_color", "theme_override_colors/icon_focus_color", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Greensocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side"),
+"node_count": 21,
+"node_ids": PackedInt32Array(216729549, 1760409671, 2073243332, 141567993, 1480172470, 624794945, 1068921541, 1501491463, 1043940795, 1892646962, 1230056435, 8181493, 545573567, 547371299, 21776993, 1621693202, 89571284, 136036605, 1209304848, 1796528329, 789397931),
+"node_paths": [NodePath("."), NodePath("."), NodePath("./Main_Panel"), NodePath("./Main_Panel"), NodePath("./Main_Panel"), NodePath("./Main_Panel/Wires"), NodePath("./Main_Panel/Wires"), NodePath("./Main_Panel/Wires"), NodePath("./Main_Panel/Wires"), NodePath("./Main_Panel"), NodePath("./Main_Panel"), NodePath("./Main_Panel/LeftSocket"), NodePath("./Main_Panel/LeftSocket"), NodePath("./Main_Panel/LeftSocket"), NodePath("./Main_Panel/LeftSocket"), NodePath("./Main_Panel"), NodePath("./Main_Panel/RightSocket"), NodePath("./Main_Panel/RightSocket"), NodePath("./Main_Panel/RightSocket"), NodePath("./Main_Panel/RightSocket")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 1, 1, 1, 0, 1073741824, 0, 3, 262146, -1, 1, 4, 2, 0, 1073741825, 0, 6, 2097157, -1, 9, 7, 3, 8, 4, 9, 5, 10, 6, 11, 7, 12, 8, 13, 9, 14, 10, 15, 11, 0, 1073741826, 0, 17, 262160, -1, 7, 18, 12, 19, 13, 20, 14, 21, 15, 22, 16, 23, 17, 24, 18, 0, 1073741827, 0, 26, 524313, -1, 3, 27, 19, 28, 20, 29, 21, 0, 1073741828, 0, 31, 786462, -1, 3, 32, 22, 33, 23, 34, 24, 0, 1073741829, 0, 36, 262179, -1, 1, 37, 25, 0, 1073741830, 0, 39, 524326, -1, 1, 40, 26, 0, 1073741831, 0, 42, 786473, -1, 1, 43, 27, 0, 1073741832, 0, 45, 1048620, -1, 1, 46, 28, 0, 1073741833, 0, 48, 1048623, -1, 6, 49, 29, 50, 30, 51, 31, 52, 32, 53, 33, 54, 34, 0, 1073741834, 0, 56, 1310775, -1, 12, 57, 35, 58, 36, 59, 37, 60, 38, 61, 39, 62, 40, 63, 41, 64, 42, 65, 43, 66, 44, 67, 45, 68, 46, 0, 1073741835, 0, 70, 262213, -1, 8, 71, 47, 72, 48, 73, 49, 74, 50, 75, 51, 76, 52, 77, 53, 78, 54, 0, 1073741836, 0, 80, 524367, -1, 6, 81, 55, 82, 56, 83, 57, 84, 58, 85, 59, 86, 60, 0, 1073741837, 0, 88, 786519, -1, 6, 89, 61, 90, 62, 91, 63, 92, 64, 93, 65, 94, 66, 0, 1073741838, 0, 96, 1048671, -1, 6, 97, 67, 98, 68, 99, 69, 100, 70, 101, 71, 102, 72, 0, 1073741839, 0, 104, 1572967, -1, 13, 105, 73, 106, 74, 107, 75, 108, 76, 109, 77, 110, 78, 111, 79, 112, 80, 113, 81, 114, 82, 115, 83, 116, 84, 117, 85, 0, 1073741840, 0, 119, 262262, -1, 6, 120, 86, 121, 87, 122, 88, 123, 89, 124, 90, 125, 91, 0, 1073741841, 0, 127, 524414, -1, 6, 128, 92, 129, 93, 130, 94, 131, 95, 132, 96, 133, 97, 0, 1073741842, 0, 135, 786566, -1, 8, 136, 98, 137, 99, 138, 100, 139, 101, 140, 102, 141, 103, 142, 104, 143, 105, 0, 1073741843, 0, 145, 1048720, -1, 6, 146, 106, 147, 107, 148, 108, 149, 109, 150, 110, 151, 111, 0),
+"variants": [ExtResource("14_gg7pb"), ExtResource("15_7p775"), true, 1, 0.17400001, 0.07700001, 0.86500007, 0.873, -0.4480133, 0.10399628, 0.51989746, 0.29595947, 1, -1, 0.99700004, 0.98800004, 0.3909912, 0.19198608, SubResource("StyleBoxFlat_c07je"), 0, 796.0, 35.0, 0, 40.0, 40.0, Color(0.67230505, 1.7688051e-06, 6.256998e-07, 1), Color(0.054438993, 2.310276e-05, 0.8849139, 1), Color(0.17887229, 0.426441, 0, 1), Color(0.5140663, 0.44800127, 0, 1), 1, 10, 1.0, 47.0, 2, 1, 1, -1, 0.022584694, 0.06782946, 0.07779172, 0.93217057, 16.0, 4.0, 2, 100, 1, true, 2, 3, Color(0.7670247, 2.5268644e-06, 9.62615e-07, 1), Color(1, 0, 0, 1), SubResource("StyleBoxFlat_mt240"), ExtResource("16_c3v03"), "Red", "Left", 2, 3, SubResource("StyleBoxFlat_0xafj"), ExtResource("16_c3v03"), "Blue", "Left", 2, 3, SubResource("StyleBoxFlat_baqgp"), ExtResource("16_c3v03"), "Green", "Left", 2, 3, SubResource("StyleBoxFlat_bn406"), ExtResource("16_c3v03"), "Yellow", "Left", 1, 11, 1.0, 1.0, 1.0, -81.0, 35.0, -21.0, -31.0, 0, 2, 100, 1, 2, 3, SubResource("StyleBoxFlat_0xafj"), ExtResource("16_c3v03"), "Blue", "Left", 2, 3, SubResource("StyleBoxFlat_bn406"), ExtResource("16_c3v03"), "Yellow", "Left", 2, 3, Color(0.7670247, 2.5268644e-06, 9.62615e-07, 1), Color(1, 0, 0, 1), SubResource("StyleBoxFlat_mt240"), ExtResource("16_c3v03"), "Red", "Left", 2, 3, SubResource("StyleBoxFlat_baqgp"), ExtResource("16_c3v03"), "Green", "Left"],
+"version": 3
+}
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_futi2"]
 transparency = 1
 depth_draw_mode = 1
 albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gg7pb"]
+transparency = 1
+albedo_color = Color(0, 0.92156863, 1, 0.3529412)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7p775"]
+albedo_color = Color(0.3779188, 0.37791887, 0.37791884, 1)
+metallic = 0.3
+roughness = 0.0
 
 [node name="World" type="Node3D" unique_id=1014660479]
 
@@ -105,6 +173,9 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 80
+[node name="BaseDoor3" parent="Level" unique_id=1777024561 instance=ExtResource("9_12diy")]
+transform = Transform3D(1.5999999, 0, 0, 0, 2.0214696, 0, 0, 0, 1.5999999, -142.37645, 8.061265, 54.42732)
+door_ID = 1111
 
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
@@ -259,6 +330,11 @@ spot_angle = 117.14
 [node name="Map" type="Node3D" parent="." unique_id=57778771]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.126495, 0, 13.090427)
 
+[node name="CSGBox3D9" type="CSGBox3D" parent="Map" unique_id=1205160412]
+transform = Transform3D(1, 0, 0, 0, 0.5586773, 0, 0, 0, 1, 21.424656, 1.5329016, 55.33118)
+use_collision = true
+size = Vector3(6.715088, 5.5600586, 0.47729492)
+
 [node name="CSGBox3D" type="CSGBox3D" parent="Map" unique_id=362645088]
 transform = Transform3D(1, 0, 0, 0, 0.5586773, 0, 0, 0, 1, 15.180981, 1.5329016, 55.33118)
 use_collision = true
@@ -298,11 +374,6 @@ size = Vector3(4.9821243, 5.7127686, 0.47729492)
 transform = Transform3D(-0.044386625, 0, 0.99901444, 0, 0.5586773, 0, -0.99901444, 0, -0.044386625, 24.968658, 2.9046724, 61.79559)
 use_collision = true
 size = Vector3(3.437107, 0.5420532, 0.47729492)
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="Map" unique_id=1205160412]
-transform = Transform3D(1, 0, 0, 0, 0.5586773, 0, 0, 0, 1, 21.424656, 1.5329016, 55.33118)
-use_collision = true
-size = Vector3(6.715088, 5.5600586, 0.47729492)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Map" unique_id=991574418]
 transform = Transform3D(1, 0, 0, 0, 0.5586773, 0, 0, 0, 1, 21.798653, 1.5143459, 67.81293)
@@ -741,14 +812,10 @@ light_negative = true
 spot_range = 5.359
 spot_angle = 117.14
 
-[node name="BaseDoor2" parent="Map" unique_id=91568385 instance=ExtResource("9_12diy")]
-transform = Transform3D(-1.6, 0, 1.3987645e-07, 0, 2.021469, 0, -1.3987645e-07, 0, -1.6, -72.46599, 8.106144, 41.416843)
-door_ID = 1111
-
 [node name="puzzle_terminal_2" parent="Map" unique_id=703107241 instance=ExtResource("5_12diy")]
 transform = Transform3D(-0.6877086, 0, 0.7259868, 0, 1, 0, -0.7259868, 0, -0.6877086, -64.08293, 6.832308, 36.895664)
-door_ID_to_open = 1111
-puzzle_scene = ExtResource("7_pbr1s")
+door_ID_to_open = 1112
+puzzle_scene = SubResource("PackedScene_w8o47")
 
 [node name="Roof7" type="CSGBox3D" parent="Map" unique_id=1098597911]
 transform = Transform3D(-4.371139e-08, -0.5586771, -4.3711378e-08, 0, -2.4420551e-08, 0.99999976, -1, 2.4420551e-08, 1.910685e-15, -66.11311, 10.346619, 31.728596)
@@ -806,9 +873,9 @@ size = Vector3(15.073853, 5.5600586, 0.47729492)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D74" type="CSGBox3D" parent="Map" unique_id=1858691158]
-transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -65.94435, 6.2113333, 31.83033)
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -65.94037, 6.2113333, 32.070843)
 use_collision = true
-size = Vector3(18.927462, 36.73004, 0.27563477)
+size = Vector3(19.408554, 36.73004, 0.27563477)
 material = ExtResource("14_8nkgs")
 
 [node name="SpotLight3D12" type="SpotLight3D" parent="Map" unique_id=1283906768]
@@ -820,10 +887,10 @@ spot_range = 39.271
 spot_angle = 86.41
 
 [node name="CSGBox3D78" type="CSGBox3D" parent="Map" unique_id=1209380256]
-transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -54.348938, 6.2113333, 40.803894)
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -51.37162, 10.355358, 30.757439)
 use_collision = true
-size = Vector3(2.2437367, 4.914092, 0.27563477)
-material = ExtResource("10_pbr1s")
+size = Vector3(3.015423, 14.288521, 0.27563477)
+material = ExtResource("12_77064")
 
 [node name="SpotLight3D13" type="SpotLight3D" parent="Map" unique_id=1607413645]
 transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -54.406776, 9.371189, 30.694775)
@@ -908,6 +975,113 @@ transform = Transform3D(0.19208112, 0, 0, 0, 0.21062793, 0, 0, 0, 0.22278488, 1.
 
 [node name="cabnet12" parent="Map" unique_id=400334530 instance=ExtResource("15_futi2")]
 transform = Transform3D(0.19208112, 0, 0, 0, 0.21062793, 0, 0, 0, 0.22278488, 1.5986099, 0.06320751, 30.4264)
+
+[node name="CSGBox3D77" type="CSGBox3D" parent="Map" unique_id=1723275716]
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -65.66095, 6.2113333, 50.766014)
+use_collision = true
+size = Vector3(17.973036, 36.609207, 0.27563477)
+material = ExtResource("9_5jrsn")
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="Map" unique_id=509146253]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -73.77463, 10.503693, 43.859272)
+light_energy = 3.973
+light_size = 0.045
+shadow_enabled = true
+spot_range = 39.271
+spot_angle = 86.41
+
+[node name="Roof9" type="CSGBox3D" parent="Map" unique_id=1428221150]
+transform = Transform3D(-0.015707362, -0.5586083, -4.3711385e-08, -6.8658873e-10, -2.4417544e-08, 0.9999999, -0.99987674, 0.008775344, 1.9106853e-15, -46.789085, 8.22651, 30.701813)
+use_collision = true
+size = Vector3(3.8401723, 1.5096297, 4.189514)
+material = ExtResource("12_77064")
+
+[node name="CSGBox3D79" type="CSGBox3D" parent="Map" unique_id=2055364431]
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -65.41644, 6.2113333, 68.75232)
+use_collision = true
+size = Vector3(17.973036, 36.609207, 0.27563477)
+material = ExtResource("9_5jrsn")
+
+[node name="CSGBox3D80" type="CSGBox3D" parent="Map" unique_id=745929028]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -62.653946, 8.353546, 48.44961)
+use_collision = true
+size = Vector3(14.299622, 5.5600586, 0.47729492)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D81" type="CSGBox3D" parent="Map" unique_id=1446679033]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -69.19736, 8.353546, 47.948544)
+use_collision = true
+size = Vector3(1.2127991, 5.5600586, 0.6694946)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D82" type="CSGBox3D" parent="Map" unique_id=735376854]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -69.19736, 8.353546, 42.777767)
+use_collision = true
+size = Vector3(1.2127991, 5.5600586, 2.4449768)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D83" type="CSGBox3D" parent="Map" unique_id=182933449]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -75.72034, 8.353546, 44.669025)
+use_collision = true
+size = Vector3(0.6160431, 5.5600586, 6.2274933)
+material = ExtResource("12_tspqu")
+
+[node name="CSGBox3D84" type="CSGBox3D" parent="Map" unique_id=976172416]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -55.420372, 8.438449, 42.78158)
+use_collision = true
+size = Vector3(0.26057434, 5.8303223, 1.9871569)
+material = SubResource("StandardMaterial3D_gg7pb")
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="Map" unique_id=1187422567]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -59.885696, 10.312241, 43.859272)
+light_energy = 3.973
+light_size = 0.045
+shadow_enabled = true
+spot_range = 39.271
+spot_angle = 86.41
+
+[node name="CSGBox3D86" type="CSGBox3D" parent="Map" unique_id=560270532]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -55.409973, 8.431826, 45.084263)
+use_collision = true
+size = Vector3(0.26057434, 5.848877, 2.344304)
+material = SubResource("StandardMaterial3D_gg7pb")
+
+[node name="CSGBox3D87" type="CSGBox3D" parent="Map" unique_id=234015419]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -55.42913, 8.421541, 47.21297)
+use_collision = true
+size = Vector3(0.26057434, 5.8776855, 1.7746773)
+material = SubResource("StandardMaterial3D_gg7pb")
+
+[node name="CSGBox3D88" type="CSGBox3D" parent="Map" unique_id=265606756]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -55.41678, 8.390651, 43.85267)
+use_collision = true
+size = Vector3(0.2480011, 5.9231567, 0.16681671)
+material = SubResource("StandardMaterial3D_7p775")
+
+[node name="CSGBox3D89" type="CSGBox3D" parent="Map" unique_id=396801503]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -55.41678, 8.390651, 41.616936)
+use_collision = true
+size = Vector3(0.2480011, 5.9231567, 0.16681671)
+material = SubResource("StandardMaterial3D_7p775")
+
+[node name="CSGBox3D90" type="CSGBox3D" parent="Map" unique_id=636109632]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -55.41678, 8.390651, 46.254066)
+use_collision = true
+size = Vector3(0.2480011, 5.9231567, 0.16681671)
+material = SubResource("StandardMaterial3D_7p775")
+
+[node name="CSGBox3D91" type="CSGBox3D" parent="Map" unique_id=1702641380]
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -55.41678, 8.390651, 48.243504)
+use_collision = true
+size = Vector3(0.2480011, 5.9231567, 0.16681671)
+material = SubResource("StandardMaterial3D_7p775")
+
+[node name="Roof10" type="CSGBox3D" parent="Map" unique_id=247392070]
+transform = Transform3D(-4.371139e-08, -0.5586771, -4.3711378e-08, 0, -2.4420551e-08, 0.99999976, -1, 2.4420551e-08, 1.910685e-15, -66.11311, 10.346619, 51.112476)
+use_collision = true
+flip_faces = true
+size = Vector3(19.020967, 36.534363, 0.27563477)
+material = ExtResource("12_77064")
 
 [node name="PuzzleUI" type="CanvasLayer" parent="." unique_id=848183622]
 
