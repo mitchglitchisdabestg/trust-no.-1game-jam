@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cvvtluh5qp8rc"]
+
+[ext_resource type="PackedScene" uid="uid://01n7kiyddi4e" path="res://Brackeys Gam Jam!/office table.glb" id="1_ponm5"]
+
+[node name="office table" unique_id=1078158700 instance=ExtResource("1_ponm5")]
