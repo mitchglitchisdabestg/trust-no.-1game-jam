@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://chle7db0nfrya"
-valid=false
+path="res://.godot/imported/Couch.blend-6e5a0391a72084971c867a6b53ac785c.scn"
 
 [deps]
 
 source_file="res://Brackeys Gam Jam!/Couch.blend"
+dest_files=["res://.godot/imported/Couch.blend-6e5a0391a72084971c867a6b53ac785c.scn"]
 
 [params]
 

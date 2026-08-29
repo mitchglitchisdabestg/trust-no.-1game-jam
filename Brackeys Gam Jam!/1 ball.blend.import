@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bo27sy0uw2c04"
-valid=false
+path="res://.godot/imported/1 ball.blend-4f3fd1d0302489dac4826ed0de6cc0cd.scn"
 
 [deps]
 
 source_file="res://Brackeys Gam Jam!/1 ball.blend"
+dest_files=["res://.godot/imported/1 ball.blend-4f3fd1d0302489dac4826ed0de6cc0cd.scn"]
 
 [params]
 
