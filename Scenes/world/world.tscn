@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://d3cekedri12wm" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.gd" id="15_7p775"]
 [ext_resource type="PackedScene" uid="uid://bd5cckv58v5h5" path="res://Scenes/Assets/filing cabnet.tscn" id="15_futi2"]
 [ext_resource type="Script" uid="uid://b15b841rto01i" path="res://Scenes/Puzzles/wiring_puzzle/socket.gd" id="16_c3v03"]
+[ext_resource type="PackedScene" uid="uid://dbej0k2sepc7v" path="res://Scenes/world/VoiceMemo.tscn" id="19_7p775"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrml"]
 albedo_color = Color(1, 1, 0.2, 1)
@@ -27,6 +28,13 @@ material = SubResource("StandardMaterial3D_qgrml")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nhnx1"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p775"]
+bg_color = Color(0.2611126, 0.26111263, 0.26111248, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c07je"]
 bg_color = Color(0.23031491, 0.23031494, 0.23031485, 1)
@@ -160,19 +168,29 @@ puzzle_scene = ExtResource("7_pbr1s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Level" unique_id=512907059]
 
-[node name="Label" type="Label" parent="Level/CanvasLayer" unique_id=494278527]
+[node name="PanelContainer" type="PanelContainer" parent="Level/CanvasLayer" unique_id=908383205]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -0.5
-offset_top = -23.0
-offset_right = 0.5
+offset_left = -420.0
+offset_top = -153.0
+offset_right = 417.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7p775")
+
+[node name="Label" type="Label" parent="Level/CanvasLayer/PanelContainer" unique_id=494278527]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
 size_flags_vertical = 8
-theme_override_font_sizes/font_size = 80
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [node name="BaseDoor3" parent="Level" unique_id=1777024561 instance=ExtResource("9_12diy")]
 transform = Transform3D(1.5999999, 0, 0, 0, 2.0214696, 0, 0, 0, 1.5999999, -142.37645, 8.061265, 54.42732)
 door_ID = 1111
@@ -1165,5 +1183,10 @@ spot_angle = 86.41
 
 [node name="PuzzleUI" type="CanvasLayer" parent="." unique_id=848183622]
 
-[node name="cabnet" parent="." unique_id=1665941040 instance=ExtResource("15_futi2")]
+[node name="cabinet" parent="." unique_id=1665941040 instance=ExtResource("15_futi2")]
 transform = Transform3D(0.19208115, 0, 0, 0, 0.21062797, 0, 0, 0, 0.22278494, -67.58114, 0.18195927, 51.819695)
+
+[node name="VoiceMemo2" parent="." unique_id=126759128 node_paths=PackedStringArray("subtitle_box", "subtitle_text") instance=ExtResource("19_7p775")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -84.25653, 0.047745705, 45.843555)
+subtitle_box = NodePath("../Level/CanvasLayer/PanelContainer")
+subtitle_text = NodePath("../Level/CanvasLayer/PanelContainer/Label")
