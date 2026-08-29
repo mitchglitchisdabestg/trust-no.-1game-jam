@@ -18,6 +18,7 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 SignalBus="*uid://m72cy8qhe4fj"
+Status="*uid://bq3kppt1f306g"
 
 [editor_plugins]
 
