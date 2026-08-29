@@ -13,3 +13,8 @@ func on_win() -> void:
 	game_won.emit()
 	
 	queue_free()
+
+func quit_game() -> void:
+	Status.set_status(Status.Statuses.World)
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	queue_free()

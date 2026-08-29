@@ -102,10 +102,5 @@ func on_failed_pair_timeout() -> void:
 	failed_rune = null
 	selected_rune = null
 
-func quit_game() -> void:
-	Status.set_status(Status.Statuses.World)
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	queue_free()
-
 func on_win() -> void:
 	show_success_timer.start()

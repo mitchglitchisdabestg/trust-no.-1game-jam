@@ -59,10 +59,5 @@ func on_socket_pressed(socket_pressed: Socket) -> void:
 	if wires == {}: #All needed wires have been used
 		on_win()
 
-func quit_game() -> void:
-	Status.set_status(Status.Statuses.World)
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	queue_free()
-
 func on_win() -> void:
 	show_success_timer.start()

@@ -80,6 +80,7 @@ theme_override_constants/margin_bottom = 64
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+theme_override_constants/separation = 30
 alignment = 2
 
 [node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1136207556]
@@ -88,43 +89,35 @@ theme_override_fonts/font = ExtResource("5_glbon")
 theme_override_font_sizes/font_size = 60
 text = "Trust No.1"
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=970432440]
-layout_mode = 2
-
 [node name="NewGameButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=515091646]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_glbon")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qe12f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8qtwp")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0o4t1")
 text = "New Game"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=835583613]
-layout_mode = 2
-
 [node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1589104044]
+visible = false
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/line_spacing = 500
 theme_override_fonts/font = ExtResource("5_glbon")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qe12f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8qtwp")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0o4t1")
 text = "Settings"
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1269603510]
-layout_mode = 2
-
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1296841661]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/line_spacing = 500
 theme_override_fonts/font = ExtResource("5_glbon")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qe12f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8qtwp")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dy7ct")
@@ -141,10 +134,6 @@ text = "Quit"
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_mouse_exited"]
 [connection signal="focus_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_focus_entered"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_mouse_exited"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_settings_button_mouse_exited"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_pressed"]
