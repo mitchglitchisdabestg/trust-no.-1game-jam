@@ -38,6 +38,7 @@ func reset_game() -> void:
 		wires[wire.name] = wire
 
 func on_success_timeout() -> void: # Lets people admire their completed puzzle for a bit :D
+	super.on_win()
 	quit_game()
 
 func on_socket_pressed(socket_pressed: Socket) -> void:
@@ -64,5 +65,4 @@ func quit_game() -> void:
 	queue_free()
 
 func on_win() -> void:
-	super.on_win()
 	show_success_timer.start()

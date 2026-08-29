@@ -93,6 +93,7 @@ func on_rune_pressed(rune_pressed: Rune) -> void:
 		on_win()
 
 func on_success_timeout() -> void: # Lets people admire their completed work for a bit :D
+	super.on_win()
 	quit_game()
 
 func on_failed_pair_timeout() -> void:
@@ -107,5 +108,4 @@ func quit_game() -> void:
 	queue_free()
 
 func on_win() -> void:
-	super.on_win()
 	show_success_timer.start()

@@ -28,6 +28,8 @@ func check_ray_collision() -> void:
 	
 	var hover_collider : Node3D = interaction_ray.get_collider()
 	
+	#print(hover_collider) #For debugging
+	
 	if !is_instance_valid(hover_collider) or !hover_collider.has_method("interact") or !hover_collider.has_method("show_prompt"): 
 		hide_current_prompt()
 		return

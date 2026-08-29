@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://buvtipramp20d" path="res://Scenes/player/player.gd" id="1_8afob"]
 [ext_resource type="PackedScene" uid="uid://ctu7i8trkddmu" path="res://Scenes/player_camera/player_camera.tscn" id="2_eo61r"]
+[ext_resource type="PackedScene" uid="uid://3isjcxsbv51x" path="res://Assets/Textures/psx_vhs_demo.glb" id="3_mxepk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dovo2"]
 albedo_color = Color(0.2073909, 0.6671061, 0.56671625, 1)
@@ -109,3 +110,7 @@ head = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=458502156]
 libraries/ = SubResource("AnimationLibrary_gmlin")
+
+[node name="Casette" parent="." unique_id=1650450434 instance=ExtResource("3_mxepk")]
+transform = Transform3D(-0.14061828, 0, 0.2067039, 0.093175605, 0.22316022, 0.06338629, -0.18451235, 0.112692125, -0.12552163, -0.65497726, 0, -0.7768544)
+visible = false
