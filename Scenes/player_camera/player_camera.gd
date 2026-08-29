@@ -59,7 +59,9 @@ func _ready() -> void:
 	reticle.scale.y = reticle_size
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and mouse_locked:
+	if Status.current_status == Status.Statuses.Puzzle: return
+	
+	if event is InputEventMouseMotion and mouse_locked and player:
 		player.rotate_y(deg_to_rad(-event.relative.x * SENSITIVITY))
 		head.rotate_x(deg_to_rad(-event.relative.y * SENSITIVITY))
 		head.rotation.x = clampf(head.rotation.x,deg_to_rad(-90),deg_to_rad(90))

@@ -3,6 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://dw3fwfrkrekw7" path="res://Scenes/Puzzles/puzzle_groundwork.tscn" id="1_redks"]
 [ext_resource type="Script" uid="uid://cy667i3yqvx1g" path="res://Scenes/Puzzles/match_puzzle/match_puzzle.gd" id="2_3y1kt"]
 [ext_resource type="PackedScene" uid="uid://t28y84kq4j3h" path="res://Scenes/Puzzles/match_puzzle/rune.tscn" id="3_ij32e"]
+[ext_resource type="AudioStream" uid="uid://cvibgyn3rx6tr" path="res://Assets/Audio/Buttons/success_noise.mp3" id="3_lequ2"]
+[ext_resource type="AudioStream" uid="uid://dpkbenxgyt0sr" path="res://Assets/Audio/Buttons/error_noise.mp3" id="4_vv0vk"]
+[ext_resource type="AudioStream" uid="uid://cvdqg0h4eu21u" path="res://Assets/Audio/Buttons/press-2.mp3" id="5_xklob"]
+[ext_resource type="AudioStream" uid="uid://brwryvs5xfsi7" path="res://Assets/Audio/Buttons/press-3.mp3" id="6_4cdcx"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_p4dhl"]
+streams_count = 2
+stream_0/stream = ExtResource("5_xklob")
+stream_1/stream = ExtResource("6_4cdcx")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh5cw"]
 bg_color = Color(0.2051175, 0.20511743, 0.20511743, 1)
@@ -20,13 +29,25 @@ corner_radius_bottom_left = 25
 script = ExtResource("2_3y1kt")
 rune_icon_uids = Array[String](["uid://do77br2ko8vkr", "uid://c6a0rqcm0m23d", "uid://dq4o6eincei1n", "uid://7cpq4j80twf4", "uid://l6gywfvjkubq", "uid://b1o8cpv6qwxki", "uid://cyek4wr55047a", "uid://dc8m730jbf7cd", "uid://cjh3wf4mdxygn", "uid://b738rirssvh0k", "uid://dwc2376g2vtgt", "uid://b6rql1dqrlayx", "uid://crn8epp4rhxyw", "uid://k4mn7bqg2bho", "uid://dbnqkb7rxeep5", "uid://c7ii8s41p0ny7", "uid://dko1fegja4tns", "uid://droc1qwhs4gnq"])
 
-[node name="ShowSuccessTimer" type="Timer" parent="." index="0" unique_id=1196276124]
+[node name="Success" type="AudioStreamPlayer" parent="." index="0" unique_id=1246242708]
+stream = ExtResource("3_lequ2")
+volume_db = -10.0
 
-[node name="FailedRevealTimer" type="Timer" parent="." index="1" unique_id=506594635]
+[node name="Fail" type="AudioStreamPlayer" parent="." index="1" unique_id=111009621]
+stream = ExtResource("4_vv0vk")
+volume_db = -10.0
+
+[node name="Click" type="AudioStreamPlayer" parent="." index="2" unique_id=559682097]
+stream = SubResource("AudioStreamRandomizer_p4dhl")
+volume_db = -10.0
+
+[node name="ShowSuccessTimer" type="Timer" parent="." index="3" unique_id=1196276124]
+
+[node name="FailedRevealTimer" type="Timer" parent="." index="4" unique_id=506594635]
 wait_time = 0.5
 one_shot = true
 
-[node name="MainFrame" type="Control" parent="." index="8" unique_id=1119173782]
+[node name="MainFrame" type="Control" parent="." index="11" unique_id=1119173782]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0yvak2bscqwi"
+path="res://.godot/imported/Trust no.1 theme.mp3-c430217ee0c226681dff6ed5bc67e524.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Trust no.1 theme.mp3"
+dest_files=["res://.godot/imported/Trust no.1 theme.mp3-c430217ee0c226681dff6ed5bc67e524.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

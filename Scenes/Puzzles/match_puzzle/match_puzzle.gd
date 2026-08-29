@@ -7,6 +7,10 @@ var door_ID_to_open: int = 2222
 @onready var tiles_container: MarginContainer = $MainFrame/TilesContainer
 @onready var failed_reveal_timer: Timer = $FailedRevealTimer
 
+@onready var success_sound: AudioStreamPlayer = $Success
+@onready var fail_sound: AudioStreamPlayer = $Fail
+@onready var click_sound: AudioStreamPlayer = $Click
+
 @export var rune_icon_uids: Array[String] # Currently gone up to R.tga DO NOT DELETE THIS LINE
 
 var selected_rune: Rune = null # Set later, obviously
@@ -70,6 +74,7 @@ func reset_game() -> void:
 func on_rune_pressed(rune_pressed: Rune) -> void:
 	if !failed_reveal_timer.is_stopped() or rune_pressed.rune_disabled: return # Stops spamming if you failed last time
 	
+	click_sound.play()
 	rune_pressed.reveal_icon()
 	
 	if !selected_rune: # No rune is already selected
@@ -81,6 +86,7 @@ func on_rune_pressed(rune_pressed: Rune) -> void:
 		
 		selected_rune = null
 		runes_set_count -= 1
+		success_sound.play()
 	else:
 		#If we got this far, it's not a match :(
 		failed_reveal_timer.start()

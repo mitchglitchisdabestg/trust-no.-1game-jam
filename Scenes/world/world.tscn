@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://war8l4yhhhch" path="res://Scenes/world/lighting.tscn" id="1_5jrsn"]
 [ext_resource type="PackedScene" uid="uid://ctk6mjhs3nnbd" path="res://Scenes/world/floor.tscn" id="1_sl2e5"]
+[ext_resource type="AudioStream" uid="uid://daxdyp1qk2h8x" path="res://Assets/Audio/Ambiance/whistles-ambiance.mp3" id="1_tquit"]
 [ext_resource type="PackedScene" uid="uid://b0ipyxcr6w3e8" path="res://Scenes/player/player.tscn" id="2_1fp7r"]
 [ext_resource type="PackedScene" uid="uid://c8yijckfutcyv" path="res://Scenes/world/box.tscn" id="2_6m72w"]
 [ext_resource type="Script" uid="uid://dcj47mwsibkwy" path="res://Scripts/basic_interact_script.gd" id="3_qgrml"]
@@ -110,6 +111,11 @@ roughness = 0.0
 
 [node name="World" type="Node3D" unique_id=1014660479]
 
+[node name="WhistlesAmbiance" type="AudioStreamPlayer" parent="." unique_id=403446378]
+stream = ExtResource("1_tquit")
+volume_db = -5.0
+autoplay = true
+
 [node name="Level" type="Node3D" parent="." unique_id=1191396916]
 
 [node name="BaseDoor" parent="Level" unique_id=522574859 instance=ExtResource("9_12diy")]
@@ -195,7 +201,7 @@ autowrap_mode = 3
 
 [node name="BaseDoor3" parent="Level" unique_id=1777024561 instance=ExtResource("9_12diy")]
 transform = Transform3D(1.5999999, 0, 0, 0, 2.0214696, 0, 0, 0, 1.5999999, -142.37645, 8.061265, 54.42732)
-door_ID = 1111
+door_ID = 1112
 
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
