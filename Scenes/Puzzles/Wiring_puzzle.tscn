@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://bndc5jwcstgwg"]
+
+[ext_resource type="PackedScene" uid="uid://dw3fwfrkrekw7" path="res://Scenes/Puzzles/puzzle_groundwork.tscn" id="1_bnh4e"]
+[ext_resource type="Script" uid="uid://cxplagx3y2ywg" path="res://Scenes/Puzzles/wiring_puzzle.gd" id="2_mt240"]
+[ext_resource type="Script" path="res://Scenes/Puzzles/socket.gd" id="2_xsflo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mt240"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xafj"]
+bg_color = Color(0.19999999, 0.39999998, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_baqgp"]
+bg_color = Color(0.34650004, 0.77, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn406"]
+bg_color = Color(0.9932222, 0.8698, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PuzzleGroundwork" unique_id=216729549 instance=ExtResource("1_bnh4e")]
+
+[node name="Wiring_Puzzle" type="Control" parent="." index="6" unique_id=2073243332]
+layout_mode = 1
+anchor_left = 0.17400001
+anchor_top = 0.07700001
+anchor_right = 0.86500007
+anchor_bottom = 0.873
+offset_left = -0.4480133
+offset_top = 0.10399628
+offset_right = 0.51989746
+offset_bottom = 0.29595947
+script = ExtResource("2_mt240")
+
+[node name="Panel" type="Panel" parent="Wiring_Puzzle" index="0" unique_id=141567993]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99700004
+anchor_bottom = 0.98800004
+offset_right = 0.3909912
+offset_bottom = 0.19198608
+
+[node name="Instructions" type="Label" parent="Wiring_Puzzle" index="1" unique_id=1480172470]
+layout_mode = 0
+offset_right = 796.0
+offset_bottom = 35.0
+
+[node name="Wires" type="Control" parent="Wiring_Puzzle" index="2" unique_id=624794945]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Red" type="Line2D" parent="Wiring_Puzzle/Wires" index="0" unique_id=1068921541]
+default_color = Color(0.67230505, 1.7688051e-06, 6.256998e-07, 1)
+
+[node name="Blue" type="Line2D" parent="Wiring_Puzzle/Wires" index="1" unique_id=1501491463]
+default_color = Color(0.054438993, 2.310276e-05, 0.8849139, 1)
+
+[node name="Green" type="Line2D" parent="Wiring_Puzzle/Wires" index="2" unique_id=1043940795]
+default_color = Color(0.17887229, 0.426441, 0, 1)
+
+[node name="Yellow" type="Line2D" parent="Wiring_Puzzle/Wires" index="3" unique_id=1892646962]
+default_color = Color(0.5140663, 0.44800127, 0, 1)
+
+[node name="CompletedLabel" type="Label" parent="Wiring_Puzzle" index="3" unique_id=1230056435]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 47.0
+grow_horizontal = 2
+horizontal_alignment = 1
+
+[node name="LeftSocket" type="VBoxContainer" parent="Wiring_Puzzle" index="4" unique_id=8181493]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0062735258
+anchor_top = 0.06782946
+anchor_right = 0.061480552
+anchor_bottom = 0.93217057
+offset_right = 16.0
+offset_bottom = 4.0
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Redsocket" type="Button" parent="Wiring_Puzzle/LeftSocket" index="0" unique_id=545573567]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/icon_normal_color = Color(0.7670247, 2.5268644e-06, 9.62615e-07, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_mt240")
+script = ExtResource("2_xsflo")
+socket_colour = "Red"
+socket_side = "Left"
+
+[node name="Bluesocket" type="Button" parent="Wiring_Puzzle/LeftSocket" index="1" unique_id=547371299]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_0xafj")
+script = ExtResource("2_xsflo")
+socket_colour = "Blue"
+socket_side = "Left"
+
+[node name="Greensocket" type="Button" parent="Wiring_Puzzle/LeftSocket" index="2" unique_id=21776993]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_baqgp")
+script = ExtResource("2_xsflo")
+socket_colour = "Green"
+socket_side = "Left"
+
+[node name="Yellowsocket" type="Button" parent="Wiring_Puzzle/LeftSocket" index="3" unique_id=1621693202]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_bn406")
+script = ExtResource("2_xsflo")
+socket_colour = "Yellow"
+socket_side = "Left"
+
+[node name="RightSocket" type="VBoxContainer" parent="Wiring_Puzzle" index="5" unique_id=89571284]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -69.0
+offset_top = 31.0
+offset_right = -9.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Bluesocket" type="Button" parent="Wiring_Puzzle/RightSocket" index="0" unique_id=136036605]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_0xafj")
+script = ExtResource("2_xsflo")
+socket_colour = "Blue"
+socket_side = "Left"
+
+[node name="Yellowsocket" type="Button" parent="Wiring_Puzzle/RightSocket" index="1" unique_id=1209304848]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_bn406")
+script = ExtResource("2_xsflo")
+socket_colour = "Yellow"
+socket_side = "Left"
+
+[node name="Redsocket" type="Button" parent="Wiring_Puzzle/RightSocket" index="2" unique_id=1796528329]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/icon_normal_color = Color(0.7670247, 2.5268644e-06, 9.62615e-07, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_mt240")
+script = ExtResource("2_xsflo")
+socket_colour = "Red"
+socket_side = "Left"
+
+[node name="Greensocket" type="Button" parent="Wiring_Puzzle/RightSocket" index="3" unique_id=789397931]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_baqgp")
+script = ExtResource("2_xsflo")
+socket_colour = "Green"
+socket_side = "Left"

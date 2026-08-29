@@ -158,6 +158,21 @@ transform = Transform3D(-0.6877086, 0, 0.7259868, 0, 1, 0, -0.7259868, 0, -0.687
 door_ID_to_open = 1111
 puzzle_scene = ExtResource("7_pbr1s")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Level" unique_id=512907059]
+
+[node name="Label" type="Label" parent="Level/CanvasLayer" unique_id=494278527]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -23.0
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
 [node name="BaseDoor3" parent="Level" unique_id=1777024561 instance=ExtResource("9_12diy")]
 transform = Transform3D(1.5999999, 0, 0, 0, 2.0214696, 0, 0, 0, 1.5999999, -142.37645, 8.061265, 54.42732)
 door_ID = 1111
