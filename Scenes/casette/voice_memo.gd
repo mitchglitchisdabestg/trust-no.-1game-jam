@@ -36,14 +36,20 @@ func play_memo() -> void:
 	collision_shape_3d.set_deferred("disabled", true)
 
 func interact () -> void:
-	play_memo()
+	#play_memo()
+	# To use old logic, uncomment line above and comment line below
+	pickup_memo()
+
+func pickup_memo () -> void:
+	collision_shape_3d.set_deferred("disabled", true)
+	hide()
+	SignalBus.emit_pickup_casette(audio_player.stream)
 
 func show_prompt () -> void:
 	prompt_3d.show()
 
 func hide_prompt () -> void:
 	prompt_3d.hide()
-
 
 func _ready() -> void:
 	if subtitle_box != null:
@@ -65,4 +71,4 @@ func _ready() -> void:
 		# Hide the floating text when walking away
 		#if prompt_3d != null:
 			#prompt_3d.hide()
-	
+	pass
