@@ -2055,6 +2055,12 @@ transform = Transform3D(-0.5529323, 0, 0.03235237, 0, 0.5193113, 0, -0.031542975
 [node name="office cubicles2" parent="Map" unique_id=643985826 instance=ExtResource("21_w8o47")]
 transform = Transform3D(0.5537389, 0, -0.010379618, 0, 0.5193113, 0, 0.010119928, 0, 0.5679477, -134.67075, 10.542213, 77.99365)
 
+[node name="CSGBox3D203" type="CSGBox3D" parent="Map" unique_id=1934757889]
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -65.84413, 10.375817, 32.79722)
+use_collision = true
+size = Vector3(17.973036, 37.265053, 0.27563477)
+material = ExtResource("9_5jrsn")
+
 [node name="PuzzleUI" type="CanvasLayer" parent="." unique_id=848183622]
 
 [node name="cabinet" parent="." unique_id=1665941040 instance=ExtResource("15_futi2")]
