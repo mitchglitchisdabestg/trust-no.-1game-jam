@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://0ldtewe4df71"]
+
+[ext_resource type="PackedScene" uid="uid://dje28ydww1uv5" path="res://Brackeys Gam Jam!/office cubicles.glb" id="1_ei17n"]
+
+[node name="office cubicles" unique_id=1995821060 instance=ExtResource("1_ei17n")]
