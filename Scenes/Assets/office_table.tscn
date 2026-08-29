@@ -3,3 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://01n7kiyddi4e" path="res://Brackeys Gam Jam!/office table.glb" id="1_ponm5"]
 
 [node name="office table" unique_id=1078158700 instance=ExtResource("1_ponm5")]
+
+[node name="Cube_009" parent="." index="9" unique_id=428837557]
+transform = Transform3D(0.079754226, 0, 0, 0, 1.1502731, 0, 0, 0, 0.9838538, 4.3751173, 1.0175946, -4.630502)
+
+[node name="Cube_010" parent="." index="10" unique_id=725616234]
+transform = Transform3D(0, 0, 1, 0, 1.167994, 0, -0.079754226, 0, 0, 0.004948087, 1.0175946, -5.5543785)
+
+[node name="Cube_011" parent="." index="11" unique_id=559721513]
+transform = Transform3D(-0.079754226, 0, -8.742278e-08, 0, 1.1833191, 0, 6.972336e-09, 0, -1, -0.92228293, 0.89712036, -4.5999794)
