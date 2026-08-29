@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c8yijckfutcyv" path="res://Scenes/world/box.tscn" id="2_6m72w"]
 [ext_resource type="Script" uid="uid://dcj47mwsibkwy" path="res://Scripts/basic_interact_script.gd" id="3_qgrml"]
 [ext_resource type="PackedScene" uid="uid://5tsawn866bsp" path="res://Scenes/pause_menu/pause_menu.tscn" id="4_fbtbp"]
-[ext_resource type="PackedScene" uid="uid://c77m8s1n603w7" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.tscn" id="7_pbr1s"]
 [ext_resource type="Material" uid="uid://doxclr7t2sbfm" path="res://Assets/Textures/Officecarpetfloor.tres" id="9_5jrsn"]
 [ext_resource type="PackedScene" uid="uid://dlnmpj1xqimgv" path="res://Scenes/base_door/base_door.tscn" id="9_12diy"]
 [ext_resource type="Material" uid="uid://cp5b1xmm0j7sn" path="res://Assets/Textures/Basement floor.tres" id="10_pbr1s"]
@@ -18,6 +17,7 @@
 [ext_resource type="Material" uid="uid://7wthnebfgwmu" path="res://Assets/Textures/Officewall.tres" id="17_w8o47"]
 [ext_resource type="PackedScene" uid="uid://dohrkyj7bsimk" path="res://Scenes/Puzzles/puzzle_terminal.tscn" id="18_7p775"]
 [ext_resource type="PackedScene" uid="uid://dbej0k2sepc7v" path="res://Scenes/world/VoiceMemo.tscn" id="19_7p775"]
+[ext_resource type="PackedScene" uid="uid://c77m8s1n603w7" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.tscn" id="19_c3v03"]
 [ext_resource type="PackedScene" uid="uid://rb1816okb3y3" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle_harder.tscn" id="20_c3v03"]
 [ext_resource type="PackedScene" uid="uid://0ldtewe4df71" path="res://Scenes/Assets/office_cubicles.tscn" id="21_w8o47"]
 
@@ -2012,7 +2012,7 @@ transform = Transform3D(0.5537389, 0, -0.010379618, 0, 0.5193113, 0, 0.010119928
 
 [node name="PuzzleTerminal" parent="." unique_id=1661541044 instance=ExtResource("18_7p775")]
 transform = Transform3D(-0.7035311, 0, 0.7106645, 0, 1, 0, -0.7106645, 0, -0.7035311, -88.6946, 0.54535866, 48.23472)
-puzzle_scene = ExtResource("7_pbr1s")
+puzzle_scene = ExtResource("19_c3v03")
 door_ID_to_open = 1111
 
 [node name="PuzzleTerminal2" parent="." unique_id=652503248 instance=ExtResource("18_7p775")]

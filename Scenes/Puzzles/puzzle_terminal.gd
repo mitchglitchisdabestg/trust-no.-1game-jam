@@ -21,10 +21,11 @@ func play_game () -> void:
 	
 	var puzzle = puzzle_scene.instantiate()
 	get_tree().current_scene.add_child(puzzle)
+	print(puzzle is Puzzle)
+	puzzle.game_won.connect(on_game_won)
 	puzzle.visible = true
 	
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func on_game_won () -> void:
-	print(door_ID_to_open)
 	SignalBus.emit_open_door(door_ID_to_open)
