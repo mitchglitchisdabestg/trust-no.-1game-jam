@@ -4,6 +4,10 @@ var sway_speed : float = 0.05
 var screen_center : Vector2
 var start_position : Vector2
 
+@onready var new_game_button: Button = $MarginContainer/VBoxContainer/NewGameButton
+@onready var quit_button: Button = $MarginContainer/VBoxContainer/QuitButton
+@onready var settings_button: Button = $MarginContainer/VBoxContainer/SettingsButton
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	screen_center = get_viewport_rect().size / 2.0
@@ -24,19 +28,19 @@ func _process(_delta: float) -> void:
 
 
 func _on_new_game_button_mouse_entered() -> void:
-	$MarginContainer/VBoxContainer/NewGameButton.text = ">> New Game"
+	new_game_button.text = ">> New Game"
 
 func _on_new_game_button_mouse_exited() -> void:
-	$MarginContainer/VBoxContainer/NewGameButton.text = "New Game"
+	new_game_button.text = "New Game"
 
 func _on_settings_button_mouse_entered() -> void:
-	$MarginContainer/VBoxContainer/SettingsButton.text = ">> Settings"
+	settings_button.text = ">> Settings"
 
 func _on_settings_button_mouse_exited() -> void:
-	$MarginContainer/VBoxContainer/SettingsButton.text = "Settings"
+	settings_button.text = "Settings"
 
 func _on_quit_button_mouse_entered() -> void:
-	$MarginContainer/VBoxContainer/QuitButton.text = ">> Quit"
+	quit_button.text = ">> Quit"
 
 func _on_quit_button_mouse_exited() -> void:
-	$MarginContainer/VBoxContainer/QuitButton.text = "Quit"
+	quit_button.text = "Quit"

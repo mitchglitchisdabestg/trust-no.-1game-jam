@@ -1,6 +1,4 @@
-extends Control
-
-var door_ID_to_open: int = 2222
+extends Puzzle
 
 @onready var close_button: Button = $CloseButton
 @onready var show_success_timer: Timer = $ShowSuccessTimer
@@ -69,7 +67,6 @@ func reset_game() -> void:
 	for rune: Rune in rune_nodes: # Set the icons and flip all to hidden
 		rune.icon = chosen_rune_icons.pop_front()
 		rune.hide_icon()
-	
 
 func on_rune_pressed(rune_pressed: Rune) -> void:
 	if !failed_reveal_timer.is_stopped() or rune_pressed.rune_disabled: return # Stops spamming if you failed last time
@@ -96,7 +93,6 @@ func on_rune_pressed(rune_pressed: Rune) -> void:
 		on_win()
 
 func on_success_timeout() -> void: # Lets people admire their completed work for a bit :D
-	SignalBus.emit_open_door(door_ID_to_open)
 	quit_game()
 
 func on_failed_pair_timeout() -> void:
@@ -111,4 +107,5 @@ func quit_game() -> void:
 	queue_free()
 
 func on_win() -> void:
+	super.on_win()
 	show_success_timer.start()

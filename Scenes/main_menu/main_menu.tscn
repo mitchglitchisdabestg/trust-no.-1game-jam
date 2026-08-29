@@ -131,6 +131,10 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0o4t1")
 text = "Quit"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1802320571]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1923669717]
+
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]

@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c8yijckfutcyv" path="res://Scenes/world/box.tscn" id="2_6m72w"]
 [ext_resource type="Script" uid="uid://dcj47mwsibkwy" path="res://Scripts/basic_interact_script.gd" id="3_qgrml"]
 [ext_resource type="PackedScene" uid="uid://5tsawn866bsp" path="res://Scenes/pause_menu/pause_menu.tscn" id="4_fbtbp"]
-[ext_resource type="PackedScene" uid="uid://lyebknc4s66c" path="res://Scenes/Puzzles/puzzle_terminal_1.tscn" id="5_12diy"]
 [ext_resource type="PackedScene" uid="uid://c77m8s1n603w7" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.tscn" id="7_pbr1s"]
 [ext_resource type="Material" uid="uid://doxclr7t2sbfm" path="res://Assets/Textures/Officecarpetfloor.tres" id="9_5jrsn"]
 [ext_resource type="PackedScene" uid="uid://dlnmpj1xqimgv" path="res://Scenes/base_door/base_door.tscn" id="9_12diy"]
@@ -15,12 +14,11 @@
 [ext_resource type="Material" uid="uid://dhs38u3a3mduo" path="res://Assets/Textures/basementroff.tres" id="12_77064"]
 [ext_resource type="Material" uid="uid://bij4urn1fraol" path="res://Assets/Textures/Basementwall.tres" id="12_tspqu"]
 [ext_resource type="Material" uid="uid://bdmj7wqg68og2" path="res://Assets/Textures/Receptionfloor.tres" id="14_8nkgs"]
-[ext_resource type="PackedScene" uid="uid://dw3fwfrkrekw7" path="res://Scenes/Puzzles/puzzle_groundwork.tscn" id="14_gg7pb"]
-[ext_resource type="Script" uid="uid://d3cekedri12wm" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.gd" id="15_7p775"]
 [ext_resource type="PackedScene" uid="uid://bd5cckv58v5h5" path="res://Scenes/Assets/filing cabnet.tscn" id="15_futi2"]
-[ext_resource type="Script" uid="uid://b15b841rto01i" path="res://Scenes/Puzzles/wiring_puzzle/socket.gd" id="16_c3v03"]
 [ext_resource type="Material" uid="uid://7wthnebfgwmu" path="res://Assets/Textures/Officewall.tres" id="17_w8o47"]
+[ext_resource type="PackedScene" uid="uid://dohrkyj7bsimk" path="res://Scenes/Puzzles/puzzle_terminal.tscn" id="18_7p775"]
 [ext_resource type="PackedScene" uid="uid://dbej0k2sepc7v" path="res://Scenes/world/VoiceMemo.tscn" id="19_7p775"]
+[ext_resource type="PackedScene" uid="uid://rb1816okb3y3" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle_harder.tscn" id="20_c3v03"]
 [ext_resource type="PackedScene" uid="uid://0ldtewe4df71" path="res://Scenes/Assets/office_cubicles.tscn" id="21_w8o47"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrml"]
@@ -38,62 +36,6 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c07je"]
-bg_color = Color(0.23031491, 0.23031494, 0.23031485, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.4117647, 0.4117647, 0.4117647, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mt240"]
-bg_color = Color(1, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xafj"]
-bg_color = Color(0.19999999, 0.39999998, 1, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_baqgp"]
-bg_color = Color(0.34650004, 0.77, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn406"]
-bg_color = Color(0.9932222, 0.8698, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="PackedScene" id="PackedScene_w8o47"]
-_bundled = {
-"base_scene": 0,
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"id_paths": [PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array()],
-"names": PackedStringArray("WiringPuzzle", "script", "ShowSuccessTimer", "Timer", "one_shot", "Main_Panel", "Control", "layout_mode", "anchor_left", "anchor_top", "anchor_right", "anchor_bottom", "offset_left", "offset_top", "offset_right", "offset_bottom", "Panel", "Panel", "layout_mode", "anchors_preset", "anchor_right", "anchor_bottom", "offset_right", "offset_bottom", "theme_override_styles/panel", "Instructions", "Label", "layout_mode", "offset_right", "offset_bottom", "Wires", "Control", "anchors_preset", "offset_right", "offset_bottom", "Red", "Line2D", "default_color", "Blue", "Line2D", "default_color", "Green", "Line2D", "default_color", "Yellow", "Line2D", "default_color", "CompletedLabel", "Label", "layout_mode", "anchors_preset", "anchor_right", "offset_bottom", "grow_horizontal", "horizontal_alignment", "LeftSocket", "VBoxContainer", "layout_mode", "anchors_preset", "anchor_left", "anchor_top", "anchor_right", "anchor_bottom", "offset_right", "offset_bottom", "grow_vertical", "theme_override_constants/separation", "alignment", "metadata/_edit_use_anchors_", "Redsocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_colors/icon_normal_color", "theme_override_colors/icon_focus_color", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Bluesocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Greensocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Yellowsocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "RightSocket", "VBoxContainer", "layout_mode", "anchors_preset", "anchor_left", "anchor_right", "anchor_bottom", "offset_left", "offset_top", "offset_right", "offset_bottom", "grow_horizontal", "grow_vertical", "theme_override_constants/separation", "alignment", "Bluesocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Yellowsocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Redsocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_colors/icon_normal_color", "theme_override_colors/icon_focus_color", "theme_override_styles/normal", "script", "socket_colour", "socket_side", "Greensocket", "Button", "layout_mode", "size_flags_vertical", "theme_override_styles/normal", "script", "socket_colour", "socket_side"),
-"node_count": 21,
-"node_ids": PackedInt32Array(216729549, 1760409671, 2073243332, 141567993, 1480172470, 624794945, 1068921541, 1501491463, 1043940795, 1892646962, 1230056435, 8181493, 545573567, 547371299, 21776993, 1621693202, 89571284, 136036605, 1209304848, 1796528329, 789397931),
-"node_paths": [NodePath("."), NodePath("."), NodePath("./Main_Panel"), NodePath("./Main_Panel"), NodePath("./Main_Panel"), NodePath("./Main_Panel/Wires"), NodePath("./Main_Panel/Wires"), NodePath("./Main_Panel/Wires"), NodePath("./Main_Panel/Wires"), NodePath("./Main_Panel"), NodePath("./Main_Panel"), NodePath("./Main_Panel/LeftSocket"), NodePath("./Main_Panel/LeftSocket"), NodePath("./Main_Panel/LeftSocket"), NodePath("./Main_Panel/LeftSocket"), NodePath("./Main_Panel"), NodePath("./Main_Panel/RightSocket"), NodePath("./Main_Panel/RightSocket"), NodePath("./Main_Panel/RightSocket"), NodePath("./Main_Panel/RightSocket")],
-"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 1, 1, 1, 0, 1073741824, 0, 3, 262146, -1, 1, 4, 2, 0, 1073741825, 0, 6, 2097157, -1, 9, 7, 3, 8, 4, 9, 5, 10, 6, 11, 7, 12, 8, 13, 9, 14, 10, 15, 11, 0, 1073741826, 0, 17, 262160, -1, 7, 18, 12, 19, 13, 20, 14, 21, 15, 22, 16, 23, 17, 24, 18, 0, 1073741827, 0, 26, 524313, -1, 3, 27, 19, 28, 20, 29, 21, 0, 1073741828, 0, 31, 786462, -1, 3, 32, 22, 33, 23, 34, 24, 0, 1073741829, 0, 36, 262179, -1, 1, 37, 25, 0, 1073741830, 0, 39, 524326, -1, 1, 40, 26, 0, 1073741831, 0, 42, 786473, -1, 1, 43, 27, 0, 1073741832, 0, 45, 1048620, -1, 1, 46, 28, 0, 1073741833, 0, 48, 1048623, -1, 6, 49, 29, 50, 30, 51, 31, 52, 32, 53, 33, 54, 34, 0, 1073741834, 0, 56, 1310775, -1, 12, 57, 35, 58, 36, 59, 37, 60, 38, 61, 39, 62, 40, 63, 41, 64, 42, 65, 43, 66, 44, 67, 45, 68, 46, 0, 1073741835, 0, 70, 262213, -1, 8, 71, 47, 72, 48, 73, 49, 74, 50, 75, 51, 76, 52, 77, 53, 78, 54, 0, 1073741836, 0, 80, 524367, -1, 6, 81, 55, 82, 56, 83, 57, 84, 58, 85, 59, 86, 60, 0, 1073741837, 0, 88, 786519, -1, 6, 89, 61, 90, 62, 91, 63, 92, 64, 93, 65, 94, 66, 0, 1073741838, 0, 96, 1048671, -1, 6, 97, 67, 98, 68, 99, 69, 100, 70, 101, 71, 102, 72, 0, 1073741839, 0, 104, 1572967, -1, 13, 105, 73, 106, 74, 107, 75, 108, 76, 109, 77, 110, 78, 111, 79, 112, 80, 113, 81, 114, 82, 115, 83, 116, 84, 117, 85, 0, 1073741840, 0, 119, 262262, -1, 6, 120, 86, 121, 87, 122, 88, 123, 89, 124, 90, 125, 91, 0, 1073741841, 0, 127, 524414, -1, 6, 128, 92, 129, 93, 130, 94, 131, 95, 132, 96, 133, 97, 0, 1073741842, 0, 135, 786566, -1, 8, 136, 98, 137, 99, 138, 100, 139, 101, 140, 102, 141, 103, 142, 104, 143, 105, 0, 1073741843, 0, 145, 1048720, -1, 6, 146, 106, 147, 107, 148, 108, 149, 109, 150, 110, 151, 111, 0),
-"variants": [ExtResource("14_gg7pb"), ExtResource("15_7p775"), true, 1, 0.17400001, 0.07700001, 0.86500007, 0.873, -0.4480133, 0.10399628, 0.51989746, 0.29595947, 1, -1, 0.99700004, 0.98800004, 0.3909912, 0.19198608, SubResource("StyleBoxFlat_c07je"), 0, 796.0, 35.0, 0, 40.0, 40.0, Color(0.67230505, 1.7688051e-06, 6.256998e-07, 1), Color(0.054438993, 2.310276e-05, 0.8849139, 1), Color(0.17887229, 0.426441, 0, 1), Color(0.5140663, 0.44800127, 0, 1), 1, 10, 1.0, 47.0, 2, 1, 1, -1, 0.022584694, 0.06782946, 0.07779172, 0.93217057, 16.0, 4.0, 2, 100, 1, true, 2, 3, Color(0.7670247, 2.5268644e-06, 9.62615e-07, 1), Color(1, 0, 0, 1), SubResource("StyleBoxFlat_mt240"), ExtResource("16_c3v03"), "Red", "Left", 2, 3, SubResource("StyleBoxFlat_0xafj"), ExtResource("16_c3v03"), "Blue", "Left", 2, 3, SubResource("StyleBoxFlat_baqgp"), ExtResource("16_c3v03"), "Green", "Left", 2, 3, SubResource("StyleBoxFlat_bn406"), ExtResource("16_c3v03"), "Yellow", "Left", 1, 11, 1.0, 1.0, 1.0, -81.0, 35.0, -21.0, -31.0, 0, 2, 100, 1, 2, 3, SubResource("StyleBoxFlat_0xafj"), ExtResource("16_c3v03"), "Blue", "Left", 2, 3, SubResource("StyleBoxFlat_bn406"), ExtResource("16_c3v03"), "Yellow", "Left", 2, 3, Color(0.7670247, 2.5268644e-06, 9.62615e-07, 1), Color(1, 0, 0, 1), SubResource("StyleBoxFlat_mt240"), ExtResource("16_c3v03"), "Red", "Left", 2, 3, SubResource("StyleBoxFlat_baqgp"), ExtResource("16_c3v03"), "Green", "Left"],
-"version": 3
-}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_futi2"]
 transparency = 1
@@ -113,7 +55,7 @@ roughness = 0.0
 
 [node name="WhistlesAmbiance" type="AudioStreamPlayer" parent="." unique_id=403446378]
 stream = ExtResource("1_tquit")
-volume_db = -5.0
+volume_db = -10.0
 autoplay = true
 
 [node name="Level" type="Node3D" parent="." unique_id=1191396916]
@@ -158,21 +100,11 @@ mesh = SubResource("BoxMesh_qgrml")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D" unique_id=747092600]
 shape = SubResource("ConcavePolygonShape3D_nhnx1")
 
-[node name="puzzle_terminal_1" parent="Level" unique_id=1661541044 instance=ExtResource("5_12diy")]
-transform = Transform3D(0.7472648, 0, -0.66452634, 0, 1, 0, 0.66452634, 0, 0.7472648, 22.929424, 0.5097165, -0.92473066)
-door_ID_to_open = 1111
-puzzle_scene = null
-
 [node name="Lighting" parent="Level" unique_id=298486255 instance=ExtResource("1_5jrsn")]
 
 [node name="BaseDoor2" parent="Level" unique_id=1235796359 instance=ExtResource("9_12diy")]
 transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 2.0214696, 0, -1.6, 0, -6.9938224e-08, -90.305176, 1.792475, 43.81)
 door_ID = 1111
-
-[node name="puzzle_terminal_2" parent="Level" unique_id=263274929 instance=ExtResource("5_12diy")]
-transform = Transform3D(-0.6877086, 0, 0.7259868, 0, 1, 0, -0.7259868, 0, -0.6877086, -88.58269, 0.5097165, 48.358543)
-door_ID_to_open = 1111
-puzzle_scene = ExtResource("7_pbr1s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Level" unique_id=512907059]
 
@@ -837,11 +769,6 @@ light_energy = 3.04
 light_negative = true
 spot_range = 5.359
 spot_angle = 117.14
-
-[node name="puzzle_terminal_2" parent="Map" unique_id=703107241 instance=ExtResource("5_12diy")]
-transform = Transform3D(-0.6877086, 0, 0.7259868, 0, 1, 0, -0.7259868, 0, -0.6877086, -64.08293, 6.832308, 36.895664)
-door_ID_to_open = 1112
-puzzle_scene = SubResource("PackedScene_w8o47")
 
 [node name="Roof7" type="CSGBox3D" parent="Map" unique_id=1098597911]
 transform = Transform3D(-4.371139e-08, -0.5586771, -4.3711378e-08, 0, -2.4420551e-08, 0.99999976, -1, 2.4420551e-08, 1.910685e-15, -66.11311, 10.346619, 31.728596)
@@ -2082,3 +2009,13 @@ transform = Transform3D(-0.5529323, 0, 0.03235237, 0, 0.5193113, 0, -0.031542975
 
 [node name="office cubicles2" parent="." unique_id=1521870772 instance=ExtResource("21_w8o47")]
 transform = Transform3D(0.5537389, 0, -0.010379618, 0, 0.5193113, 0, 0.010119928, 0, 0.5679477, -134.67075, 6.37773, 77.993645)
+
+[node name="PuzzleTerminal" parent="." unique_id=1661541044 instance=ExtResource("18_7p775")]
+transform = Transform3D(-0.7035311, 0, 0.7106645, 0, 1, 0, -0.7106645, 0, -0.7035311, -88.6946, 0.54535866, 48.23472)
+puzzle_scene = ExtResource("7_pbr1s")
+door_ID_to_open = 1111
+
+[node name="PuzzleTerminal2" parent="." unique_id=652503248 instance=ExtResource("18_7p775")]
+transform = Transform3D(-0.85649234, 0, 0.5161598, 0, 1, 0, -0.5161598, 0, -0.85649234, -136.67151, 6.8391104, 51.641056)
+puzzle_scene = ExtResource("20_c3v03")
+door_ID_to_open = 1112
