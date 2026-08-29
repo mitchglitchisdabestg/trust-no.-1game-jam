@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://q2wsurueahvt" path="res://Scenes/Puzzles/puzzle_terminal.gd" id="1_mjf85"]
 [ext_resource type="AudioStream" uid="uid://chcqlapwfu7x3" path="res://Assets/Audio/Ambiance/metallic-ambiance.mp3" id="2_u6kqq"]
+[ext_resource type="AudioStream" uid="uid://dnrm5ug8wxx0u" path="res://Assets/Audio/insert_casette.mp3" id="3_f1at8"]
+[ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="3_u6kqq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5vog"]
 albedo_color = Color(0.19076231, 0.19076234, 0.19076231, 1)
@@ -27,6 +29,17 @@ max_db = 6.0
 autoplay = true
 max_distance = 7.0
 
+[node name="VoiceMemoPlayer" type="AudioStreamPlayer3D" parent="." unique_id=154250033]
+volume_db = 5.0
+unit_size = 15.0
+max_distance = 10.0
+
+[node name="InsertCasetteNoise" type="AudioStreamPlayer3D" parent="." unique_id=662568852]
+stream = ExtResource("3_f1at8")
+volume_db = 5.0
+unit_size = 15.0
+max_distance = 10.0
+
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1874442933]
 transform = Transform3D(1, 0, 0, 0, 0.9959239, 0.09019803, 0, -0.09019803, 0.9959239, 0.0014648438, 0.09763505, -0.19571368)
 size = Vector3(1.0029297, 0.77630615, 1)
@@ -37,6 +50,8 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, -7.450581e-09, 0, 7.450581e-09, 
 billboard = 1
 text = "Press E to Interact
 "
+font = ExtResource("3_u6kqq")
+font_size = 25
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1141941857]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005317688, -0.23580676, -0.17986798)

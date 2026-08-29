@@ -2,6 +2,7 @@ class_name Player extends CharacterBody3D
 
 @onready var player_camera: Camera3D = $Head/PlayerCamera
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var casette: Node3D = $Casette
 
 @export var is_audible : bool = true
 
@@ -26,6 +27,17 @@ const MIN_AUDIBLE_SPEED : float = 3.0
 # Changing variables
 var bob_progress : float = 0.0
 var current_speed : float = 0.0
+
+#region casette
+
+func show_held_casette(audio_stream: AudioStream) -> void:
+	Status.set_stored_casette_stream(audio_stream)
+	casette.show()
+
+func hide_held_casette() -> void:
+	casette.hide()
+
+#endregion
 
 #region handlers
 
@@ -52,6 +64,10 @@ func decide_is_audible () -> bool:
 	return current_speed >= MIN_AUDIBLE_SPEED
 
 #endregion
+
+func _ready() -> void:
+	SignalBus.pickup_casette.connect(show_held_casette)
+	SignalBus.insert_casette.connect(hide_held_casette)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
