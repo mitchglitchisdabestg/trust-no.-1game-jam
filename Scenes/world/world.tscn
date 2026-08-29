@@ -726,11 +726,11 @@ spot_range = 5.359
 spot_angle = 117.14
 
 [node name="BaseDoor2" parent="Map" unique_id=91568385 instance=ExtResource("9_12diy")]
-transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 2.0214696, 0, -1.6, 0, -6.9938224e-08, -151.76358, 8.115067, 43.81)
+transform = Transform3D(-1.6, 0, 1.3987645e-07, 0, 2.021469, 0, -1.3987645e-07, 0, -1.6, -72.46599, 8.106144, 41.416843)
 door_ID = 1111
 
 [node name="puzzle_terminal_2" parent="Map" unique_id=703107241 instance=ExtResource("5_12diy")]
-transform = Transform3D(-0.6877086, 0, 0.7259868, 0, 1, 0, -0.7259868, 0, -0.6877086, -150.0411, 6.832308, 48.358543)
+transform = Transform3D(-0.6877086, 0, 0.7259868, 0, 1, 0, -0.7259868, 0, -0.6877086, -64.08293, 6.832308, 36.895664)
 door_ID_to_open = 1111
 puzzle_scene = ExtResource("7_pbr1s")
 
@@ -742,21 +742,21 @@ size = Vector3(19.020967, 36.534363, 0.27563477)
 material = ExtResource("12_77064")
 
 [node name="CSGBox3D25" type="CSGBox3D" parent="Map" unique_id=1799513423]
-transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -69.03372, 8.306464, 22.096962)
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -69.03372, 8.306464, 22.221226)
 use_collision = true
 size = Vector3(13.823853, 5.5600586, 0.47729492)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D27" type="CSGBox3D" parent="Map" unique_id=350416500]
-transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -68.912994, 8.353546, 41.38329)
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -75.085434, 8.353546, 41.38329)
 use_collision = true
-size = Vector3(14.330383, 5.5600586, 0.47729492)
+size = Vector3(1.9855042, 5.5600586, 0.47729492)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D44" type="CSGBox3D" parent="Map" unique_id=356078604]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -80.56299, 8.328873, 36.546448)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -76.153824, 8.328873, 31.822056)
 use_collision = true
-size = Vector3(9.463631, 7.301819, 0.47729492)
+size = Vector3(18.912416, 7.301819, 0.47729492)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D49" type="CSGBox3D" parent="Map" unique_id=1604181194]
@@ -778,15 +778,15 @@ size = Vector3(3.437107, 0.6518574, 0.47729492)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D72" type="CSGBox3D" parent="Map" unique_id=1130164884]
-transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -58.966934, 8.321497, 22.096962)
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -58.966934, 8.321497, 22.22081)
 use_collision = true
 size = Vector3(7.2525635, 5.578369, 0.47729492)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D73" type="CSGBox3D" parent="Map" unique_id=1045418552]
-transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -58.86168, 8.353546, 41.38329)
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -63.04106, 8.353546, 41.31267)
 use_collision = true
-size = Vector3(6.715088, 5.5600586, 0.47729492)
+size = Vector3(15.073853, 5.5600586, 0.47729492)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D74" type="CSGBox3D" parent="Map" unique_id=1858691158]
@@ -817,23 +817,11 @@ shadow_enabled = true
 spot_range = 39.271
 spot_angle = 86.41
 
-[node name="CSGBox3D84" type="CSGBox3D" parent="Map" unique_id=1825073776]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -80.5126, 8.33577, 26.016556)
-use_collision = true
-size = Vector3(7.4573145, 7.3265076, 0.47729492)
-material = ExtResource("12_tspqu")
-
 [node name="CSGBox3D85" type="CSGBox3D" parent="Map" unique_id=737645516]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.5586773, 0, -1, 0, -4.371139e-08, -80.52931, 10.032175, 30.725174)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 0.5586773, 0, 8.742278e-08, 0, -1, -72.35742, 10.032175, 41.384407)
 use_collision = true
-size = Vector3(2.2214594, 1.2195473, 0.43215942)
+size = Vector3(3.634738, 1.2195473, 0.43215942)
 material = ExtResource("12_tspqu")
-
-[node name="CSGBox3D89" type="CSGBox3D" parent="Map" unique_id=1147204730]
-transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -78.97313, 6.2113333, 30.863445)
-use_collision = true
-size = Vector3(2.2437367, 4.914092, 0.27563477)
-material = ExtResource("10_pbr1s")
 
 [node name="SpotLight3D15" type="SpotLight3D" parent="Map" unique_id=2002940630]
 transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -67.438156, 9.371189, 30.694775)
