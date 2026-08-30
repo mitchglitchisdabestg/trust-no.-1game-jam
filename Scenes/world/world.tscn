@@ -31,6 +31,7 @@
 [ext_resource type="AudioStream" uid="uid://bn8votrjtwkfa" path="res://Assets/Audio/voice memo (3).mp3" id="25_2bfpg"]
 [ext_resource type="PackedScene" uid="uid://nido2vv38kbf" path="res://Scenes/Elevator/elevator.tscn" id="25_rmni6"]
 [ext_resource type="PackedScene" uid="uid://bxy1y4bs1k4q6" path="res://Scenes/Assets/whiteboard.tscn" id="26_yujt8"]
+[ext_resource type="PackedScene" uid="uid://rb1816okb3y3" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle_harder.tscn" id="28_nhj0p"]
 [ext_resource type="PackedScene" uid="uid://dn1ppagaiknek" path="res://Scenes/Assets/working_plant.tscn" id="29_thd77"]
 [ext_resource type="PackedScene" uid="uid://cx6ahprev4rof" path="res://Scenes/Assets/chair.tscn" id="30_2bfpg"]
 [ext_resource type="PackedScene" uid="uid://b1cmynonep1pt" path="res://Scenes/Puzzles/password_puzzle/password_puzzle.tscn" id="33_bnk1b"]
@@ -172,7 +173,7 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Player" parent="." unique_id=423765952 instance=ExtResource("2_1fp7r")]
-transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -131.7706, 11.596215, 39.205227)
+transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -131.7706, 8.898668, 72.54373)
 
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
@@ -2617,7 +2618,7 @@ transform = Transform3D(1.5999999, 0, 0, 0, 2.0214696, 0, 0, 0, 1.5999999, -142.
 door_ID = 1112
 
 [node name="VoiceMemo2" parent="Key Objects" unique_id=126759128 node_paths=PackedStringArray("subtitle_box", "subtitle_text") instance=ExtResource("19_7p775")]
-transform = Transform3D(0.15142035, 0.37023205, 0.0003597432, -0.37005958, 0.15133786, 0.012360932, 0.011304921, -0.005012057, 0.39980873, -66.69766, 1.1588911, 43.825542)
+transform = Transform3D(0.09039081, 0.19339952, 0.33826923, -0.37005952, 0.15133783, 0.012360932, -0.122005835, -0.31574276, 0.21312213, -71.863464, 0.27690542, 47.822273)
 tape_subtitle = "“Hey, uh… don't freak out, but I’m you. An older version of you.If you’re waking up in the basement again, don’t panic. Head straight through the filing cabinets and find the terminal. It should unlock the door.\""
 subtitle_box = NodePath("../../SubtitlesUI/PanelContainer")
 subtitle_text = NodePath("../../SubtitlesUI/PanelContainer/Label")
@@ -2639,11 +2640,11 @@ door_ID_to_open = 1112
 
 [node name="Door3" parent="Key Objects" unique_id=522574859 instance=ExtResource("9_12diy")]
 transform = Transform3D(1.8831835, 0, 0, 0, 2.321127, 0, 0, 0, 1.5999999, -142.8814, 12.163199, 60.842266)
-door_ID = 1112
+door_ID = 1113
 
 [node name="Door4" parent="Key Objects" unique_id=971052306 instance=ExtResource("9_12diy")]
 transform = Transform3D(1.9535425, 0, 0, 0, 2.2580843, 0, 0, 0, 1.5999999, -129.99734, 12.364784, 46.08125)
-door_ID = 1113
+door_ID = 1114
 
 [node name="whiteboard" parent="Key Objects" unique_id=1442603353 instance=ExtResource("26_yujt8")]
 transform = Transform3D(0.35777482, -1.5236853e-10, 1.0244548e-08, 1.891749e-10, 0.356466, 1.0244548e-08, 3.7252903e-09, -3.2588012e-09, 0.44331056, -127.398575, 10.611698, 86.81817)
@@ -2673,13 +2674,13 @@ max_db = 6.0
 
 [node name="PuzzleTerminal3" parent="Key Objects" unique_id=1572665685 instance=ExtResource("18_7p775")]
 transform = Transform3D(-0.9111229, 0, 0.41213477, 0, 1, 0, -0.41213477, 0, -0.9111229, -130.97035, 12.240025, 65.85385)
-puzzle_scene = ExtResource("20_c3v03")
-door_ID_to_open = 1112
+puzzle_scene = ExtResource("28_nhj0p")
+door_ID_to_open = 1113
 
 [node name="PuzzleTerminal4" parent="Key Objects" unique_id=1643478636 instance=ExtResource("18_7p775")]
 transform = Transform3D(-0.9111229, 0, 0.41213477, 0, 1, 0, -0.41213477, 0, -0.9111229, -141.6858, 12.110536, 49.0175)
 puzzle_scene = ExtResource("20_c3v03")
-door_ID_to_open = 1112
+door_ID_to_open = 1114
 
 [node name="Prototyping" type="Node3D" parent="." unique_id=2096246784]
 

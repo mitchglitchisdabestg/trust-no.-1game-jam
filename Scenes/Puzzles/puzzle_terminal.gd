@@ -16,6 +16,8 @@ func _ready() -> void:
 	label.hide()
 
 func interact () -> void:
+	if voice_memo_player.playing: return
+	
 	if !get_has_casette():
 		play_game()
 	else:
@@ -23,6 +25,7 @@ func interact () -> void:
 		hide_prompt()
 
 func show_prompt () -> void:
+	if voice_memo_player.playing: return
 	label.text = original_text if !get_has_casette() else "Press E to Insert Casette"
 	
 	label.show()
