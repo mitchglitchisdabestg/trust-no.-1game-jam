@@ -13,6 +13,7 @@
 [ext_resource type="Material" uid="uid://bdmj7wqg68og2" path="res://Assets/Textures/Receptionfloor.tres" id="14_8nkgs"]
 [ext_resource type="PackedScene" uid="uid://dc7n5ixntwcwr" path="res://Scenes/Assets/office_tableBIG.tscn" id="14_c3v03"]
 [ext_resource type="PackedScene" uid="uid://bd5cckv58v5h5" path="res://Scenes/Assets/filing cabnet.tscn" id="15_futi2"]
+[ext_resource type="Material" uid="uid://o28oyy8bdqgo" path="res://Assets/Textures/exit stairs.tres" id="15_rxwyd"]
 [ext_resource type="Material" uid="uid://7wthnebfgwmu" path="res://Assets/Textures/Officewall.tres" id="17_w8o47"]
 [ext_resource type="PackedScene" uid="uid://dohrkyj7bsimk" path="res://Scenes/Puzzles/puzzle_terminal.tscn" id="18_7p775"]
 [ext_resource type="PackedScene" uid="uid://dbej0k2sepc7v" path="res://Scenes/casette/voice_memo.tscn" id="19_7p775"]
@@ -2355,47 +2356,47 @@ spot_angle = 86.41
 [node name="CSGBox3D270" type="CSGBox3D" parent="Map" unique_id=572305775]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -66.1225, 10.418204, 25.863674)
 size = Vector3(3.2200894, 1.3636799, 0.32919312)
-material = ExtResource("10_pbr1s")
+material = ExtResource("15_rxwyd")
 
 [node name="CSGBox3D271" type="CSGBox3D" parent="Map" unique_id=778948463]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -68.13086, 11.022797, 25.866577)
 size = Vector3(3.2200894, 1.9870157, 0.51185226)
-material = ExtResource("10_pbr1s")
+material = ExtResource("15_rxwyd")
 
 [node name="CSGBox3D272" type="CSGBox3D" parent="Map" unique_id=1489762810]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -69.13527, 11.600697, 25.86536)
 size = Vector3(3.2200894, 1.7259297, 0.6283293)
-material = ExtResource("10_pbr1s")
+material = ExtResource("15_rxwyd")
 
 [node name="CSGBox3D273" type="CSGBox3D" parent="Map" unique_id=686356496]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -70.11813, 12.170483, 25.866577)
 size = Vector3(3.2200894, 1.9870157, 0.51185226)
-material = ExtResource("10_pbr1s")
+material = ExtResource("15_rxwyd")
 
 [node name="CSGBox3D274" type="CSGBox3D" parent="Map" unique_id=1934026104]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -71.212814, 12.556855, 25.866577)
 size = Vector3(3.2200894, 1.9870157, 0.51185226)
-material = ExtResource("10_pbr1s")
+material = ExtResource("15_rxwyd")
 
 [node name="CSGBox3D275" type="CSGBox3D" parent="Map" unique_id=438084835]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -72.217224, 13.081188, 25.86536)
 size = Vector3(3.2200894, 1.7259297, 0.5211959)
-material = ExtResource("10_pbr1s")
+material = ExtResource("15_rxwyd")
 
 [node name="CSGBox3D276" type="CSGBox3D" parent="Map" unique_id=1901345619]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -73.14746, 13.564864, 25.866577)
 size = Vector3(3.2200894, 1.9870157, 0.410223)
-material = ExtResource("10_pbr1s")
+material = ExtResource("15_rxwyd")
 
 [node name="CSGBox3D277" type="CSGBox3D" parent="Map" unique_id=1079998131]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -74.899124, 13.970524, 25.87753)
 size = Vector3(3.2200894, 4.339211, 0.44879723)
-material = ExtResource("10_pbr1s")
+material = ExtResource("15_rxwyd")
 
 [node name="CSGBox3D281" type="CSGBox3D" parent="Map" unique_id=1185995918]
 transform = Transform3D(0.016667217, 0.5585996, 4.370532e-08, -1.2776347e-15, -2.4420554e-08, 1, 0.9998611, -0.009311587, -7.2854345e-10, -67.044876, 10.686612, 25.867035)
 size = Vector3(3.2200894, 2.0853047, 0.58307457)
-material = ExtResource("10_pbr1s")
+material = ExtResource("15_rxwyd")
 
 [node name="CSGBox3D282" type="CSGBox3D" parent="Map" unique_id=2079291873]
 transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -60.684814, 14.466918, 25.004799)
@@ -2624,4 +2625,4 @@ transform = Transform3D(-2.5203397e-09, 0, 0.116326176, 0, 0.05958669, 0, -0.057
 transform = Transform3D(-0.057628077, 0, -0.003787829, 0, 0.05958669, 0, 0.001877489, 0, -0.11626449, -134.36209, 9.287814, 54.10154)
 
 [node name="Sketchfab_Scene" parent="." unique_id=1557729591 instance=ExtResource("22_tquit")]
-transform = Transform3D(-1.6626989, 0, -1.3790091e-07, 0, 1.3626122, 0, 1.4535775e-07, 0, -1.5774025, -132.114, 7.917945, 50.49791)
+transform = Transform3D(-1.6626989, 0, -1.3790091e-07, 0, 1.2535715, 0, 1.4535775e-07, 0, -1.5774025, -132.114, 7.795148, 50.49791)
