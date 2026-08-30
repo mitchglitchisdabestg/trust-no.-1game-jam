@@ -37,6 +37,10 @@
 [ext_resource type="PackedScene" uid="uid://cx6ahprev4rof" path="res://Scenes/Assets/chair.tscn" id="30_2bfpg"]
 [ext_resource type="AudioStream" uid="uid://ckbbawh1w5i1l" path="res://Assets/Audio/voice memo (4).mp3" id="30_2ym14"]
 [ext_resource type="PackedScene" uid="uid://b1cmynonep1pt" path="res://Scenes/Puzzles/password_puzzle/password_puzzle.tscn" id="33_bnk1b"]
+[ext_resource type="PackedScene" uid="uid://bmc5c76am4rks" path="res://Scenes/Assets/firedoor.tscn" id="38_b33nd"]
+[ext_resource type="PackedScene" uid="uid://ddn6pppaxagex" path="res://Scenes/Assets/sign_exit_2.tscn" id="39_uaeg3"]
+[ext_resource type="PackedScene" uid="uid://cr133idyvajxr" path="res://Scenes/Assets/cups.tscn" id="40_1fyea"]
+[ext_resource type="PackedScene" uid="uid://bjx7031eudf8a" path="res://Scenes/Assets/cooler_with_bottle.tscn" id="41_s2s2h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p775"]
 bg_color = Color(0.2611126, 0.26111263, 0.26111248, 1)
@@ -2476,7 +2480,7 @@ spot_range = 39.271
 spot_angle = 86.41
 
 [node name="SpotLight3D59" type="SpotLight3D" parent="Map" unique_id=652210593]
-transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -76.03662, 17.752653, 25.253643)
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -73.47333, 17.752653, 25.528488)
 light_color = Color(2.117753e-06, 0.7291325, 0.27605376, 1)
 light_energy = 15.159
 light_size = 0.045
@@ -2900,6 +2904,27 @@ password = "159058"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=85762414]
 libraries/ = SubResource("AnimationLibrary_eduk4")
+
+[node name="firedoor" parent="." unique_id=1781545172 instance=ExtResource("38_b33nd")]
+transform = Transform3D(-0.028730595, 0, 3.212446, 0, 1.5118024, 0, -2.934205, 0, -0.031455025, -144.46329, 14.269945, 38.898685)
+
+[node name="sign_exit2" parent="." unique_id=1608820480 instance=ExtResource("39_uaeg3")]
+transform = Transform3D(-1.12525406e-07, 0, 1.0000001, 0, 1.9212338, 0, -2.5742812, 0, -4.3711392e-08, -135.15698, 14.22576, 38.817066)
+
+[node name="Cups" parent="." unique_id=1280475709 instance=ExtResource("40_1fyea")]
+transform = Transform3D(0.18833576, 0, 0, 0, 0.12424374, 0, 0, 0, 0.18217418, -133.34134, 11.454855, 87.39146)
+
+[node name="Cups2" parent="." unique_id=294523865 instance=ExtResource("40_1fyea")]
+transform = Transform3D(0.18833576, 0, 0, 0, 0.12424374, 0, 0, 0, 0.18217418, -133.34134, 11.4891815, 84.67545)
+
+[node name="cooler_with_bottle" parent="." unique_id=426156055 instance=ExtResource("41_s2s2h")]
+transform = Transform3D(-0.32414633, 0, -1.7385899, 0, 1.2728825, 0, 2.053072, 0, -0.27449477, -125.7511, 10.561796, 82.91966)
+
+[node name="cooler_with_bottle2" parent="." unique_id=1011570886 instance=ExtResource("41_s2s2h")]
+transform = Transform3D(-0.32414633, 0, -1.7385899, 0, 1.2728825, 0, 2.053072, 0, -0.27449477, -125.7511, 6.3179717, 82.91966)
+
+[node name="cooler_with_bottle3" parent="." unique_id=908526938 instance=ExtResource("41_s2s2h")]
+transform = Transform3D(2.0718138, 0, 0.1410988, 0, 1.2728823, 0, -0.16662121, 0, 1.7544609, -134.22032, 6.5190377, 55.365128)
 
 [connection signal="body_entered" from="Map/Roof11/End Trigger" to="Map/Roof11/End Trigger" method="_on_body_entered"]
 
