@@ -99,7 +99,7 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Player" parent="." unique_id=423765952 instance=ExtResource("2_1fp7r")]
-transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -63.22151, 1.4157617, 43.852234)
+transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -135.1979, 7.2946854, 88.779724)
 
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
@@ -1142,9 +1142,9 @@ size = Vector3(3.791669, 5.8668213, 0.25842285)
 material = ExtResource("17_w8o47")
 
 [node name="CSGBox3D145" type="CSGBox3D" parent="Map" unique_id=20676174]
-transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -65.319824, 9.935787, 82.718414)
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -65.319824, 9.904424, 82.5654)
 use_collision = true
-size = Vector3(1.9890962, 1.7411499, 0.47729492)
+size = Vector3(1.9890962, 1.6532898, 0.17126465)
 material = ExtResource("17_w8o47")
 
 [node name="CSGBox3D280" type="CSGBox3D" parent="Map" unique_id=1453484514]
@@ -1235,12 +1235,6 @@ material = SubResource("StandardMaterial3D_7p775")
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -62.61734, 8.456776, 82.581024)
 use_collision = true
 size = Vector3(3.4583344, 5.849243, 0.20251465)
-material = ExtResource("17_w8o47")
-
-[node name="CSGBox3D142" type="CSGBox3D" parent="Map" unique_id=868562918]
-transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -65.312546, 10.313602, 82.587524)
-use_collision = true
-size = Vector3(1.9197202, 0.5886843, 0.18835449)
 material = ExtResource("17_w8o47")
 
 [node name="CSGBox3D143" type="CSGBox3D" parent="Map" unique_id=1985020059]
@@ -1715,9 +1709,9 @@ size = Vector3(0.39122963, 5.8011627, 0.2152443)
 material = SubResource("StandardMaterial3D_7p775")
 
 [node name="CSGBox3D198" type="CSGBox3D" parent="Map" unique_id=1529122417]
-transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -62.61734, 12.62126, 82.718414)
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -62.576218, 12.62126, 82.718414)
 use_collision = true
-size = Vector3(3.4583344, 5.849243, 0.47729492)
+size = Vector3(3.5405686, 5.849243, 0.47729492)
 material = ExtResource("17_w8o47")
 
 [node name="CSGBox3D199" type="CSGBox3D" parent="Map" unique_id=980903274]
