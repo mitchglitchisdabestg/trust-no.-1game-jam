@@ -1,11 +1,27 @@
 [gd_scene format=4 uid="uid://nido2vv38kbf"]
 
-[ext_resource type="Script" uid="uid://3mm8yeke3hni" path="res://Scenes/world/elevator_old.gd" id="1_3inrq"]
 [ext_resource type="Texture2D" uid="uid://cok32054sqhbc" path="res://Assets/Textures/elevator_0.png" id="3_7bymq"]
 [ext_resource type="Texture2D" uid="uid://bmfkqw85pwukw" path="res://Assets/Textures/elevator_1.jpg" id="4_shwcs"]
 
+[sub_resource type="Animation" id="Animation_0xhws"]
+resource_name = "Lift"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("root/ElevatorMain:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 2.297397),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 4.08, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_7omhd"]
 resource_name = "Open"
+length = 1.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -13,10 +29,10 @@ tracks/0/path = NodePath("root/ElevatorMain/LeftOutsideDoor_0_3:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0.025991244, 1, 0)]
+"values": [Vector3(0.025991244, 1, 0), Vector3(0.026, 1, 1.1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -25,10 +41,34 @@ tracks/1/path = NodePath("root/ElevatorMain/RightOutsideDoor_1_5:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0.02599139, 1, 0)]
+"values": [Vector3(0.02599139, 1, 0), Vector3(0.026, 1, -1.1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("root/ElevatorMain/ElevatorCage_11_11/LeftInteriorDoor_8_26:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.008280821, 0, 0), Vector3(-0.008, 0, 0.8)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("root/ElevatorMain/ElevatorCage_11_11/RightInteriorDoor_10_31:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.010248926, 0.39999986, -0.0034389496), Vector3(-0.01, 0.4, -0.8)]
 }
 
 [sub_resource type="Animation" id="Animation_3inrq"]
@@ -57,9 +97,46 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0.02599139, 1, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("root/ElevatorMain/ElevatorCage_11_11/LeftInteriorDoor_8_26:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.008280821, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("root/ElevatorMain/ElevatorCage_11_11/RightInteriorDoor_10_31:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.010248926, 0.39999986, -0.0034389496)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("root/ElevatorMain:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0xhws"]
 _data = {
+&"Lift": SubResource("Animation_0xhws"),
 &"Open": SubResource("Animation_7omhd"),
 &"RESET": SubResource("Animation_3inrq")
 }
@@ -840,7 +917,6 @@ shadow_mesh = SubResource("ArrayMesh_r6po1")
 
 [node name="elevator" type="Node3D" unique_id=1384273909]
 transform = Transform3D(-0.023014154, -0.0004768538, 0.99973506, -0.020715578, 0.99978554, 0, -0.99952066, -0.020710086, -0.023019109, 0, 0, 0)
-script = ExtResource("1_3inrq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1804621700]
 libraries/ = SubResource("AnimationLibrary_0xhws")
@@ -1024,6 +1100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18848056, 3.3219762, 0.0857
 [node name="Object_37_37" type="Node3D" parent="root/OutsideFloor1/ElevatorCallingButtons_007_13_36" unique_id=968115617]
 
 [node name="Object_61" type="MeshInstance3D" parent="root/OutsideFloor1/ElevatorCallingButtons_007_13_36/Object_37_37" unique_id=1609872451]
+transform = Transform3D(-1, 8.754432e-08, 0, -8.568168e-08, -1, 0, 1.8626451e-09, 5.820766e-11, 1, 0.00069348514, -0.0334692, 0)
 mesh = SubResource("ArrayMesh_nw4lk")
 
 [node name="OutsideFloor2" type="Node3D" parent="root" unique_id=1291500004]
