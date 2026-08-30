@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d2tjhdu4pb5ax"]
+
+[ext_resource type="PackedScene" uid="uid://sv2kscclq137" path="res://Brackeys Gam Jam!/long table.glb" id="1_1auip"]
+
+[node name="long table" unique_id=707582757 instance=ExtResource("1_1auip")]

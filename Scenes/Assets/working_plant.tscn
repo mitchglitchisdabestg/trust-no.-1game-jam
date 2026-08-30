@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dn1ppagaiknek"]
+
+[ext_resource type="PackedScene" uid="uid://babtmyq3eeyvl" path="res://Brackeys Gam Jam!/working plant.glb" id="1_ouaet"]
+
+[node name="working plant" unique_id=869183356 instance=ExtResource("1_ouaet")]
