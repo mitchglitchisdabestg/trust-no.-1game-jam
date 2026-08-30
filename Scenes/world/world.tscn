@@ -2008,24 +2008,24 @@ size = Vector3(1.9197202, 0.5886843, 0.18835449)
 material = ExtResource("17_w8o47")
 
 [node name="CSGBox3D143" type="CSGBox3D" parent="Map" unique_id=1985020059]
-transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -65.57152, 8.411691, 85.16608)
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -65.57152, 8.411691, 85.211914)
 operation = 1
 use_collision = true
-size = Vector3(3.1036768, 5.7127686, 0.47729492)
+size = Vector3(3.1036768, 5.7127686, 0.38562012)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D144" type="CSGBox3D" parent="Map" unique_id=870761410]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.71393794, 0, 1, 0, -4.371139e-08, -66.76372, 8.411691, 83.69829)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.71393794, 0, 1, 0, -4.371139e-08, -66.95506, 8.411691, 83.69829)
 operation = 1
 use_collision = true
-size = Vector3(2.3679395, 5.7127686, 0.47729492)
+size = Vector3(2.3679395, 5.7127686, 0.09460449)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D145" type="CSGBox3D" parent="Map" unique_id=1216432987]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.71393794, 0, 1, 0, -4.371139e-08, -64.19388, 8.411691, 83.83574)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.71393794, 0, 1, 0, -4.371139e-08, -63.996674, 8.411691, 83.83574)
 operation = 1
 use_collision = true
-size = Vector3(2.4195948, 5.7127686, 0.47729492)
+size = Vector3(2.4195948, 5.7127686, 0.08288574)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D146" type="CSGBox3D" parent="Map" unique_id=1171555757]
@@ -3553,6 +3553,7 @@ transform = Transform3D(2.0102222e-07, 1.1923918, 0, -1.1923918, 2.0102222e-07, 
 [node name="Object_34_34" type="Node3D" parent="elevator/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/root_1/GLTF_SceneRootNode_2/ElevatorCallingButtons_12_33" unique_id=2119886991]
 
 [node name="Object_56" type="MeshInstance3D" parent="elevator/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/root_1/GLTF_SceneRootNode_2/ElevatorCallingButtons_12_33/Object_34_34" unique_id=133598154]
+transform = Transform3D(0.99999994, -1.8626451e-09, -2.910383e-11, -1.8626451e-09, 0.99999994, -1.8626451e-09, 0, 0, 0.99999994, 0.005033016, -0.24290466, -0.005592346)
 mesh = SubResource("ArrayMesh_03ukp")
 
 [node name="Object_35_35" type="Node3D" parent="elevator/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/root_1/GLTF_SceneRootNode_2/ElevatorCallingButtons_12_33" unique_id=1838976416]
