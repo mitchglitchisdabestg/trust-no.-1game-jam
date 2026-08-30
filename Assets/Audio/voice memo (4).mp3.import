@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckbbawh1w5i1l"
+path="res://.godot/imported/voice memo (4).mp3-770caae1d903e7610c0c6ae67364ce4a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/voice memo (4).mp3"
+dest_files=["res://.godot/imported/voice memo (4).mp3-770caae1d903e7610c0c6ae67364ce4a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
