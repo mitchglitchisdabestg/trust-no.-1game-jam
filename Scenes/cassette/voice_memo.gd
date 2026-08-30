@@ -45,7 +45,7 @@ func pickup_memo () -> void:
 	collision_shape_3d.set_deferred("disabled", true)
 	hide()
 	SignalBus.emit_pickup_casette(audio_player.stream)
-	SignalBus.emit_subtitles(tape_subtitle)
+
 
 func show_prompt () -> void:
 	prompt_3d.show()
