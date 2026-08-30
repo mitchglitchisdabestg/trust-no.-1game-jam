@@ -2,7 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://dgktyevd0xn6k" path="res://Brackeys Gam Jam!/chair.glb" id="1_idu40"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_idu40"]
+size = Vector3(0.6195679, 4.2459717, 2.9426575)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ue3la"]
+size = Vector3(2.9807358, 0.77142334, 3.0997467)
+
 [node name="chair" unique_id=2033680019 instance=ExtResource("1_idu40")]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="17" unique_id=1854633936]
-transform = Transform3D(1, 0, 0, 0, 0.2371434, 0.97147465, 0, -0.97147465, 0.2371434, 0, 20.126299, 0)
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="17" unique_id=376695284]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=344147998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42636108, 3.916245, -1.4589267)
+shape = SubResource("BoxShape3D_idu40")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1022960885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3199234, 1.7516549, -1.5645094)
+shape = SubResource("BoxShape3D_ue3la")

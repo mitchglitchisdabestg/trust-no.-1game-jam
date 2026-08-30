@@ -14,7 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://dc7n5ixntwcwr" path="res://Scenes/Assets/office_tableBIG.tscn" id="14_c3v03"]
 [ext_resource type="PackedScene" uid="uid://bd5cckv58v5h5" path="res://Scenes/Assets/filing cabnet.tscn" id="15_futi2"]
 [ext_resource type="Material" uid="uid://o28oyy8bdqgo" path="res://Assets/Textures/exit stairs.tres" id="15_rxwyd"]
+[ext_resource type="PackedScene" uid="uid://d2tjhdu4pb5ax" path="res://Scenes/Assets/long_table.tscn" id="16_yujt8"]
 [ext_resource type="Material" uid="uid://7wthnebfgwmu" path="res://Assets/Textures/Officewall.tres" id="17_w8o47"]
+[ext_resource type="AudioStream" uid="uid://be4odybytiemk" path="res://Assets/Audio/Voice memo 1.mp3" id="18_2bqh1"]
 [ext_resource type="PackedScene" uid="uid://dohrkyj7bsimk" path="res://Scenes/Puzzles/puzzle_terminal.tscn" id="18_7p775"]
 [ext_resource type="PackedScene" uid="uid://dbej0k2sepc7v" path="res://Scenes/cassette/voice_memo.tscn" id="19_7p775"]
 [ext_resource type="PackedScene" uid="uid://c77m8s1n603w7" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.tscn" id="19_c3v03"]
@@ -23,8 +25,11 @@
 [ext_resource type="PackedScene" uid="uid://cxe3nwr28bhls" path="res://Scenes/Assets/clock_2.tscn" id="21_tquit"]
 [ext_resource type="PackedScene" uid="uid://0ldtewe4df71" path="res://Scenes/Assets/office_cubicles.tscn" id="21_w8o47"]
 [ext_resource type="PackedScene" uid="uid://deybkqri2ff7p" path="res://Scenes/Assets/receptiondesk.tscn" id="22_tquit"]
+[ext_resource type="AudioStream" uid="uid://bdh786uanj7md" path="res://Assets/Audio/voice memo 2.mp3" id="23_qo8xd"]
 [ext_resource type="PackedScene" uid="uid://nido2vv38kbf" path="res://Scenes/Elevator/elevator.tscn" id="25_rmni6"]
 [ext_resource type="PackedScene" uid="uid://bxy1y4bs1k4q6" path="res://Scenes/Assets/whiteboard.tscn" id="26_yujt8"]
+[ext_resource type="PackedScene" uid="uid://dn1ppagaiknek" path="res://Scenes/Assets/working_plant.tscn" id="29_thd77"]
+[ext_resource type="PackedScene" uid="uid://cx6ahprev4rof" path="res://Scenes/Assets/chair.tscn" id="30_2bfpg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p775"]
 bg_color = Color(0.2611126, 0.26111263, 0.26111248, 1)
@@ -2445,6 +2450,12 @@ spot_range = 9.698
 spot_attenuation = -0.2
 spot_angle = 86.41
 
+[node name="long table" parent="Map" unique_id=707582757 instance=ExtResource("16_yujt8")]
+transform = Transform3D(1, 0, 0, 0, 0.43665475, 0, 0, 0, 0.24075891, -60.54402, 7.347042, 44.691074)
+
+[node name="long table2" parent="Map" unique_id=301147783 instance=ExtResource("16_yujt8")]
+transform = Transform3D(1.324373, 0, 0, 0, 0.43665475, 0, 0, 0, 0.24075891, -63.55063, 11.44833, 73.00566)
+
 [node name="Key Objects" type="Node3D" parent="." unique_id=1191396916]
 
 [node name="Door1" parent="Key Objects" unique_id=1235796359 instance=ExtResource("9_12diy")]
@@ -2457,8 +2468,14 @@ door_ID = 1112
 
 [node name="VoiceMemo2" parent="Key Objects" unique_id=126759128 node_paths=PackedStringArray("subtitle_box", "subtitle_text") instance=ExtResource("19_7p775")]
 transform = Transform3D(0.15142035, 0.37023205, 0.0003597432, -0.37005958, 0.15133786, 0.012360932, 0.011304921, -0.005012057, 0.39980873, -66.69766, 1.1588911, 43.825542)
+tape_subtitle = "“Hey, uh… don't freak out, but I’m you. An older version of you.If you’re waking up in the basement again, don’t panic. Head straight through the filing cabinets and find the terminal. It should unlock the door.\""
 subtitle_box = NodePath("../../SubtitlesUI/PanelContainer")
 subtitle_text = NodePath("../../SubtitlesUI/PanelContainer/Label")
+
+[node name="AudioStreamPlayer3D" parent="Key Objects/VoiceMemo2" index="2" unique_id=288719404]
+stream = ExtResource("18_2bqh1")
+volume_db = 47.731
+max_db = 6.0
 
 [node name="PuzzleTerminal" parent="Key Objects" unique_id=1661541044 instance=ExtResource("18_7p775")]
 transform = Transform3D(-0.7035311, 0, 0.7106645, 0, 1, 0, -0.7106645, 0, -0.7035311, -88.6946, 0.54535866, 48.23472)
@@ -2480,6 +2497,16 @@ door_ID = 1113
 
 [node name="whiteboard" parent="Key Objects" unique_id=1442603353 instance=ExtResource("26_yujt8")]
 transform = Transform3D(0.35777482, -1.5236853e-10, 1.0244548e-08, 1.891749e-10, 0.356466, 1.0244548e-08, 3.7252903e-09, -3.2588012e-09, 0.44331056, -127.398575, 10.611698, 86.81817)
+
+[node name="VoiceMemo3" parent="Key Objects" unique_id=418452768 node_paths=PackedStringArray("subtitle_box", "subtitle_text") instance=ExtResource("19_7p775")]
+transform = Transform3D(-0.15183611, -0.3685361, -0.033570215, -0.37005955, 0.15133785, 0.012360931, 0.0013124915, 0.03574954, -0.398397, -132.9833, 7.611908, 58.241184)
+subtitle_box = NodePath("../../SubtitlesUI/PanelContainer")
+subtitle_text = NodePath("../../SubtitlesUI/PanelContainer/Label")
+
+[node name="AudioStreamPlayer3D" parent="Key Objects/VoiceMemo3" index="2" unique_id=288719404]
+stream = ExtResource("23_qo8xd")
+volume_db = 80.0
+max_db = 6.0
 
 [node name="Prototyping" type="Node3D" parent="." unique_id=2096246784]
 
@@ -2646,3 +2673,30 @@ transform = Transform3D(-1.6626989, 0, -1.3790091e-07, 0, 1.2535715, 0, 1.453577
 
 [node name="elevator" parent="." unique_id=1384273909 instance=ExtResource("25_rmni6")]
 transform = Transform3D(-0.023014175, -0.00047685427, 0.999735, -0.020715576, 0.99978554, 9.4881825e-11, -0.9995206, -0.020710086, -0.023019113, -135.42717, 6.323777, 95.766205)
+
+[node name="working plant" parent="." unique_id=869183356 instance=ExtResource("29_thd77")]
+transform = Transform3D(0.32372397, 0, 0, 0, 0.3031478, 0, 0, 0, 0.36314508, -128.00961, 11.043928, 92.77958)
+
+[node name="chair" parent="." unique_id=2033680019 instance=ExtResource("30_2bfpg")]
+transform = Transform3D(-0.046319176, 0, 0.37349987, 0, 0.2759085, 0, -0.2682153, 0, -0.06450119, -135.01657, 10.6813, 83.82979)
+
+[node name="chair2" parent="." unique_id=566889185 instance=ExtResource("30_2bfpg")]
+transform = Transform3D(0.047526456, 0, -0.37320563, 0, 0.2759085, 0, 0.26800403, 0, 0.06618236, -135.98491, 10.6813, 88.39387)
+
+[node name="chair3" parent="." unique_id=1231482348 instance=ExtResource("30_2bfpg")]
+transform = Transform3D(-0.046319176, 0, 0.37349987, 0, 0.2759085, 0, -0.2682153, 0, -0.06450119, -133.70052, 10.6813, 83.82979)
+
+[node name="chair4" parent="." unique_id=85002255 instance=ExtResource("30_2bfpg")]
+transform = Transform3D(0.047526456, 0, -0.37320563, 0, 0.2759085, 0, 0.26800403, 0, 0.06618236, -134.66885, 10.6813, 88.39387)
+
+[node name="chair5" parent="." unique_id=209225415 instance=ExtResource("30_2bfpg")]
+transform = Transform3D(-0.046319176, 0, 0.37349987, 0, 0.2759085, 0, -0.2682153, 0, -0.06450119, -132.26152, 10.6813, 83.82979)
+
+[node name="chair6" parent="." unique_id=551257650 instance=ExtResource("30_2bfpg")]
+transform = Transform3D(0.047526456, 0, -0.37320563, 0, 0.2759085, 0, 0.26800403, 0, 0.06618236, -133.22986, 10.6813, 88.39387)
+
+[node name="chair7" parent="." unique_id=1165513842 instance=ExtResource("30_2bfpg")]
+transform = Transform3D(-0.27217904, 0, 0.002599813, 0, 0.2759085, 0, -0.0018669665, 0, -0.37901953, -137.63545, 10.6813, 85.45335)
+
+[editable path="Key Objects/VoiceMemo2"]
+[editable path="Key Objects/VoiceMemo3"]
