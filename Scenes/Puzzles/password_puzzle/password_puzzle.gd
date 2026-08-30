@@ -39,10 +39,11 @@ func show_correct() -> void:
 	success_noise.play()
 
 func on_closed() -> void:
-	print("h")
 	quit_game()
 
 func _ready() -> void:
+	Status.set_status(Status.Statuses.Puzzle)
+	
 	close_button.pressed.connect(on_closed)
 	submit_button.pressed.connect(submit)
 	clear_button.pressed.connect(clear_input)

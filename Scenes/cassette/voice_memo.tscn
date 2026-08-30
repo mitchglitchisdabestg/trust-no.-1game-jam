@@ -5,7 +5,6 @@
 [ext_resource type="AudioStream" uid="uid://cvibgyn3rx6tr" path="res://Assets/Audio/Buttons/success_noise.mp3" id="3_p717f"]
 [ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="4_kj58l"]
 
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_6bm42"]
 size = Vector3(1.0888672, 0.50201416, 2.314087)
 
@@ -24,6 +23,6 @@ stream = ExtResource("3_p717f")
 [node name="InteractPrompt3D" type="Label3D" parent="." unique_id=1332436581]
 offset = Vector2(0, 200)
 billboard = 1
-text = "Press E to Interact"
+text = "Press E to Pick Up"
 font = ExtResource("4_kj58l")
 font_size = 60

@@ -3,6 +3,7 @@ class_name Player extends CharacterBody3D
 @onready var player_camera: Camera3D = $Head/PlayerCamera
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var casette: Node3D = $Casette
+@onready var interact_prompt_3d: Label3D = $Casette/InteractPrompt3D
 
 @export var is_audible : bool = true
 
@@ -36,6 +37,7 @@ func show_held_casette(audio_stream: AudioStream) -> void:
 
 func hide_held_casette() -> void:
 	casette.hide()
+	interact_prompt_3d.hide()
 
 #endregion
 
