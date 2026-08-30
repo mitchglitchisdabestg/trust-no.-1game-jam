@@ -41,6 +41,7 @@ func play_stored_casette() -> void:
 	insert_casette_noise.play()
 	#Handle subtitles
 
+
 func play_game () -> void:
 	if !puzzle_scene: return
 	
