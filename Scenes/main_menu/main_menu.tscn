@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://buxgdch0arnut" path="res://Scenes/main_menu/main_menu.gd" id="1_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://dm5dmaxhl1gqb" path="res://Assets/wmremove-transformed.jpeg" id="2_jix8l"]
+[ext_resource type="AudioStream" uid="uid://d0yvak2bscqwi" path="res://Assets/Audio/Trust no.1 theme.mp3" id="2_kjrrv"]
 [ext_resource type="Texture2D" uid="uid://kl4kdx05e6e0" path="res://Assets/Unknown-3.jpg" id="3_jix8l"]
 [ext_resource type="Script" uid="uid://b1x3od4253adb" path="res://Scripts/static_overlay.gd" id="4_jix8l"]
 [ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="5_glbon"]
@@ -25,6 +26,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fu7sn")
+
+[node name="PeakMenuMusic" type="AudioStreamPlayer" parent="." unique_id=768283682]
+stream = ExtResource("2_kjrrv")
+autoplay = true
 
 [node name="Background" type="TextureRect" parent="." unique_id=420134897]
 layout_mode = 1
@@ -75,6 +80,7 @@ theme_override_constants/margin_bottom = 64
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+theme_override_constants/separation = 30
 alignment = 2
 
 [node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1136207556]
@@ -83,48 +89,44 @@ theme_override_fonts/font = ExtResource("5_glbon")
 theme_override_font_sizes/font_size = 60
 text = "Trust No.1"
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=970432440]
-layout_mode = 2
-
 [node name="NewGameButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=515091646]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_glbon")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qe12f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8qtwp")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0o4t1")
 text = "New Game"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=835583613]
-layout_mode = 2
-
 [node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1589104044]
+visible = false
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/line_spacing = 500
 theme_override_fonts/font = ExtResource("5_glbon")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qe12f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8qtwp")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0o4t1")
 text = "Settings"
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1269603510]
-layout_mode = 2
-
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1296841661]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/line_spacing = 500
 theme_override_fonts/font = ExtResource("5_glbon")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qe12f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8qtwp")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0o4t1")
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1802320571]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1923669717]
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_mouse_exited"]
@@ -132,10 +134,6 @@ text = "Quit"
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_mouse_exited"]
 [connection signal="focus_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_focus_entered"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_exited"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_mouse_exited"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_settings_button_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_pressed"]

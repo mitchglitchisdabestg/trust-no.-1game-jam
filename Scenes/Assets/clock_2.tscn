@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cxe3nwr28bhls"]
+
+[ext_resource type="PackedScene" uid="uid://b1j55oum410nc" path="res://Assets/Imported modles from the internet/Clock.glb" id="1_xa8oh"]
+
+[node name="Clock2" unique_id=53353270 instance=ExtResource("1_xa8oh")]
+
+[node name="Glass Cover" parent="." index="1" unique_id=1633816920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12889385, 0.08513902, -0.24030092)

@@ -1,5 +1,15 @@
 [gd_scene format=3 uid="uid://dw3fwfrkrekw7"]
 
+[ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="1_5n1we"]
+[ext_resource type="Texture2D" uid="uid://kl4kdx05e6e0" path="res://Assets/Unknown-3.jpg" id="1_mybuh"]
+[ext_resource type="Script" uid="uid://b1x3od4253adb" path="res://Scripts/static_overlay.gd" id="2_rv0nq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7iesh"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_qepae"]
+font = ExtResource("1_5n1we")
+
 [node name="PuzzleGroundwork" type="Control" unique_id=216729549]
 layout_mode = 3
 anchors_preset = 15
@@ -8,6 +18,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="StaticOverlay" type="TextureRect" parent="." unique_id=975529971]
+modulate = Color(1, 1, 1, 0.88235295)
+material = SubResource("CanvasItemMaterial_7iesh")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2731.0
+offset_top = -1503.0
+offset_right = 2797.0
+offset_bottom = 1561.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_mybuh")
+script = ExtResource("2_rv0nq")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=210102783]
 layout_mode = 1
 anchors_preset = 15
@@ -15,7 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.16206557, 0.1620656, 0.16206557, 1)
+color = Color(0.6627451, 0.5058824, 1, 0.41568628)
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1588801652]
 layout_mode = 1
@@ -35,20 +64,27 @@ scale = Vector2(0.4, 0.4)
 
 [node name="CloseButton" type="Button" parent="." unique_id=380983017]
 layout_mode = 0
-offset_left = 1058.0
+offset_left = 1014.99994
 offset_top = 604.0
-offset_right = 1118.0
+offset_right = 1109.8672
 offset_bottom = 634.0
 scale = Vector2(1.3703374, 1.2761503)
 
-[node name="CloseLabel" type="Label" parent="." unique_id=658098949]
-layout_mode = 0
-offset_left = 1060.0
-offset_top = 606.0
-offset_right = 1110.0
-offset_bottom = 629.0
-scale = Vector2(1.5, 1.5)
+[node name="CloseLabel" type="Label" parent="CloseButton" unique_id=658098949]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Close"
+label_settings = SubResource("LabelSettings_qepae")
 uppercase = true
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=554499783]

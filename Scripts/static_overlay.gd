@@ -1,5 +1,8 @@
 extends TextureRect
 
+func _ready() -> void:
+	show()
+
 func _process(_delta: float) -> void:
 	var random_x = randi_range(-300, -50)
 	var random_y = randi_range(-150, 150)

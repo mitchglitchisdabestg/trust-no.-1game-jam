@@ -28,6 +28,8 @@ func check_ray_collision() -> void:
 	
 	var hover_collider : Node3D = interaction_ray.get_collider()
 	
+	#print(hover_collider) #For debugging
+	
 	if !is_instance_valid(hover_collider) or !hover_collider.has_method("interact") or !hover_collider.has_method("show_prompt"): 
 		hide_current_prompt()
 		return
@@ -59,7 +61,9 @@ func _ready() -> void:
 	reticle.scale.y = reticle_size
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and mouse_locked:
+	if Status.current_status == Status.Statuses.Puzzle: return
+	
+	if event is InputEventMouseMotion and mouse_locked and player:
 		player.rotate_y(deg_to_rad(-event.relative.x * SENSITIVITY))
 		head.rotate_x(deg_to_rad(-event.relative.y * SENSITIVITY))
 		head.rotation.x = clampf(head.rotation.x,deg_to_rad(-90),deg_to_rad(90))

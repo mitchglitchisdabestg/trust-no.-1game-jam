@@ -1,6 +1,4 @@
-extends Control
-
-var door_ID_to_open: int = 1111
+extends Puzzle
 
 var selected_socket: Socket = null
 var correct_wire: int = 0
@@ -40,7 +38,7 @@ func reset_game() -> void:
 		wires[wire.name] = wire
 
 func on_success_timeout() -> void: # Lets people admire their completed puzzle for a bit :D
-	SignalBus.emit_open_door(door_ID_to_open)
+	super.on_win()
 	quit_game()
 
 func on_socket_pressed(socket_pressed: Socket) -> void:
@@ -60,11 +58,6 @@ func on_socket_pressed(socket_pressed: Socket) -> void:
 	
 	if wires == {}: #All needed wires have been used
 		on_win()
-
-func quit_game() -> void:
-	Status.set_status(Status.Statuses.World)
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	queue_free()
 
 func on_win() -> void:
 	show_success_timer.start()

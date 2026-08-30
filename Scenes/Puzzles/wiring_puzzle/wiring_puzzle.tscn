@@ -47,10 +47,15 @@ corner_radius_bottom_left = 10
 [node name="WiringPuzzle" unique_id=216729549 instance=ExtResource("1_bnh4e")]
 script = ExtResource("2_mt240")
 
-[node name="ShowSuccessTimer" type="Timer" parent="." index="0" unique_id=1760409671]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="0" unique_id=265892856]
+
+[node name="ShowSuccessTimer" type="Timer" parent="." index="1" unique_id=1760409671]
 one_shot = true
 
-[node name="Main_Panel" type="Control" parent="." index="7" unique_id=2073243332]
+[node name="StaticOverlay" parent="." index="2" unique_id=975529971]
+visible = false
+
+[node name="Main_Panel" type="Control" parent="." index="8" unique_id=2073243332]
 layout_mode = 1
 anchor_left = 0.17400001
 anchor_top = 0.07700001

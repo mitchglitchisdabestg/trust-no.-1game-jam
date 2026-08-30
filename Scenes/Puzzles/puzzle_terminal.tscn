@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://dohrkyj7bsimk"]
+
+[ext_resource type="Script" uid="uid://q2wsurueahvt" path="res://Scenes/Puzzles/puzzle_terminal.gd" id="1_mjf85"]
+[ext_resource type="AudioStream" uid="uid://chcqlapwfu7x3" path="res://Assets/Audio/Ambiance/metallic-ambiance.mp3" id="2_u6kqq"]
+[ext_resource type="AudioStream" uid="uid://dnrm5ug8wxx0u" path="res://Assets/Audio/insert_casette.mp3" id="3_f1at8"]
+[ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="3_u6kqq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5vog"]
+albedo_color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bnehh"]
+albedo_color = Color(0.038397167, 0.038397167, 0.03839716, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7is5v"]
+albedo_color = Color(0.6627451, 0.5058824, 1, 0.41568628)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bnehh"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7is5v"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="PuzzleTerminal" type="StaticBody3D" unique_id=1661541044 node_paths=PackedStringArray("label")]
+script = ExtResource("1_mjf85")
+label = NodePath("CSGBox3D/Label3D")
+
+[node name="MetallicAmbiance" type="AudioStreamPlayer3D" parent="." unique_id=590381511]
+stream = ExtResource("2_u6kqq")
+max_db = 6.0
+autoplay = true
+max_distance = 7.0
+
+[node name="VoiceMemoPlayer" type="AudioStreamPlayer3D" parent="." unique_id=154250033]
+volume_db = 5.0
+unit_size = 15.0
+max_distance = 10.0
+
+[node name="InsertCasetteNoise" type="AudioStreamPlayer3D" parent="." unique_id=662568852]
+stream = ExtResource("3_f1at8")
+volume_db = 5.0
+unit_size = 15.0
+max_distance = 10.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1874442933]
+transform = Transform3D(1, 0, 0, 0, 0.9959239, 0.09019803, 0, -0.09019803, 0.9959239, 0.0014648438, 0.09763505, -0.19571368)
+size = Vector3(1.0029297, 0.77630615, 1)
+material = SubResource("StandardMaterial3D_u5vog")
+
+[node name="Label3D" type="Label3D" parent="CSGBox3D" unique_id=773046292]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, -7.450581e-09, 0, 7.450581e-09, 0.99999994, 0, 0.78017706, 0.30061528)
+billboard = 1
+text = "Press E to Interact
+"
+font = ExtResource("3_u6kqq")
+font_size = 25
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1141941857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005317688, -0.23580676, -0.17986798)
+size = Vector3(1.0576172, 0.05090332, 1.267334)
+material = SubResource("StandardMaterial3D_bnehh")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=961973751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005317688, -0.35940295, -0.17986798)
+size = Vector3(1.0172882, 0.24414063, 1.244142)
+material = SubResource("StandardMaterial3D_u5vog")
+
+[node name="Screen" type="CSGBox3D" parent="." unique_id=1917815944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010635376, 0.15259796, 0.29131687)
+size = Vector3(0.9042969, 0.61724854, 0.122986555)
+material = SubResource("StandardMaterial3D_7is5v")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1128202353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43701148, -0.37112924, 0.36139187)
+size = Vector3(0.056640625, 0.12011719, 0.1640625)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=438275294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34503925, -0.37112924, 0.36139187)
+size = Vector3(0.056640625, 0.12011719, 0.1640625)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=1044500796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2423561, -0.37112924, 0.36139187)
+size = Vector3(0.056640625, 0.12011719, 0.1640625)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=124207542]
+visible = false
+mesh = SubResource("BoxMesh_bnehh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1396009432]
+shape = SubResource("ConcavePolygonShape3D_7is5v")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=226286945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17984056, 1.0180546)
+light_indirect_energy = 0.858
+shadow_enabled = true
+spot_range = 0.855
+spot_attenuation = 1.75
+spot_angle = 36.58
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=69743555]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.17984056, 0.014557362)
+light_indirect_energy = 0.858
+shadow_enabled = true
+spot_range = 1.753
+spot_attenuation = 1.75
+spot_angle = 45.87
