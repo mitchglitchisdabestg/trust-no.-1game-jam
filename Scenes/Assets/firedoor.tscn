@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bmc5c76am4rks"]
+
+[ext_resource type="PackedScene" uid="uid://dpfcrlv5g2g03" path="res://Brackeys Gam Jam!/firedoor.glb" id="1_ptsbk"]
+
+[node name="firedoor" unique_id=1781545172 instance=ExtResource("1_ptsbk")]

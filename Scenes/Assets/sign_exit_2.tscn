@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ddn6pppaxagex"]
+
+[ext_resource type="PackedScene" uid="uid://dfr7clglass71" path="res://Brackeys Gam Jam!/sign_exit.glb" id="1_pjdxl"]
+
+[node name="sign_exit2" unique_id=1608820480 instance=ExtResource("1_pjdxl")]
