@@ -5,16 +5,17 @@ class_name Elevator extends Node3D
 @onready var button_rise_delay_timer: Timer = $ButtonRiseDelayTimer
 @onready var door_open_delay_timer: Timer = $DoorOpenDelayTimer
 
+var locked: bool = true
+
 func _ready() -> void:
 	pass
 
 func go_up() -> void:
 	animation_player.play_backwards("Open")
 	button_rise_delay_timer.start()
-	
 
 func _on_open_trigger_body_entered(body: Node3D) -> void:
-	if !body is Player: return
+	if locked or !body is Player: return
 	animation_player.play("Open")
 
 func _on_button_rise_delay_timer_timeout() -> void:
