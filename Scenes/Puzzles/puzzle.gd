@@ -1,5 +1,4 @@
 class_name Puzzle extends Control
-
 signal game_won
 
 func _process(_delta: float) -> void:
