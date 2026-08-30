@@ -33,7 +33,9 @@
 [ext_resource type="PackedScene" uid="uid://bxy1y4bs1k4q6" path="res://Scenes/Assets/whiteboard.tscn" id="26_yujt8"]
 [ext_resource type="PackedScene" uid="uid://rb1816okb3y3" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle_harder.tscn" id="28_nhj0p"]
 [ext_resource type="PackedScene" uid="uid://dn1ppagaiknek" path="res://Scenes/Assets/working_plant.tscn" id="29_thd77"]
+[ext_resource type="PackedScene" uid="uid://crvpc14wtp21r" path="res://Scenes/Puzzles/match_puzzle/match_puzzle_harder.tscn" id="29_vmp7a"]
 [ext_resource type="PackedScene" uid="uid://cx6ahprev4rof" path="res://Scenes/Assets/chair.tscn" id="30_2bfpg"]
+[ext_resource type="AudioStream" uid="uid://ckbbawh1w5i1l" path="res://Assets/Audio/voice memo (4).mp3" id="30_2ym14"]
 [ext_resource type="PackedScene" uid="uid://b1cmynonep1pt" path="res://Scenes/Puzzles/password_puzzle/password_puzzle.tscn" id="33_bnk1b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p775"]
@@ -2679,7 +2681,7 @@ door_ID_to_open = 1113
 
 [node name="PuzzleTerminal4" parent="Key Objects" unique_id=1643478636 instance=ExtResource("18_7p775")]
 transform = Transform3D(-0.9111229, 0, 0.41213477, 0, 1, 0, -0.41213477, 0, -0.9111229, -141.6858, 12.110536, 49.0175)
-puzzle_scene = ExtResource("20_c3v03")
+puzzle_scene = ExtResource("29_vmp7a")
 door_ID_to_open = 1114
 
 [node name="VoiceMemo5" parent="Key Objects" unique_id=1455311785 node_paths=PackedStringArray("subtitle_box", "subtitle_text") instance=ExtResource("19_7p775")]
@@ -2691,7 +2693,7 @@ subtitle_text = NodePath("../../SubtitlesUI/PanelContainer/Label")
 transform = Transform3D(1, -1.4901161e-08, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0.060317993, -0.18874359, -0.0025024414)
 
 [node name="AudioStreamPlayer3D" parent="Key Objects/VoiceMemo5" index="2" unique_id=288719404]
-stream = ExtResource("25_2bfpg")
+stream = ExtResource("30_2ym14")
 volume_db = 80.0
 max_db = 6.0
 
