@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cx6ahprev4rof"]
+
+[ext_resource type="PackedScene" uid="uid://dgktyevd0xn6k" path="res://Brackeys Gam Jam!/chair.glb" id="1_idu40"]
+
+[node name="chair" unique_id=2033680019 instance=ExtResource("1_idu40")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="17" unique_id=1854633936]
+transform = Transform3D(1, 0, 0, 0, 0.2371434, 0.97147465, 0, -0.97147465, 0.2371434, 0, 20.126299, 0)
