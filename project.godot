@@ -13,6 +13,7 @@ config_version=5
 config/name="Trust no. 1 (brackeys jam 26-2)"
 run/main_scene="uid://bheumvpgw1mxt"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/image="uid://bd4l2gqd8h021"
 config/icon="res://Assets/icon.svg"
 
 [autoload]
