@@ -19,7 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://c77m8s1n603w7" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.tscn" id="19_c3v03"]
 [ext_resource type="PackedScene" uid="uid://civebhg0y2sce" path="res://Scenes/Puzzles/match_puzzle/match_puzzle.tscn" id="20_c3v03"]
 [ext_resource type="PackedScene" uid="uid://cvvtluh5qp8rc" path="res://Scenes/Assets/office_table.tscn" id="20_w8o47"]
+[ext_resource type="PackedScene" uid="uid://cxe3nwr28bhls" path="res://Scenes/Assets/clock_2.tscn" id="21_tquit"]
 [ext_resource type="PackedScene" uid="uid://0ldtewe4df71" path="res://Scenes/Assets/office_cubicles.tscn" id="21_w8o47"]
+[ext_resource type="PackedScene" uid="uid://deybkqri2ff7p" path="res://Scenes/Assets/receptiondesk.tscn" id="22_tquit"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p775"]
 bg_color = Color(0.2611126, 0.26111263, 0.26111248, 1)
@@ -31,7 +33,7 @@ corner_radius_bottom_left = 4
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_futi2"]
 transparency = 1
 depth_draw_mode = 1
-albedo_color = Color(0.5019608, 1, 1, 0.44705883)
+albedo_color = Color(0.5019608, 1, 1, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gg7pb"]
 transparency = 1
@@ -2276,7 +2278,7 @@ spot_attenuation = -0.2
 spot_angle = 86.41
 
 [node name="SpotLight3D53" type="SpotLight3D" parent="Map" unique_id=813254189]
-transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -65.76251, 10.048375, 40.21776)
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -71.93005, 10.048375, 40.21776)
 light_energy = 4.398
 light_size = 0.045
 shadow_enabled = true
@@ -2419,6 +2421,15 @@ use_collision = true
 size = Vector3(12.50359, 10.806091, 1.812912)
 material = ExtResource("17_w8o47")
 
+[node name="SpotLight3D60" type="SpotLight3D" parent="Map" unique_id=1398488447]
+transform = Transform3D(1, 0, 0, 0, -0.048013028, 0.9988467, 0, -0.9988467, -0.048013028, -64.22278, 10.048375, 40.912994)
+light_energy = 4.398
+light_size = 0.045
+shadow_enabled = true
+spot_range = 9.698
+spot_attenuation = -0.2
+spot_angle = 86.41
+
 [node name="Key Objects" type="Node3D" parent="." unique_id=1191396916]
 
 [node name="Door1" parent="Key Objects" unique_id=1235796359 instance=ExtResource("9_12diy")]
@@ -2440,7 +2451,7 @@ puzzle_scene = ExtResource("19_c3v03")
 door_ID_to_open = 1111
 
 [node name="PuzzleTerminal2" parent="Key Objects" unique_id=652503248 instance=ExtResource("18_7p775")]
-transform = Transform3D(-0.85649234, 0, 0.5161598, 0, 1, 0, -0.5161598, 0, -0.85649234, -136.67151, 6.8391104, 51.641056)
+transform = Transform3D(0.8749665, 0, 0.4841835, 0, 1, 0, -0.4841835, 0, 0.8749665, -135.93353, 8.00124, 51.579796)
 puzzle_scene = ExtResource("20_c3v03")
 door_ID_to_open = 1112
 
@@ -2602,3 +2613,15 @@ door_ID = 1111
 
 [node name="office table" parent="." unique_id=604429056 instance=ExtResource("20_w8o47")]
 transform = Transform3D(-2.4047754e-08, 0, 0.5039258, 0, 0.5226204, 0, -0.5501485, 0, -2.2027296e-08, -129.34052, 10.598343, 66.0228)
+
+[node name="Clock2" parent="." unique_id=53353270 instance=ExtResource("21_tquit")]
+transform = Transform3D(-0.057628077, 0, -0.003787829, 0, 0.05958669, 0, 0.001877489, 0, -0.11626449, -132.42558, 8.13509, 61.237064)
+
+[node name="Clock3" parent="." unique_id=208013660 instance=ExtResource("21_tquit")]
+transform = Transform3D(-2.5203397e-09, 0, 0.116326176, 0, 0.05958669, 0, -0.057658654, 0, -5.084779e-09, -145.48965, 8.555305, 76.492065)
+
+[node name="Clock4" parent="." unique_id=1331396998 instance=ExtResource("21_tquit")]
+transform = Transform3D(-0.057628077, 0, -0.003787829, 0, 0.05958669, 0, 0.001877489, 0, -0.11626449, -134.36209, 9.287814, 54.10154)
+
+[node name="Sketchfab_Scene" parent="." unique_id=1557729591 instance=ExtResource("22_tquit")]
+transform = Transform3D(-1.6626989, 0, -1.3790091e-07, 0, 1.3626122, 0, 1.4535775e-07, 0, -1.5774025, -132.114, 7.917945, 50.49791)
