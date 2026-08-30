@@ -52,6 +52,9 @@ script = ExtResource("2_mt240")
 [node name="ShowSuccessTimer" type="Timer" parent="." index="1" unique_id=1760409671]
 one_shot = true
 
+[node name="StaticOverlay" parent="." index="2" unique_id=975529971]
+visible = false
+
 [node name="Main_Panel" type="Control" parent="." index="8" unique_id=2073243332]
 layout_mode = 1
 anchor_left = 0.17400001

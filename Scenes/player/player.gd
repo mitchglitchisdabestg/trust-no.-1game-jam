@@ -70,6 +70,8 @@ func _ready() -> void:
 	SignalBus.insert_casette.connect(hide_held_casette)
 
 func _physics_process(delta: float) -> void:
+	if Status.current_status == Status.Statuses.Puzzle: return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -121,5 +123,4 @@ func _physics_process(delta: float) -> void:
 	
 	is_audible = decide_is_audible()
 	
-	if Status.current_status == Status.Statuses.World:
-		move_and_slide()
+	move_and_slide()

@@ -3,6 +3,7 @@ class_name Terminal extends Node3D
 @export var label: Label3D
 @export var puzzle_scene: PackedScene
 @export var door_ID_to_open : int
+@export var password: String
 
 @onready var original_text: String = label.text
 @onready var voice_memo_player: AudioStreamPlayer3D = $VoiceMemoPlayer
@@ -21,7 +22,7 @@ func interact () -> void:
 		play_stored_casette()
 
 func show_prompt () -> void:
-	label.text = original_text if get_has_casette() else "Press E to Insert Casette"
+	label.text = original_text if !get_has_casette() else "Press E to Insert Casette"
 	
 	label.show()
 
