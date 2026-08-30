@@ -141,29 +141,3 @@ layout_mode = 2
 
 [node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow4" index="2" unique_id=1542438090 instance=ExtResource("3_ij32e")]
 layout_mode = 2
-
-[node name="TileRow5" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" index="4" unique_id=985307392]
-layout_mode = 2
-alignment = 1
-
-[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow5" index="0" unique_id=134888694 instance=ExtResource("3_ij32e")]
-layout_mode = 2
-
-[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow5" index="1" unique_id=1026326227 instance=ExtResource("3_ij32e")]
-layout_mode = 2
-
-[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow5" index="2" unique_id=2085714100 instance=ExtResource("3_ij32e")]
-layout_mode = 2
-
-[node name="TileRow6" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" index="5" unique_id=373701115]
-layout_mode = 2
-alignment = 1
-
-[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow6" index="0" unique_id=2008539048 instance=ExtResource("3_ij32e")]
-layout_mode = 2
-
-[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow6" index="1" unique_id=794931119 instance=ExtResource("3_ij32e")]
-layout_mode = 2
-
-[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow6" index="2" unique_id=1899760014 instance=ExtResource("3_ij32e")]
-layout_mode = 2
