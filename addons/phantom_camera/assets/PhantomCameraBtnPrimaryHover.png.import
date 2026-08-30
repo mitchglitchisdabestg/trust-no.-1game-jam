@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pvr8mbvl1onm"
-path="res://.godot/imported/PhantomCameraBtnPrimaryHover.png-5f508cedf79b9e0cf1cf1991ed006a81.ctex"
+path="res://.godot/imported/PhantomCameraBtnPrimaryHover.png-3d2e4d225f6a86ce8a9c981ee7926a16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/phantom_camera/assets/PhantomCameraBtnPrimaryHover.png"
-dest_files=["res://.godot/imported/PhantomCameraBtnPrimaryHover.png-5f508cedf79b9e0cf1cf1991ed006a81.ctex"]
+source_file="res://addons/phantom_camera/assets/PhantomCameraBtnPrimaryHover.png"
+dest_files=["res://.godot/imported/PhantomCameraBtnPrimaryHover.png-3d2e4d225f6a86ce8a9c981ee7926a16.ctex"]
 
 [params]
 

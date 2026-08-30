@@ -15,6 +15,7 @@
 [ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="14_tbmo1"]
 [ext_resource type="PackedScene" uid="uid://bd5cckv58v5h5" path="res://Scenes/Assets/filing cabnet.tscn" id="15_futi2"]
 [ext_resource type="Material" uid="uid://o28oyy8bdqgo" path="res://Assets/Textures/exit stairs.tres" id="15_rxwyd"]
+[ext_resource type="Script" uid="uid://dho25betocflc" path="res://Scenes/world/end_trigger.gd" id="16_bnk1b"]
 [ext_resource type="PackedScene" uid="uid://d2tjhdu4pb5ax" path="res://Scenes/Assets/long_table.tscn" id="16_yujt8"]
 [ext_resource type="Material" uid="uid://7wthnebfgwmu" path="res://Assets/Textures/Officewall.tres" id="17_w8o47"]
 [ext_resource type="AudioStream" uid="uid://be4odybytiemk" path="res://Assets/Audio/Voice memo 1.mp3" id="18_2bqh1"]
@@ -69,6 +70,70 @@ metallic = 0.45
 metallic_specular = 0.34
 roughness = 0.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nhj0p"]
+size = Vector3(3.1706543, 8.241943, 5.7716675)
+
+[sub_resource type="Animation" id="Animation_bnk1b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Head/PlayerCamera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.6795035, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Head/PlayerCamera:fov")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [75.0]
+}
+
+[sub_resource type="Animation" id="Animation_nhj0p"]
+resource_name = "end_cutscene"
+length = 3.9666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Head/PlayerCamera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.63, 0.6333333),
+"transitions": PackedFloat32Array(1, 1, 10.928331),
+"update": 0,
+"values": [Vector3(0, -0.6795035, 0), Vector3(-0.023830414, -1.3484764, -0.69958496), Vector3(0, -1.3520155, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Head/PlayerCamera:fov")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9448),
+"transitions": PackedFloat32Array(1, 5.2780313),
+"update": 0,
+"values": [75.0, 21.8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eduk4"]
+_data = {
+&"RESET": SubResource("Animation_bnk1b"),
+&"end_cutscene": SubResource("Animation_nhj0p")
+}
+
 [node name="World" type="Node3D" unique_id=1014660479]
 
 [node name="Pause Menu" parent="." unique_id=1368006392 instance=ExtResource("4_fbtbp")]
@@ -107,7 +172,7 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Player" parent="." unique_id=423765952 instance=ExtResource("2_1fp7r")]
-transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -118.790535, 8.467977, 42.691387)
+transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -131.7706, 11.596215, 39.205227)
 
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
@@ -2384,6 +2449,14 @@ use_collision = true
 size = Vector3(3.8401723, 19.93581, 0.27563477)
 material = SubResource("StandardMaterial3D_futi2")
 
+[node name="End Trigger" type="Area3D" parent="Map/Roof11" unique_id=1855370030 node_paths=PackedStringArray("animation_player")]
+script = ExtResource("16_bnk1b")
+animation_player = NodePath("../../../Player/AnimationPlayer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Roof11/End Trigger" unique_id=1150852855]
+transform = Transform3D(0.9999807, -2.8871e-07, -1.710664e-07, 3.296882e-07, 0.9999983, 3.625297e-07, -2.0293228e-08, -8.939234e-08, 0.9999998, 0.10149765, 7.814636, 2.522522)
+shape = SubResource("BoxShape3D_nhj0p")
+
 [node name="CSGBox3D269" type="CSGBox3D" parent="Map" unique_id=1948220118]
 transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -70.004196, 14.4742565, 30.186008)
 use_collision = true
@@ -2756,6 +2829,12 @@ transform = Transform3D(0.7311037, 0, 0.68226635, 0, 1, 0, -0.68226635, 0, 0.731
 puzzle_scene = ExtResource("33_bnk1b")
 password = "159058"
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=85762414]
+libraries/ = SubResource("AnimationLibrary_eduk4")
+
+[connection signal="area_entered" from="Map/Roof11/End Trigger" to="Map/Roof11/End Trigger" method="_on_area_entered"]
+
+[editable path="Player"]
 [editable path="Key Objects/VoiceMemo2"]
 [editable path="Key Objects/VoiceMemo3"]
 [editable path="Key Objects/VoiceMemo4"]
