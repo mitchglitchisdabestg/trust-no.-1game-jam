@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dve7mgsjik4dg"
-path="res://.godot/imported/Nunito-Regular.ttf-b6054d499efa1a10921004862b1e217a.fontdata"
+path="res://.godot/imported/Nunito-Regular.ttf-e38705fcc2ee5c220bf1d1eeb61c9ec4.fontdata"
 
 [deps]
 
-source_file="res://addons/phantom_camera/fonts/Nunito-Regular.ttf"
-dest_files=["res://.godot/imported/Nunito-Regular.ttf-b6054d499efa1a10921004862b1e217a.fontdata"]
+source_file="res://Addons/phantom_camera/fonts/Nunito-Regular.ttf"
+dest_files=["res://.godot/imported/Nunito-Regular.ttf-e38705fcc2ee5c220bf1d1eeb61c9ec4.fontdata"]
 
 [params]
 

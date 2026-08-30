@@ -53,4 +53,8 @@ func _ready() -> void:
 
 func success_timer_timeout () -> void:
 	on_win()
+
+func on_win() -> void:
+	super.on_win()
 	SignalBus.emit_unlock_elevator()
+	quit_game()

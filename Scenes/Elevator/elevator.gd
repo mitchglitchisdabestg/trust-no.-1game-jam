@@ -8,7 +8,10 @@ class_name Elevator extends Node3D
 var locked: bool = true
 
 func _ready() -> void:
-	pass
+	SignalBus.unlock_elevator.connect(unlock)
+
+func unlock () -> void:
+	locked = false
 
 func go_up() -> void:
 	animation_player.play_backwards("Open")
@@ -23,7 +26,6 @@ func _on_button_rise_delay_timer_timeout() -> void:
 
 func _on_door_open_delay_timer_timeout() -> void:
 	animation_player.play("Open")
-
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Lift":
