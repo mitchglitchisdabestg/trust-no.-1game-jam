@@ -1,7 +1,5 @@
 extends Puzzle
 
-var password: String = "1111"
-
 @onready var line_edit: LineEdit = $MainPanel/Panel/MarginContainer/VBoxContainer/LineEdit
 @onready var submit_button: Button = $MainPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/SubmitButton
 @onready var clear_button: Button = $MainPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ClearButton
@@ -40,8 +38,12 @@ func show_correct() -> void:
 	correct.show()
 	success_noise.play()
 
+func on_closed() -> void:
+	print("h")
+	quit_game()
+
 func _ready() -> void:
-	close_button.pressed.connect(quit_game)
+	close_button.pressed.connect(on_closed)
 	submit_button.pressed.connect(submit)
 	clear_button.pressed.connect(clear_input)
 	
