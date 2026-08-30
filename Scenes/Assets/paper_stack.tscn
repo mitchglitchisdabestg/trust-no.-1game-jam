@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://k4jcjckl4fed"]
+
+[ext_resource type="PackedScene" uid="uid://bisffuii10ibv" path="res://Brackeys Gam Jam!/paper stack.glb" id="1_6dfop"]
+
+[node name="paper stack" unique_id=1331907269 instance=ExtResource("1_6dfop")]
