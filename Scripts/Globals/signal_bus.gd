@@ -7,7 +7,7 @@ signal insert_casette
 signal unlock_elevator
 
 func emit_open_door (door_ID: int) -> void:
-	print(door_ID)
+	#print(door_ID)
 	open_door.emit(door_ID)
 
 func emit_pickup_casette (stream_to_play_terminal: AudioStream) -> void:

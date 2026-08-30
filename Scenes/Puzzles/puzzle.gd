@@ -7,7 +7,6 @@ func _process(_delta: float) -> void:
 		on_win()
 
 func on_win() -> void:
-	print("gg")
 	Status.set_status(Status.Statuses.World)
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	game_won.emit()
