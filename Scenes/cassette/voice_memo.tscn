@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dbej0k2sepc7v"]
 
-[ext_resource type="Script" uid="uid://bhlccif5gimas" path="res://Scenes/casette/voice_memo.gd" id="1_ycii3"]
+[ext_resource type="Script" uid="uid://bhlccif5gimas" path="res://Scenes/cassette/voice_memo.gd" id="1_ycii3"]
 [ext_resource type="PackedScene" uid="uid://3isjcxsbv51x" path="res://Assets/Textures/psx_vhs_demo.glb" id="2_3e3da"]
 [ext_resource type="AudioStream" uid="uid://cvibgyn3rx6tr" path="res://Assets/Audio/Buttons/success_noise.mp3" id="3_p717f"]
 [ext_resource type="FontFile" uid="uid://b7pmgpt56bw4t" path="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="4_kj58l"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6bm42"]
 size = Vector3(1.0888672, 0.50201416, 2.314087)

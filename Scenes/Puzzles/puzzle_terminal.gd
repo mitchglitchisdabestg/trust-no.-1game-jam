@@ -20,6 +20,7 @@ func interact () -> void:
 		play_game()
 	else:
 		play_stored_casette()
+		hide_prompt()
 
 func show_prompt () -> void:
 	label.text = original_text if !get_has_casette() else "Press E to Insert Casette"
