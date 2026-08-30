@@ -17,6 +17,10 @@ const connections: int = 4
 @onready var close_button: Button = $CloseButton
 @onready var show_success_timer: Timer = $ShowSuccessTimer
 
+@onready var wire_success: AudioStreamPlayer = $WireSuccess
+@onready var press_2: AudioStreamPlayer = $Press2
+@onready var electric_fail: AudioStreamPlayer = $ElectricFail
+
 func _ready() -> void:
 	Status.set_status(Status.Statuses.Puzzle)
 	reset_game()
@@ -42,18 +46,23 @@ func on_success_timeout() -> void: # Lets people admire their completed puzzle f
 	quit_game()
 
 func on_socket_pressed(socket_pressed: Socket) -> void:
-	if !selected_socket: # No socket is already selected
+	
+	if !selected_socket or selected_socket == socket_pressed: # No socket is already selected
 		selected_socket = socket_pressed
+		press_2.play()
 	elif selected_socket != socket_pressed and socket_pressed.socket_colour == selected_socket.socket_colour and wires.has(socket_pressed.socket_colour): # A socket is already selected, check for a match
 		#Success! If we got this far, it's a match! Time to wire it up.
 		var needed_wire: Line2D = wires[socket_pressed.socket_colour]
 		needed_wire.add_point(selected_socket.global_position - Vector2(170,30))
 		needed_wire.add_point(socket_pressed.global_position - Vector2(170,30))
 		
+		wire_success.play()
+		
 		wires.erase(socket_pressed.socket_colour)
 		selected_socket = null
 	else:
 		#If we got this far, it's not a match :(
+		electric_fail.play()
 		selected_socket = null
 	
 	if wires == {}: #All needed wires have been used

@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://dw3fwfrkrekw7" path="res://Scenes/Puzzles/puzzle_groundwork.tscn" id="1_bnh4e"]
 [ext_resource type="Script" uid="uid://d3cekedri12wm" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.gd" id="2_mt240"]
 [ext_resource type="Script" uid="uid://b15b841rto01i" path="res://Scenes/Puzzles/wiring_puzzle/socket.gd" id="2_xsflo"]
+[ext_resource type="AudioStream" uid="uid://duo70gm38tihd" path="res://Assets/Audio/Buttons/wire_success.mp3" id="3_3ls2m"]
+[ext_resource type="AudioStream" uid="uid://cvdqg0h4eu21u" path="res://Assets/Audio/Buttons/press-2.mp3" id="4_j8gqo"]
+[ext_resource type="AudioStream" uid="uid://vjvfkaipyovp" path="res://Assets/Audio/Buttons/electric_fail.mp3" id="5_8n0xn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c07je"]
 bg_color = Color(0.23031491, 0.23031494, 0.23031485, 1)
@@ -47,15 +50,22 @@ corner_radius_bottom_left = 10
 [node name="WiringPuzzle" unique_id=216729549 instance=ExtResource("1_bnh4e")]
 script = ExtResource("2_mt240")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="0" unique_id=265892856]
+[node name="WireSuccess" type="AudioStreamPlayer" parent="." index="0" unique_id=1204084600]
+stream = ExtResource("3_3ls2m")
 
-[node name="ShowSuccessTimer" type="Timer" parent="." index="1" unique_id=1760409671]
+[node name="Press2" type="AudioStreamPlayer" parent="." index="1" unique_id=1133603050]
+stream = ExtResource("4_j8gqo")
+
+[node name="ElectricFail" type="AudioStreamPlayer" parent="." index="2" unique_id=522739925]
+stream = ExtResource("5_8n0xn")
+
+[node name="ShowSuccessTimer" type="Timer" parent="." index="3" unique_id=1760409671]
 one_shot = true
 
-[node name="StaticOverlay" parent="." index="2" unique_id=975529971]
+[node name="StaticOverlay" parent="." index="4" unique_id=975529971]
 visible = false
 
-[node name="Main_Panel" type="Control" parent="." index="8" unique_id=2073243332]
+[node name="Main_Panel" type="Control" parent="." index="10" unique_id=2073243332]
 layout_mode = 1
 anchor_left = 0.17400001
 anchor_top = 0.07700001
