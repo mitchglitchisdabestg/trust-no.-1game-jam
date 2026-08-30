@@ -26,6 +26,7 @@
 [ext_resource type="Script" uid="uid://3mm8yeke3hni" path="res://Scenes/world/elevator.gd" id="24_qo8xd"]
 [ext_resource type="Texture2D" uid="uid://cok32054sqhbc" path="res://Assets/Textures/elevator_0.png" id="25_yujt8"]
 [ext_resource type="Texture2D" uid="uid://bmfkqw85pwukw" path="res://Assets/Textures/elevator_1.jpg" id="26_6rjl7"]
+[ext_resource type="PackedScene" uid="uid://bxy1y4bs1k4q6" path="res://Scenes/Assets/whiteboard.tscn" id="26_yujt8"]
 [ext_resource type="AnimationLibrary" uid="uid://sublucgnesdr" path="res://Scenes/world/elevatoranimation.res" id="27_thd77"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p775"]
@@ -3460,6 +3461,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03969431, 1.0145813, 0)
 
 [node name="Object_20" type="MeshInstance3D" parent="elevator/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/root_1/GLTF_SceneRootNode_2/ElevatorCage_11_11/Object_12_12" unique_id=1242366183]
 mesh = SubResource("ArrayMesh_uh6q6")
+
+[node name="whiteboard" parent="elevator/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/root_1/GLTF_SceneRootNode_2/ElevatorCage_11_11/Object_12_12" unique_id=1442603353 instance=ExtResource("26_yujt8")]
+transform = Transform3D(-0.008233893, -0.007384393, -0.44309792, -0.00017060623, 0.35638946, -0.009180988, 0.35768002, -3.5962747e-11, -0.0102045955, 8.338928, 3.446219, 8.399933)
 
 [node name="Object_13_13" type="Node3D" parent="elevator/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/root_1/GLTF_SceneRootNode_2/ElevatorCage_11_11" unique_id=667777935]
 
