@@ -15,7 +15,7 @@
 [ext_resource type="Material" uid="uid://bij4urn1fraol" path="res://Assets/Textures/Basementwall.tres" id="12_tspqu"]
 [ext_resource type="Material" uid="uid://bdmj7wqg68og2" path="res://Assets/Textures/Receptionfloor.tres" id="14_8nkgs"]
 [ext_resource type="PackedScene" uid="uid://dw3fwfrkrekw7" path="res://Scenes/Puzzles/puzzle_groundwork.tscn" id="14_gg7pb"]
-[ext_resource type="Script" uid="uid://d3cekedri12wm" path="res://Scenes/Puzzles/wiring_puzzle/wiring_puzzle.gd" id="15_7p775"]
+[ext_resource type="Script" uid="uid://d3cekedri12wm" path="res://Scenes/Puzzles/wiring_puzzle.gd" id="15_7p775"]
 [ext_resource type="PackedScene" uid="uid://bd5cckv58v5h5" path="res://Scenes/Assets/filing cabnet.tscn" id="15_futi2"]
 [ext_resource type="Script" uid="uid://b15b841rto01i" path="res://Scenes/Puzzles/wiring_puzzle/socket.gd" id="16_c3v03"]
 [ext_resource type="PackedScene" uid="uid://dbej0k2sepc7v" path="res://Scenes/world/VoiceMemo.tscn" id="19_7p775"]
@@ -198,7 +198,7 @@ door_ID = 1111
 [node name="Environment" type="Node3D" parent="." unique_id=16806332]
 
 [node name="Player" parent="." unique_id=423765952 instance=ExtResource("2_1fp7r")]
-transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -84.43235, 2.060338, 44.024887)
+transform = Transform3D(0.034044795, 0, 0.9994203, 0, 1, 0, -0.9994203, 0, 0.034044795, -91.94297, 2.060338, 44.024887)
 
 [node name="Pause Menu" parent="." unique_id=1368006392 instance=ExtResource("4_fbtbp")]
 metadata/_edit_use_anchors_ = true
@@ -641,7 +641,7 @@ size = Vector3(6.715088, 5.5600586, 0.47729492)
 material = ExtResource("12_tspqu")
 
 [node name="CSGBox3D48" type="CSGBox3D" parent="Map" unique_id=580317570]
-transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -13.648079, -0.111258864, 30.552555)
+transform = Transform3D(-0.016562432, -0.5586005, 6.951722e-09, -4.3034003e-08, 4.282553e-09, 0.99999976, -0.99986285, 0.009253052, -4.3155048e-08, -13.649086, -0.1025424, 30.559536)
 use_collision = true
 size = Vector3(12.527718, 22.804806, 0.27563477)
 material = ExtResource("10_pbr1s")
