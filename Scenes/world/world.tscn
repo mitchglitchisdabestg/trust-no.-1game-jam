@@ -2671,6 +2671,16 @@ stream = ExtResource("25_2bfpg")
 volume_db = 80.0
 max_db = 6.0
 
+[node name="PuzzleTerminal3" parent="Key Objects" unique_id=1572665685 instance=ExtResource("18_7p775")]
+transform = Transform3D(-0.9111229, 0, 0.41213477, 0, 1, 0, -0.41213477, 0, -0.9111229, -130.97035, 12.240025, 65.85385)
+puzzle_scene = ExtResource("20_c3v03")
+door_ID_to_open = 1112
+
+[node name="PuzzleTerminal4" parent="Key Objects" unique_id=1643478636 instance=ExtResource("18_7p775")]
+transform = Transform3D(-0.9111229, 0, 0.41213477, 0, 1, 0, -0.41213477, 0, -0.9111229, -141.6858, 12.110536, 49.0175)
+puzzle_scene = ExtResource("20_c3v03")
+door_ID_to_open = 1112
+
 [node name="Prototyping" type="Node3D" parent="." unique_id=2096246784]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Prototyping" unique_id=1586749847]
