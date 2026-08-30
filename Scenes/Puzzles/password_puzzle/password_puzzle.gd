@@ -3,7 +3,7 @@ extends Puzzle
 @onready var line_edit: LineEdit = $MainPanel/Panel/MarginContainer/VBoxContainer/LineEdit
 @onready var submit_button: Button = $MainPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/SubmitButton
 @onready var clear_button: Button = $MainPanel/Panel/MarginContainer/VBoxContainer/HBoxContainer/ClearButton
-@onready var close_button: Button = $CloseButton
+@onready var close_button: Button = $MainPanel/Panel/MarginContainer/VBoxContainer/CloseButton
 
 @onready var success_noise: AudioStreamPlayer = $SuccessNoise
 @onready var error_noise: AudioStreamPlayer = $ErrorNoise
@@ -52,3 +52,4 @@ func _ready() -> void:
 
 func success_timer_timeout () -> void:
 	on_win()
+	SignalBus.emit_unlock_elevator()

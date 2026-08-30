@@ -6,7 +6,7 @@ class_name Terminal extends Node3D
 @export var password: String
 
 @onready var original_text: String = label.text
-@onready var voice_memo_player: AudioStreamPlayer3D = $VoiceMemoPlayer
+@onready var voice_memo_player: AudioStreamPlayer = $VoiceMemoPlayer
 @onready var insert_casette_noise: AudioStreamPlayer3D = $InsertCasetteNoise
 
 func get_has_casette () -> bool:
