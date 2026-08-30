@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://0ldtewe4df71" path="res://Scenes/Assets/office_cubicles.tscn" id="21_w8o47"]
 [ext_resource type="PackedScene" uid="uid://deybkqri2ff7p" path="res://Scenes/Assets/receptiondesk.tscn" id="22_tquit"]
 [ext_resource type="AudioStream" uid="uid://bdh786uanj7md" path="res://Assets/Audio/voice memo 2.mp3" id="23_qo8xd"]
+[ext_resource type="AudioStream" uid="uid://bn8votrjtwkfa" path="res://Assets/Audio/voice memo (3).mp3" id="25_2bfpg"]
 [ext_resource type="PackedScene" uid="uid://nido2vv38kbf" path="res://Scenes/Elevator/elevator.tscn" id="25_rmni6"]
 [ext_resource type="PackedScene" uid="uid://bxy1y4bs1k4q6" path="res://Scenes/Assets/whiteboard.tscn" id="26_yujt8"]
 [ext_resource type="PackedScene" uid="uid://dn1ppagaiknek" path="res://Scenes/Assets/working_plant.tscn" id="29_thd77"]
@@ -2482,7 +2483,7 @@ puzzle_scene = ExtResource("20_c3v03")
 door_ID_to_open = 1112
 
 [node name="Door3" parent="Key Objects" unique_id=522574859 instance=ExtResource("9_12diy")]
-transform = Transform3D(1.7265565, 0, 0, 0, 2.321127, 0, 0, 0, 1.5999999, -142.8814, 12.163199, 60.842266)
+transform = Transform3D(1.8831835, 0, 0, 0, 2.321127, 0, 0, 0, 1.5999999, -142.8814, 12.163199, 60.842266)
 door_ID = 1112
 
 [node name="Door4" parent="Key Objects" unique_id=971052306 instance=ExtResource("9_12diy")]
@@ -2499,6 +2500,19 @@ subtitle_text = NodePath("../../SubtitlesUI/PanelContainer/Label")
 
 [node name="AudioStreamPlayer3D" parent="Key Objects/VoiceMemo3" index="2" unique_id=288719404]
 stream = ExtResource("23_qo8xd")
+volume_db = 80.0
+max_db = 6.0
+
+[node name="VoiceMemo4" parent="Key Objects" unique_id=588031378 node_paths=PackedStringArray("subtitle_box", "subtitle_text") instance=ExtResource("19_7p775")]
+transform = Transform3D(-0.2716468, -0.090484306, 0.27932164, -0.12177047, 0.38098174, 0.0049919114, -0.2671703, -0.0816427, -0.28627682, -136.95375, 11.690322, 84.61783)
+subtitle_box = NodePath("../../SubtitlesUI/PanelContainer")
+subtitle_text = NodePath("../../SubtitlesUI/PanelContainer/Label")
+
+[node name="Sketchfab_Scene" parent="Key Objects/VoiceMemo4" index="0" unique_id=1650450434]
+transform = Transform3D(1, -1.4901161e-08, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0.060317993, -0.18874359, -0.0025024414)
+
+[node name="AudioStreamPlayer3D" parent="Key Objects/VoiceMemo4" index="2" unique_id=288719404]
+stream = ExtResource("25_2bfpg")
 volume_db = 80.0
 max_db = 6.0
 
@@ -2692,5 +2706,12 @@ transform = Transform3D(0.047526456, 0, -0.37320563, 0, 0.2759085, 0, 0.26800403
 [node name="chair7" parent="." unique_id=1165513842 instance=ExtResource("30_2bfpg")]
 transform = Transform3D(-0.27217904, 0, 0.002599813, 0, 0.2759085, 0, -0.0018669665, 0, -0.37901953, -137.63545, 10.6813, 85.45335)
 
+[node name="chair8" parent="." unique_id=246178905 instance=ExtResource("30_2bfpg")]
+transform = Transform3D(0.08835885, 0, 0.35850102, 0, 0.2759085, 0, -0.2574444, 0, 0.123043, -129.18616, 10.6813, 64.40741)
+
+[node name="chair9" parent="." unique_id=75207952 instance=ExtResource("30_2bfpg")]
+transform = Transform3D(0.08835885, 0, 0.35850102, 0, 0.2759085, 0, -0.2574444, 0, 0.123043, -140.9473, 10.6813, 48.05929)
+
 [editable path="Key Objects/VoiceMemo2"]
 [editable path="Key Objects/VoiceMemo3"]
+[editable path="Key Objects/VoiceMemo4"]
