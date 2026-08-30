@@ -9,9 +9,8 @@ func _on_body_entered1(body):
 	
 func _on_body_entered(body):
 	print("TRIGGER ENTERED: ", body.name)
-	if triggered:
-		return
-	
-	if body.name == "Player":
+
+	if body.name == "Player" and not triggered:
 		triggered = true
+		print("PLAYING CUTSCENE!")
 		animation_player.play("end_cutscene")

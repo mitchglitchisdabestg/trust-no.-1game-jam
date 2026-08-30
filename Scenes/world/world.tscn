@@ -71,7 +71,7 @@ metallic_specular = 0.34
 roughness = 0.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nhj0p"]
-size = Vector3(3.1706543, 8.241943, 5.7716675)
+size = Vector3(0.17376709, 8.241943, 5.7716675)
 
 [sub_resource type="Animation" id="Animation_bnk1b"]
 length = 0.001
@@ -2122,9 +2122,9 @@ size = Vector3(0.2480011, 5.9231567, 0.16681671)
 material = SubResource("StandardMaterial3D_7p775")
 
 [node name="CSGBox3D241" type="CSGBox3D" parent="Map" unique_id=61897703]
-transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -55.41678, 12.555135, 28.622814)
+transform = Transform3D(1, 0, 0, 0, 0.7139379, 0, 0, 0, 1, -55.41678, 12.555135, 28.661617)
 use_collision = true
-size = Vector3(0.2480011, 5.9231567, 0.16681671)
+size = Vector3(0.2480011, 5.9231567, 0.2444191)
 material = SubResource("StandardMaterial3D_7p775")
 
 [node name="CSGBox3D242" type="CSGBox3D" parent="Map" unique_id=1754853298]
@@ -2450,11 +2450,12 @@ size = Vector3(3.8401723, 19.93581, 0.27563477)
 material = SubResource("StandardMaterial3D_futi2")
 
 [node name="End Trigger" type="Area3D" parent="Map/Roof11" unique_id=1855370030 node_paths=PackedStringArray("animation_player")]
+transform = Transform3D(40.87219, 1.8626451e-09, -1.679689e-09, 4.7683716e-07, 1.0865575, 1.193089e-07, 3.6182023e-08, -1.4885266e-08, 1.3759636, -0.20204926, 0.0056762695, 0)
 script = ExtResource("16_bnk1b")
 animation_player = NodePath("../../../Player/AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Roof11/End Trigger" unique_id=1150852855]
-transform = Transform3D(0.9999807, -2.8871e-07, -1.710664e-07, 3.296882e-07, 0.9999983, 3.625297e-07, -2.0293228e-08, -8.939234e-08, 0.9999998, 0.10149765, 7.814636, 2.522522)
+transform = Transform3D(0.9999807, -2.5890768e-07, -1.7280198e-07, 3.2782555e-07, 0.99999815, 4.2507048e-07, -2.1286482e-08, 2.9837626e-08, 0.9999998, 0.04824829, 7.814636, 2.5225296)
 shape = SubResource("BoxShape3D_nhj0p")
 
 [node name="CSGBox3D269" type="CSGBox3D" parent="Map" unique_id=1948220118]
@@ -2562,6 +2563,48 @@ transform = Transform3D(1, 0, 0, 0, 0.43665475, 0, 0, 0, 0.24075891, -60.54402, 
 
 [node name="long table2" parent="Map" unique_id=301147783 instance=ExtResource("16_yujt8")]
 transform = Transform3D(1.324373, 0, 0, 0, 0.43665475, 0, 0, 0, 0.24075891, -63.55063, 11.44833, 73.00566)
+
+[node name="CSGBox3D285" type="CSGBox3D" parent="Map" unique_id=1096264826]
+transform = Transform3D(-0.011065181, 0, 0.9999388, 0, 0.7139379, 0, -0.9999388, 0, -0.011065181, -56.305794, 12.555135, 22.253231)
+use_collision = true
+size = Vector3(0.2480011, 5.9231567, 1.9331398)
+material = SubResource("StandardMaterial3D_7p775")
+
+[node name="CSGBox3D286" type="CSGBox3D" parent="Map" unique_id=1735603316]
+transform = Transform3D(-0.011065181, 0, 0.9999388, 0, 0.7139379, 0, -0.9999388, 0, -0.011065181, -62.565826, 12.602933, 22.3261)
+use_collision = true
+size = Vector3(0.26057434, 5.8303223, 1.9871569)
+material = SubResource("StandardMaterial3D_gg7pb")
+
+[node name="CSGBox3D287" type="CSGBox3D" parent="Map" unique_id=102912343]
+transform = Transform3D(-0.011065181, 0, 0.9999388, 0, 0.7139379, 0, -0.9999388, 0, -0.011065181, -60.263397, 12.59631, 22.290222)
+use_collision = true
+size = Vector3(0.26057434, 5.848877, 2.344304)
+material = SubResource("StandardMaterial3D_gg7pb")
+
+[node name="CSGBox3D288" type="CSGBox3D" parent="Map" unique_id=1060183805]
+transform = Transform3D(-0.011065181, 0, 0.9999388, 0, 0.7139379, 0, -0.9999388, 0, -0.011065181, -58.134613, 12.586025, 22.285824)
+use_collision = true
+size = Vector3(0.26057434, 5.8776855, 1.7746773)
+material = SubResource("StandardMaterial3D_gg7pb")
+
+[node name="CSGBox3D289" type="CSGBox3D" parent="Map" unique_id=1867392289]
+transform = Transform3D(-0.011065181, 0, 0.9999388, 0, 0.7139379, 0, -0.9999388, 0, -0.011065181, -61.494843, 12.555135, 22.310654)
+use_collision = true
+size = Vector3(0.2480011, 5.9231567, 0.16681671)
+material = SubResource("StandardMaterial3D_7p775")
+
+[node name="CSGBox3D290" type="CSGBox3D" parent="Map" unique_id=641552981]
+transform = Transform3D(-0.011065181, 0, 0.9999388, 0, 0.7139379, 0, -0.9999388, 0, -0.011065181, -63.73044, 12.555135, 22.335392)
+use_collision = true
+size = Vector3(0.2480011, 5.9231567, 0.16681671)
+material = SubResource("StandardMaterial3D_7p775")
+
+[node name="CSGBox3D291" type="CSGBox3D" parent="Map" unique_id=2024728476]
+transform = Transform3D(-0.011065181, 0, 0.9999388, 0, 0.7139379, 0, -0.9999388, 0, -0.011065181, -59.093597, 12.555135, 22.28408)
+use_collision = true
+size = Vector3(0.2480011, 5.9231567, 0.16681671)
+material = SubResource("StandardMaterial3D_7p775")
 
 [node name="Key Objects" type="Node3D" parent="." unique_id=1191396916]
 
@@ -2832,7 +2875,7 @@ password = "159058"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=85762414]
 libraries/ = SubResource("AnimationLibrary_eduk4")
 
-[connection signal="area_entered" from="Map/Roof11/End Trigger" to="Map/Roof11/End Trigger" method="_on_area_entered"]
+[connection signal="body_entered" from="Map/Roof11/End Trigger" to="Map/Roof11/End Trigger" method="_on_body_entered"]
 
 [editable path="Player"]
 [editable path="Key Objects/VoiceMemo2"]
