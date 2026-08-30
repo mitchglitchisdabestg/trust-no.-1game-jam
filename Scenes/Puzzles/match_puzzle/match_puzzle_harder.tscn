@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://crvpc14wtp21r"]
+
+[ext_resource type="PackedScene" uid="uid://civebhg0y2sce" path="res://Scenes/Puzzles/match_puzzle/match_puzzle.tscn" id="1_ffsck"]
+[ext_resource type="PackedScene" uid="uid://t28y84kq4j3h" path="res://Scenes/Puzzles/match_puzzle/rune.tscn" id="2_e57ag"]
+
+[node name="MatchPuzzleHarder" unique_id=216729549 instance=ExtResource("1_ffsck")]
+
+[node name="TileRow5" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" parent_id_path=PackedInt32Array(467445418) index="4" unique_id=635664320]
+layout_mode = 2
+alignment = 1
+
+[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow5" index="0" unique_id=1979509240 instance=ExtResource("2_e57ag")]
+layout_mode = 2
+
+[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow5" index="1" unique_id=1859515285 instance=ExtResource("2_e57ag")]
+layout_mode = 2
+
+[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow5" index="2" unique_id=1812230690 instance=ExtResource("2_e57ag")]
+layout_mode = 2
+
+[node name="TileRow6" type="VBoxContainer" parent="MainFrame/TilesContainer/Tiles" parent_id_path=PackedInt32Array(467445418) index="5" unique_id=870580932]
+layout_mode = 2
+alignment = 1
+
+[node name="Rune" parent="MainFrame/TilesContainer/Tiles/TileRow6" index="0" unique_id=1432522264 instance=ExtResource("2_e57ag")]
+layout_mode = 2
+
+[node name="Rune2" parent="MainFrame/TilesContainer/Tiles/TileRow6" index="1" unique_id=387031343 instance=ExtResource("2_e57ag")]
+layout_mode = 2
+
+[node name="Rune3" parent="MainFrame/TilesContainer/Tiles/TileRow6" index="2" unique_id=2058077993 instance=ExtResource("2_e57ag")]
+layout_mode = 2
