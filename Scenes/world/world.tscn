@@ -2453,7 +2453,7 @@ material = SubResource("StandardMaterial3D_futi2")
 [node name="End Trigger" type="Area3D" parent="Map/Roof11" unique_id=1855370030 node_paths=PackedStringArray("animation_player")]
 transform = Transform3D(40.87219, 1.8626451e-09, -1.679689e-09, 4.7683716e-07, 1.0865575, 1.193089e-07, 3.6182023e-08, -1.4885266e-08, 1.3759636, -0.20204926, 0.0056762695, 0)
 script = ExtResource("16_bnk1b")
-animation_player = NodePath("../../../Player/AnimationPlayer")
+animation_player = NodePath("../../../AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Roof11/End Trigger" unique_id=1150852855]
 transform = Transform3D(0.9999807, -2.5890768e-07, -1.7280198e-07, 3.2782555e-07, 0.99999815, 4.2507048e-07, -2.1286482e-08, 2.9837626e-08, 0.9999998, 0.04824829, 7.814636, 2.5225296)
