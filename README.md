@@ -28,15 +28,10 @@ We hope to improve that next game jam.
 (This is me and my friends' 2nd game jam, so we *STILL* don't really know what we're doing lol)
 ------------
 CREATED BY:
-
-mitchglitchisdabestg
-
+Mitchglitchisdabestg
 Mittymatty
-
-rushurov
-
+Rushurov
 WillC2111
-
 Jack W
 ------------
 
