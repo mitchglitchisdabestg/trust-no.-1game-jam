@@ -21,6 +21,12 @@ config/icon="uid://crn8epp4rhxyw"
 SignalBus="*uid://m72cy8qhe4fj"
 Status="*uid://bq3kppt1f306g"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=3
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_with_u/plugin.cfg")
@@ -103,3 +109,4 @@ SkipPuzzle={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true

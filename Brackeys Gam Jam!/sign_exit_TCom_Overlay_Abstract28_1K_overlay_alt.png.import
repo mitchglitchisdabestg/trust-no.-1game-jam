@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpe0y0nxgsd8r"
 path.s3tc="res://.godot/imported/sign_exit_TCom_Overlay_Abstract28_1K_overlay_alt.png-dc245a82c325fed1f43732027c0848ce.s3tc.ctex"
+path.etc2="res://.godot/imported/sign_exit_TCom_Overlay_Abstract28_1K_overlay_alt.png-dc245a82c325fed1f43732027c0848ce.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Brackeys Gam Jam!/sign_exit_TCom_Overlay_Abstract28_1K_overlay_alt.png"
-dest_files=["res://.godot/imported/sign_exit_TCom_Overlay_Abstract28_1K_overlay_alt.png-dc245a82c325fed1f43732027c0848ce.s3tc.ctex"]
+dest_files=["res://.godot/imported/sign_exit_TCom_Overlay_Abstract28_1K_overlay_alt.png-dc245a82c325fed1f43732027c0848ce.s3tc.ctex", "res://.godot/imported/sign_exit_TCom_Overlay_Abstract28_1K_overlay_alt.png-dc245a82c325fed1f43732027c0848ce.etc2.ctex"]
 
 [params]
 

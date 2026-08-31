@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cssp1day6wsy5"
 path.s3tc="res://.godot/imported/Wood_Veneer_01_baseColor.jpeg-d90ea6c9cbf42d7f5d2b3fe7578ed8a4.s3tc.ctex"
+path.etc2="res://.godot/imported/Wood_Veneer_01_baseColor.jpeg-d90ea6c9cbf42d7f5d2b3fe7578ed8a4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Imported modles from the internet/textures/Wood_Veneer_01_baseColor.jpeg"
-dest_files=["res://.godot/imported/Wood_Veneer_01_baseColor.jpeg-d90ea6c9cbf42d7f5d2b3fe7578ed8a4.s3tc.ctex"]
+dest_files=["res://.godot/imported/Wood_Veneer_01_baseColor.jpeg-d90ea6c9cbf42d7f5d2b3fe7578ed8a4.s3tc.ctex", "res://.godot/imported/Wood_Veneer_01_baseColor.jpeg-d90ea6c9cbf42d7f5d2b3fe7578ed8a4.etc2.ctex"]
 
 [params]
 
